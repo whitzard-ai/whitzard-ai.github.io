@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)http://usslab.org/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Standard Meta -->
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Site Properties -->
+    <title>复旦大学白泽智能团队</title>
+    <link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/icon.png">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+    <style type="text/css">
+        .hidden.menu {
+            display: none;
+        }
+
+        .masthead.segment {
+            min-height: 600px;
+            padding: 1em 0em;
+            background-color: red;
+        }
+
+        .masthead .logo.item img {
+            margin-right: 1em;
+        }
+
+        .masthead .ui.menu .ui.button {
+            margin-left: 0.5em;
+            color: red;
+
+        }
+
+        .masthead h1.ui.header {
+            margin-top: 3em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+
+        .largeheader {
+            margin-top: 3em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+
+        .masthead h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+        }
+
+        .ui.vertical.stripe {
+            padding: 3em 0em;
+        }
+
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+
+        .ui.vertical.stripe .button+h3,
+        .ui.vertical.stripe p+h3 {
+            margin-top: 3em;
+        }
+
+        .ui.vertical.stripe .floated.image {
+            clear: both;
+        }
+
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+
+        .ui.vertical.stripe .horizontal.divider {
+            margin: 3em 0em;
+        }
+
+        .quote.stripe.segment {
+            padding: 0em;
+        }
+
+        .quote.stripe.segment .grid .column {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+
+        .footer.segment {
+            padding: 5em 0em;
+        }
+
+        .secondary.pointing.menu .toc.item {
+            display: none;
+        }
+
+        .top.fixed.menu .ftoc.item {
+            display: none;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .ui.fixed.menu {
+                display: none !important;
+            }
+
+            .secondary.pointing.menu .item,
+            .secondary.pointing.menu .logo,
+            .secondary.pointing.menu .menu {
+                display: none;
+            }
+
+            .secondary.pointing.menu .toc.item {
+                display: block;
+            }
+
+            .masthead.segment {
+                min-height: 350px;
+            }
+
+            .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+            }
+
+            .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .ui.fixed.menu {
+                display: none !important;
+            }
+
+            .top.fixed.menu .item,
+            .top.fixed.menu .menu {
+                display: none;
+            }
+
+            .top.fixed.menu .ftoc.item {
+                display: block;
+            }
+        }
+
+        .logo.image {
+            width: 50px;
+            margin-right: 1px;
+        }
+
+        .galary {
+            margin-top: 20px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 600rpx;
+            background-color: white
+        }
+
+        .beian:hover {
+            color: white;
+        }
+
+        .beian {
+            color: grey;
+        }
+
+        .list {
+            font-size: larger;
+            line-height: 150%;
+        }
+        .dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+        
+
+
+    </style>
+    <script src=".jquery.min.js"></script>
+    <script src="./js/visibility.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/transition.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        $(document)
+            .ready(function () {
+                // fix menu when passed
+                $('.masthead')
+                    .visibility({
+                        once: false,
+                        onBottomPassed: function () {
+                            $('.fixed.menu').transition('fade in');
+                        },
+                        onBottomPassedReverse: function () {
+                            $('.fixed.menu').transition('fade out');
+                        }
+                    });
+                // create sidebar and attach to menu open
+                $('.ui.sidebar').sidebar('attach events', '.toc.item');
+                $('.ui.sidebar').sidebar('attach events', '.ftoc.item');
+                var swiper = new Swiper('.swiper-container', {
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    speed: 1000,
+                    centeredSlides: true,
+                    // autoplay: 2500,
+                });
+            });
+    </script>
+</head>
+
+<body>
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+            <a class="ftoc item">
+                <i class="sidebar icon"></i>
+            </a>
+            <a class="header item">
+                <img class="logo" src="./images/logo_new.png"> 复旦白泽智能
+            </a>
+        <a class="item" href="./index.html">首页</a>
+        <a class="item" href="./projects.html">科研成果</a>
+        <a class="active item" href="./publications.html">论文发表</a>
+        <a class="item" href="./member.html">团队成员</a>
+        <a class="item" href="./">课程</a>
+        <a class="item" href="./">软件</a>
+        <a class="item" href="./">组会</a>
+        <button type="button" class="right btn dropdown-toggle" id="dropdownMenu1" 
+        data-toggle="dropdown">
+    联系我们
+    <span class="caret"></span>
+</button>
+        </div>
+    </div>
+    <!-- Sidebar Menu -->
+    <div class="ui vertical sidebar menu">
+        <div class="item">
+            <a href="./" class="ui logo icon image">
+                <img src="./images/logo_new.png">
+            </a>
+            <a href="./index.html"><b>复旦白泽智能</b></a>
+        </div>
+        <a class="item" href="./index.html">首页</a>
+        <a class="item" href="./projects.html">科研成果</a>
+        <a class="active item" href="./publications.html">论文发表</a>
+        <a class="item" href="./member.html">团队成员</a>
+        <a class="item" href="./">课程</a>
+        <a class="item" href="./">软件</a>
+        <a class="item" href="./">组会</a>
+        <button type="button" class="right btn dropdown-toggle" id="dropdownMenu1" 
+        data-toggle="dropdown">
+    联系我们
+    <span class="caret"></span>
+</button>
+    </div>
+    <!-- Page Contents -->
+    <div class="pusher">
+        <div class="ui vertical center aligned">
+            <div class="ui container">
+                <div class="ui large secondary pointing menu">
+                    <a class="toc item">
+                        <i class="sidebar icon"></i>
+                    </a>
+                    <a href="./" class="ui logo icon image">
+                        <img src="./images/logo_wo_text.png">
+                    </a>
+                    <a class="item" href="./index.html"><b>复旦白泽智能</b></a>
+                    <a class="item" href="./index.html">首页</a>
+                    <a class="item" href="./projects.html">科研成果</a>
+                    <a class="active item" href="./publications.html">论文发表</a>
+                    <a class="item" href="./member.html">团队成员</a>
+                    <a class="item" href="./">课程</a>
+                    <a class="item" href="./">软件</a>
+                    <a class="item" href="./">组会</a>
+                    <a class="right item dropdown-toggle" href="./html/contact.html">联系我们</a>
+            </div>
+        </div>
+  
+        <div class="ui vertical stripe container">
+            <h1 style="color: rgb(15, 7, 125);">论文发表</h1>
+            <div class="ui divider"></div>
+            <h4>2023</h4>
+            <ul class="list">
+
+<a href="https://www.usenix.org/system/files/sec23fall-prepub-190-xiao-qifan.pdf">Exorcising “Wraith”: Protecting LiDAR-based Object Detector in Automated Driving System from Appearing Attacks</a>
+<dd>
+Qifan Xiao*, Xudong Pan*, Yifan Lu, <strong>Mi Zhang✉</strong>, Min Yang. <em>The 32nd USENIX Security Symposium (USENIX Security, accepted).</em> 2023.
+<p>
+</p></dd>
+
+<a href="https://www.usenix.org/system/files/sec23fall-prepub-444-yan-yifan.pdf">Rethinking White-Box Watermarks on Deep Learning Models under Neural Structural Obfuscation</a>
+<dd>
+Yifan Yan*, Xudong Pan*, <strong>Mi Zhang✉</strong>, Min Yang. <em>The 32nd USENIX Security Symposium (USENIX Security, accepted).</em> 2023.
+<p>
+</p></dd>
+
+
+<a href="https://mi-zhang-fdu.github.io/">RØROS: Building a Responsive Online Recommender System via Meta-Gradients Updating.</a>
+<dd>
+Xudong Pan, <strong>Mi Zhang✉</strong>, Duocai Wu. <em>2023 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP, accepted)</em> 2023.
+<p>
+</p></dd>
+
+
+<a href="https://mi-zhang-fdu.github.io/">MaSS: Model-agnostic, Semantic and Stealthy Data Poisoning Attack on Knowledge Graph Embedding</a>
+<dd>
+Xiaoyu You, Beina Sheng, Daizong Ding, <strong>Mi Zhang✉</strong>, Xudong Pan, Min Yang, Fuli Feng.  <em>The Web Conference (WWW, accepted)</em>, 2023.
+<p>
+</p></dd>
+
+
+<a href="https://mi-zhang-fdu.github.io/">Anti-FakeU: Defending Shilling Attacks on Graph Neural Network based Recommender Model</a>
+<dd>
+Xiaoyu You, Chi Lee, Daizong Ding, <strong>Mi Zhang✉</strong>, Fuli Feng, Xudong Pan, Min Yang. <em>The Web Conference (WWW, accepted)</em>, 2023.
+<p>
+</p></dd>
+
+<a href="https://mi-zhang-fdu.github.io/">AutoGCF: Personalized Aggregation on Neural Graph Collaborative Filtering</a>
+<dd>
+Xiaoyu You, Chi Li, Jianwei Xu, <strong>Mi Zhang✉</strong>. <em>2023 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP, accepted)</em>, 2023.
+<p>
+</p></dd>
+
+<a href="https://mi-zhang-fdu.github.io/">CAP: Robust Point Cloud Classification via Semantic and Structural Modeling</a>
+<dd>
+Xiaoyu You, Chi Li, Jianwei Xu, <strong>Mi Zhang✉</strong>. <em>The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2023 (CVPR, accepted)</em>, 2023.
+<p>
+</p></dd>
+
+
+<a href="https://mi-zhang-fdu.github.io/">Black-box Adversarial Attack on Time Series Classification</a>
+<dd>
+Daizong Ding, <strong>Mi Zhang✉</strong>, Yuanmin Huang, Erling Jiang, Min Yang. <em>The 37th AAAI Conference on Artificial Intelligence (AAAI, accepted)</em>, 2023.
+<p>
+</p></dd>
+                
+</ul>
+<!-- 2022 -->
+<h4>2022</h4>
+<ul class="list">
+<a href="https://neurips.cc/virtual/2022/poster/54440">House of Cans: Covert Transmission of Internal Datasets via Capacity-Aware Neuron Steganography</a>
+<dd>
+Xudong Pan, Shengyao Zhang, <strong>Mi Zhang✉</strong>, Yifan Yan, Min Yang. <em>The 36th Annual Conference on Neural Information Processing Systems (NeurIPS) </em>, 2022.
+<p>
+</p></dd>
+
+<a href="https://www.computer.org/csdl/search/default?type=author&amp;givenName=Xin&amp;surname=Zhang">Slowing Down the Aging of Learning-based Malware Detectors with API Knowledge</a>
+<dd>
+Xiaohan Zhang, <strong>Mi Zhang✉</strong>, Yuan Zhang, Ming Zhong, Xin Zhang, Yinzhi Cao, Min Yang.  <em>IEEE Transactions on Dependable and Secure Computing (TDSC) </em>, Early Access, 2022.
+<p>
+</p></dd>
+
+<a href="https://dl.acm.org/doi/10.1145/3534678.3539257">MetaV: A Meta-Verifier Approach to Task-Agnostic Model Fingerprinting</a>
+<dd>
+Xudong Pan, Yifan Yan, <strong>Mi Zhang✉</strong>, Min Yang. <em>The 28th SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) </em>,  P1327-1336, 2022.
+<p>
+</p></dd>
+
+<a href="https://www.usenix.org/conference/usenixsecurity22/presentation/pan-hidden">Hidden Trigger Backdoor Attack on NLP Models via Linguistic Style Manipulation</a>
+<dd>
+Xudong Pan, <strong>Mi Zhang✉</strong>, Beina Sheng, Jiaming Zhu, Min Yang. <em>The 31st USENIX Security Symposium (USENIX Security) </em>, P3611-3628, 2022.
+<p>
+</p></dd>
+
+<a href="https://ieeexplore.ieee.org/document/9835394/">Towards Backdoor Attack on Deep Learning based Time Series Classification</a>
+<dd>
+Daizong Ding, <strong>Mi Zhang✉</strong>, Yuanmin Huang, Xudong Pan, Fuli Feng, Erling Jiang, Min Yang. <em>The 38th IEEE International Conference on Data Engineering (ICDE)</em>, P1274-1287, 2022. 
+<p>
+</p></dd>
+
+
+<a href="https://www.usenix.org/conference/usenixsecurity22/presentation/pan-exploring">Exploring the Security Boundary of Data Reconstruction via Neuron Exclusivity Analysis</a>
+<dd>
+Xudong Pan, <strong>Mi Zhang✉</strong>, Yifan Yan, Jiaming Zhu, Min Yang. <em>The 31st USENIX Security Symposium (USENIX Security), </em>, P3989-4006, 2022.
+<p>
+</p></dd>
+</ul>
+<!-- 2021 -->
+<h4>2021</h4>
+<ul class="list">
+
+<a href="https://dl.acm.org/doi/10.1145/3485832.3485881">Understanding the Threats of Trojaned Quantized Neural Network in Model Supply Chains</a>
+<dd>
+Xudong Pan, <strong>Mi Zhang✉</strong>, Yifan Yan, Min Yang. <em>The 38th Annual Computer Security Applications Conference (ACSAC), </em>, P634–645, 2021.
+<p>
+</p></dd>
+
+<a href="https://ieeexplore.ieee.org/document/9527101">Enhancing Time Series Predictors with Generalized Extreme Value Loss</a>
+<dd>
+<strong>Mi Zhang✉</strong>, Daizong Ding, Xudong Pan, Min Yang. <em> IEEE Transactions on Knowledge and Data Engineering (TKDE), </em>, Early Access, 2021.
+<p>
+</p></dd>
+
+<a href="https://dl.acm.org/doi/10.1145/3459637.3482223">A Deep Learning Framework for Self-evolving Hierarchical Community Detection</a>
+<dd>
+Daizong Ding, <strong>Mi Zhang✉</strong>, Hanrui Wang, Xudong Pan, Min Yang, Xiangnan He. <em>The 30th ACM International Conference on Information and Knowledge Management (CIKM), </em>, P372–381, 2021.
+<p>
+</p></dd>
+
+
+<a href="https://dl.acm.org/doi/10.1145/3459637.3482271"> Learning to Learn the Future: Modeling Concept Drift in Time Series Prediction </a>
+<dd>Xiaoyu You, <strong>Mi Zhang✉</strong>, Daizong Ding, Fuli Feng, Yuanmin Huang. <em>The 30th ACM International Conference on Information and Knowledge Management (CIKM), </em>, P2434–2443, 2021.
+<p>
+</p></dd>
+
+
+<a href="https://link.springer.com/content/pdf/10.1007/978-3-030-88418-5_26.pdf">TAFA: A Task-Agnostic Fingerprinting Algorithm for Neural Networks</a>
+<dd>
+Xudong Pan, <strong>Mi Zhang✉</strong>, Yifan Lu, Min Yang. <em>The 26th European Symposium on Research in Computer Security (ESORICS), </em>, P542-562, 2021.
+<p>
+</p></dd>
+    
+</ul>
+<!-- 2020 -->
+<h4>2020</h4>
+<ul class="list">
+<a href="https://ieeexplore.ieee.org/document/9146781">A Geometrical Perspective on Image Style Transfer with Adversarial Learning</a>
+<dd>
+Xudong Pan, <strong>Mi Zhang✉</strong>, Daizong Ding, Min Yang. <em>IEEE Transaction on Pattern Analysis and Machine Intelligence (TPAMI), </em>, 44(1), 2020.
+<p>
+</p></dd>
+
+<a href="https://ieeexplore.ieee.org/document/9338387/">Modeling Personalized Out-of-Town Distances in Location Recommendation</a>
+<dd>
+Daizong Ding, <strong>Mi Zhang✉</strong>, Xudong Pan, Xiangnan He, Min Yang. <em>The 20th IEEE International Conference on Data Mining (ICDM)</em>, P112-121, 2020.
+<p>
+</p></dd>
+
+<a href="https://arxiv.org/abs/1708.06525">Improving the Robustness of Wasserstein Embedding by Adversarial PAC-Bayesian Learning</a>
+<dd>
+Daizong Ding, <strong>Mi Zhang✉</strong>, Xudong Pan, Xiangnan He, Min Yang. <em>The 34th AAAI Conference on Artificial Intelligence (AAAI), </em>, P3791-3800, 2020. 
+<p>
+</p></dd>
+
+<a href="https://dl.acm.org/doi/10.1145/3372297.3417291">Enhancing State-of-the-art Classifiers with API Semantics to Detect Evolved Android Malware</a>
+<dd>
+Xiaohan Zhang, Yuan Zhang, Ming Zhong, Daizong Ding, Yinzhi Cao, Yukun Zhang, <strong>Mi Zhang✉</strong>, Min Yang. <em>ACM Conference on Computer and Communications Security (CCS) </em>, P757-770, 2020. <strong><font color="red">Distinguished Paper Nomination</font></strong>
+<p>
+</p></dd>
+
+<a href="https://dl.acm.org/doi/abs/10.5555/3489212.3489305">Justinian's GAAvernor: Robust Distributed Learning with Gradient Aggregation Agent</a>
+<dd>
+Xiaohan Zhang, Yuan Zhang, Ming Zhong, Daizong Ding, Yinzhi Cao, Yukun Zhang, <strong>Mi Zhang✉</strong>, Min Yang. <em>The 29th USENIX Security Symposium (USENIX Security) </em>, P1641-1658, 2020.
+<p>
+</p></dd>
+
+<a href="https://ieeexplore.ieee.org/document/9152761">Privacy Risks of General-Purpose Language Models</a>
+<dd>
+Xudong Pan, <strong>Mi Zhang✉</strong>, Shouling Ji, Min Yang. <em>2020 IEEE Symposium on Security and Privacy (S&amp;P) </em>, P1471-1488, 2020. <strong><font color="red">WAIC Youth Distinguished Paper Nomination</font></strong>
+</dd>
+</ul>
+
+<!-- 2019 -->
+<h4>2019</h4>
+<ul class="list">
+<a href="https://dl.acm.org/doi/10.1145/3292500.3330896">Modeling Extreme Events in Time Series Prediction</a>
+<dd> Daizong Ding, <strong>Mi Zhang✉</strong>, Xudong Pan, Xiangnan He, Min Yan <em>The 25th SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) </em>, P1114-1122, 2019. 
+<p>
+</p></dd>
+</ul>
+
+<!-- 2018 -->
+<h4>2018</h4>
+<ul class="list">
+<a href="http://proceedings.mlr.press/v80/pan18c/pan18c.pdf">Theoretical Analysis of Image-to-Image Translation with Adversarial Learning</a>
+<dd> Xudong Pan, <strong>Mi Zhang✉</strong>, Daizong Ding <em>The 35th International Conference on Machine Learning (ICML) </em>, P4006-4015, 2018. 
+<p>
+</p></dd>
+
+<a href="https://dl.acm.org/doi/10.1145/3178876.3186131">Geographical Feature Extraction for Entities in Location-based Social Networks</a>
+<dd> Xudong Pan, <strong>Mi Zhang✉</strong>, Daizong Ding <em>The 2018 World Wide Web Conference (WWW) </em>, P833-842, 2018.
+<p>
+</p></dd>
+</ul>
+
+
+<h4>2017 and Before</h4>
+
+<ul class="list">
+<a href="https://dl.acm.org/doi/10.1145/3132847.3132941">BayDNN: Friend Recommendation with Bayesian Personalized Ranking Deep Neural Network</a>
+<dd> Daizong Ding, <strong>Mi Zhang✉</strong>, Shao-Yuan Li, Jie Tang, Xiaotie Chen, Zhi-Hua Zhou
+
+ <em>The 2017 ACM Conference on Information and Knowledge Management (CIKM)</em>, P1479-1488, 2017.
+<p>
+</p></dd>
+
+
+<a href="https://dl.acm.org/doi/abs/10.1145/2600428.2609599">Cold Start in Recommender Systems: A Semi-Supervised Co-Training Algorithm</a>
+<dd> <strong>Mi Zhang✉</strong>, Jie Tang, Xuchen Zhang, Xiangyang Xue
+ <em>The 37th Annual ACM SIGIR Conference (SIGIR)</em>, 2014.
+<p>
+</p></dd>
+
+<a href="https://ieeexplore.ieee.org/document/6511897">A Double-Ranking Strategy for Long-Tail Product Recommendation</a>
+<dd> Mi Zhang, Neil Hurley, Wei Li, Xiangyang Xue
+ <em>The 2012 IEEE/WIC/ACM International Conferences on Web Intelligence (WI/IAT)</em>, 2012.
+<p>
+</p></dd>
+
+
+<a href="https://dl.acm.org/doi/10.1145/1944339.1944341">Novelty and Diversity in Top-N Recommendation-Analysis and Evaluation</a>
+<dd> Neil Hurley and <strong>Mi Zhang✉</strong>
+ <em>ACM transaction of internet technology (TOIT)</em>, 10(4), 14, 2011.
+<p>
+</p></dd>
+
+<a href="https://ieeexplore.ieee.org/document/5616197">Niche Product Retrieval in Top-N Recommendation</a>
+<dd> <strong>Mi Zhang</strong> and Neil Hurley
+ <em> the 2010 IEEE/WIC/ACM International Conferences on Web Intelligence (WI/IAT)</em>, P74-81, 2010. <strong><font color="red">Best Paper Award</font></strong>
+<p>
+</p></dd>
+
+
+<a href="https://dl.acm.org/doi/10.1145/1639714.1639740">Statistical Attack Detection</a>
+<dd> Neil Hurley, Zunping Cheng, <strong>Mi Zhang</strong>
+ <em>2009 ACM International Conference on Recommender Systems (ACM Recsys)</em>, P149-156, 2009.
+<p>
+</p></dd>
+
+<a href="https://dl.acm.org/doi/10.1109/ICTAI.2009.46">Evaluating the Diversity of Top-N Recommendations</a>
+<dd> <strong>Mi Zhang</strong> and Neil Hurley
+ <em>21th IEEE International Conference on Tools with Artificial Intelligence (ICTAI)</em>, P457–460, 2009.
+<p>
+</p></dd>
+
+<a href="https://dl.acm.org/doi/10.1145/1639714.1639798">Enhancing Diversity in Top-N Recommendation</a>
+<dd> <strong>Mi Zhang</strong> and Neil Hurley
+ <em>The 2009 ACM International Conference on Recommender Systems (ACM Recsys)</em>, P397-400, 2009.
+<p>
+</p></dd>
+
+<a href="https://ieeexplore.ieee.org/abstract/document/5286022">Top-N Novel Recommendation by User Profile Partitioning</a>
+<dd> <strong>Mi Zhang</strong> and Neil Hurley
+ <em>The 2009 IEEE/WIC/ACM International Conferences on Web Intelligence (WI/IAT)</em>, P508-515, 2009.
+<p>
+</p></dd>
+
+<a href="https://ieeexplore.ieee.org/document/5286024">Statistical Modeling of Diversity in Top-N Recommender Systems</a>
+<dd> <strong>Mi Zhang</strong> and Neil Hurley
+ <em>The 2009 IEEE/WIC/ACM International Conferences on Web Intelligence (WI/IAT)</em>, P490-497, 2009.
+<p>
+</p></dd>
+
+<a href="https://mi-zhang-fdu.github.io/">Spam User Detection: Problem Definition and Strategy Analysis</a>
+<dd> <strong>Mi Zhang</strong> and Neil Hurley
+ <em>The 19th Irish Conference on Artificial Intelligence and Cognitive Science (AICS)</em>, 2008.
+
+<p>
+</p></dd>
+
+<a href="https://dl.acm.org/doi/10.1145/1454008.1454030">Avoiding Monotony: Improving the Diversity of Recommendation Lists</a>
+<dd> <strong>Mi Zhang</strong> and Neil Hurley
+ <em>2008 ACM International Conference on Recommender Systems (ACM Recsys)</em>, P123-130, 2008.
+<p>
+</p></dd>
+
+<a href="https://ieeexplore.ieee.org/document/4669778/">Analysis of Methods for Novel Case Selection</a>
+<dd> Neil Hurley and <strong>Mi Zhang</strong>
+ <em>20th IEEE International Conference on Tools with Artificial Intelligence (ICTAI)</em>, P217-224, 2008.
+<p>
+</p></dd>
+
+<a href="https://ieeexplore.ieee.org/document/4669778">Using A Depth Tree Framework to Evaluate Change Impacts of Modifications to IT Infrastructure</a>
+<dd> Min Yang, <strong>Mi Zhang</strong>, et al.,
+ <em>International Joint Conference on e-Business and Telecommunications, In Conjunction with ACM SIGMIS</em>, 2006.
+<p>
+</p></dd>
+
+<a href="https://mi-zhang-fdu.github.io/">A Security Model Design in Web Service Environment</a>
+<dd> <strong>Mi Zhang</strong>, et al., 
+ <em>The 5th International Conference on Computer and Information Technology (CIT 2005)</em>, 2005.
+<p>
+</p></dd>
+
+<a href="https://mi-zhang-fdu.github.io/">A Web Service-based Framework for Supply Chain Management</a>
+<dd> <strong>Mi Zhang</strong>, et al., 
+ <em>The 8th IEEE International Symposium on Object-Oriented Real Time Distributed Computing (ISORC 2005)</em>, 2005.
+<p>
+</p></dd>
+</ul>
+        </div>
+
+
+
+
+        <div class="ui inverted vertical footer segment">
+            <div class="ui center aligned container">
+                <!--<img src="assets/images/logo.png" class="ui centered mini image">-->
+                <div class="ui horizontal inverted small divided link list">
+                    Copyright © Whitzard AI. 2013-2023
+                    <br> Interdisciplinary Building No. 2 A6008, Fudan University, Shanghai, China. 310027
+                    <br> All Right Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<!-- saved from url=(0018)http://usslab.org/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Standard Meta -->
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- Site Properties -->
+    <title>复旦大学白泽智能团队</title>
+    <link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/icon.png">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+    <style type="text/css">
+        .hidden.menu {
+            display: none;
+        }
+
+        .masthead.segment {
+            min-height: 600px;
+            padding: 1em 0em;
+            background-color: red;
+        }
+
+        .masthead .logo.item img {
+            margin-right: 1em;
+        }
+
+        .masthead .ui.menu .ui.button {
+            margin-left: 0.5em;
+            color: red;
+
+        }
+
+        .masthead h1.ui.header {
+            margin-top: 3em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+
+        .largeheader {
+            margin-top: 3em;
+            margin-bottom: 0em;
+            font-size: 4em;
+            font-weight: normal;
+        }
+
+        .masthead h2 {
+            font-size: 1.7em;
+            font-weight: normal;
+        }
+
+        .ui.vertical.stripe {
+            padding: 3em 0em;
+        }
+
+        .ui.vertical.stripe h3 {
+            font-size: 2em;
+        }
+
+        .ui.vertical.stripe .button+h3,
+        .ui.vertical.stripe p+h3 {
+            margin-top: 3em;
+        }
+
+        .ui.vertical.stripe .floated.image {
+            clear: both;
+        }
+
+        .ui.vertical.stripe p {
+            font-size: 1.33em;
+        }
+
+        .ui.vertical.stripe .horizontal.divider {
+            margin: 3em 0em;
+        }
+
+        .quote.stripe.segment {
+            padding: 0em;
+        }
+
+        .quote.stripe.segment .grid .column {
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+
+        .footer.segment {
+            padding: 5em 0em;
+        }
+
+        .secondary.pointing.menu .toc.item {
+            display: none;
+        }
+
+        .top.fixed.menu .ftoc.item {
+            display: none;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .ui.fixed.menu {
+                display: none !important;
+            }
+
+            .secondary.pointing.menu .item,
+            .secondary.pointing.menu .logo,
+            .secondary.pointing.menu .menu {
+                display: none;
+            }
+
+            .secondary.pointing.menu .toc.item {
+                display: block;
+            }
+
+            .masthead.segment {
+                min-height: 350px;
+            }
+
+            .masthead h1.ui.header {
+                font-size: 2em;
+                margin-top: 1.5em;
+            }
+
+            .masthead h2 {
+                margin-top: 0.5em;
+                font-size: 1.5em;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            .ui.fixed.menu {
+                display: none !important;
+            }
+
+            .top.fixed.menu .item,
+            .top.fixed.menu .menu {
+                display: none;
+            }
+
+            .top.fixed.menu .ftoc.item {
+                display: block;
+            }
+        }
+
+        .logo.image {
+            width: 50px;
+            margin-right: 1px;
+        }
+
+        .galary {
+            margin-top: 20px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 600rpx;
+            background-color: white
+        }
+
+        .beian:hover {
+            color: white;
+        }
+
+        .beian {
+            color: grey;
+        }
+
+        .list {
+            font-size: larger;
+            line-height: 150%;
+        }
+        .dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+        
+
+
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/visibility.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/transition.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        $(document)
+            .ready(function () {
+                // fix menu when passed
+                $('.masthead')
+                    .visibility({
+                        once: false,
+                        onBottomPassed: function () {
+                            $('.fixed.menu').transition('fade in');
+                        },
+                        onBottomPassedReverse: function () {
+                            $('.fixed.menu').transition('fade out');
+                        }
+                    });
+                // create sidebar and attach to menu open
+                $('.ui.sidebar').sidebar('attach events', '.toc.item');
+                $('.ui.sidebar').sidebar('attach events', '.ftoc.item');
+                var swiper = new Swiper('.swiper-container', {
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    speed: 1000,
+                    centeredSlides: true,
+                    // autoplay: 2500,
+                });
+            });
+    </script>
+</head>
+
+<body>
+    <!-- Following Menu -->
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+            <a class="ftoc item">
+                <i class="sidebar icon"></i>
+            </a>
+            <a class="header item">
+                <img class="logo" src="./images/logo_new.png"> 复旦白泽智能
+            </a>
+        <a class="active item" href="./index.html">首页</a>
+        <a class="item" href="./projects.html">科研成果</a>
+        <a class="item" href="./publications.html">论文发表</a>
+        <a class="item" href="./member.html">团队成员</a>
+        <a class="item" href="./">课程</a>
+        <a class="item" href="./">软件</a>
+        <a class="item" href="./">组会</a>
+        <button type="button" class="right btn dropdown-toggle" id="dropdownMenu1" 
+        data-toggle="dropdown">
+    联系我们
+    <span class="caret"></span>
+</button>
+        </div>
+    </div>
+    <!-- Sidebar Menu -->
+    <div class="ui vertical sidebar menu">
+        <div class="item">
+            <a href="./" class="ui logo icon image">
+                <img src="./images/logo_new.png">
+            </a>
+            <a href="./index.html"><b>复旦白泽智能</b></a>
+        </div>
+        <a class="active item" href="./index.html">首页</a>
+        <a class="item" href="./projects.html">科研成果</a>
+        <a class="item" href="./publications.html">论文发表</a>
+        <a class="item" href="./member.html">团队成员</a>
+        <a class="item" href="./">课程</a>
+        <a class="item" href="./">软件</a>
+        <a class="item" href="./">组会</a>
+        <button type="button" class="right btn dropdown-toggle" id="dropdownMenu1" 
+        data-toggle="dropdown">
+    联系我们
+    <span class="caret"></span>
+</button>
+    </div>
+    <!-- Page Contents -->
+    <div class="pusher">
+        <div class="ui vertical center aligned">
+            <div class="ui container">
+                <div class="ui large secondary pointing menu">
+                    <a class="toc item">
+                        <i class="sidebar icon"></i>
+                    </a>
+                    <a href="./" class="ui logo icon image">
+                        <img src="./images/logo_wo_text.png">
+                    </a>
+                    <a class="item" href="./index.html"><b>复旦白泽智能</b></a>
+                    <a class="active item" href="./index.html">首页</a>
+                    <a class="item" href="./projects.html">科研成果</a>
+                    <a class="item" href="./publications.html">论文发表</a>
+                    <a class="item" href="./member.html">团队成员</a>
+                    <a class="item" href="./">课程</a>
+                    <a class="item" href="./">软件</a>
+                    <a class="item" href="./">组会</a>
+                    <a class="right item dropdown-toggle" href="./">联系我们</a>
+            </div>
+            <!-- <div class="ui container swiper-container swiper-container-horizontal"> -->
+                <!-- <div class="swiper-wrapper">
+                    <div class="swiper-slide galary swiper-slide-active" style="width: 1127px;"><img width="50%" height="50%" src="./images/awards.png"></div>
+                    <div class="swiper-slide galary swiper-slide-next" style="width: 1127px;"><a href="https://www.sigsac.org/ccs/CCS2017/awards.html"><img width="100%" height="100%" src="./USS Lab. - Ubiquitous System Security Lab._files/fm_bp.png"></a></div>
+                    <div class="swiper-slide galary" style="width: 1127px;"><a href="http://usslab.org/projects/dolphinAttack.html"><img width="100%" height="100%" src="./USS Lab. - Ubiquitous System Security Lab._files/fm_da.png"></a></div>
+                    <div class="swiper-slide galary" style="width: 1127px;"><img width="100%" height="100%" src="./USS Lab. - Ubiquitous System Security Lab._files/fm3.png"></div>
+                </div> -->
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-button-prev swiper-button-disabled"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div> -->
+            <!-- </div> -->
+            <!-- <script language="javascript"> 
+                var mySwiper = new Swiper('.swiper-container',{
+                    prevButton:'.swiper-button-prev',
+                    nextButton:'.swiper-button-next',
+                })
+                </script> -->
+                
+                <!-- 修改箭头颜色示范 -->
+                <!-- <div class="swiper-button-next swiper-button-white"></div> 白色 -->
+                <!-- <div class="swiper-button-next swiper-button-black"></div> 黑色 -->
+                <style>
+                /*Swiper原样式 */
+                /* .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");} */
+                /*改变了颜色和加粗的样式*/
+                .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L5%2C44l-4.2-4.2L18.6%2C22L0.8%2C4.2L5%2C0z'%20fill%3D'%23cccccc'%2F%3E%3C%2Fsvg%3E");}
+                /*Swiper原样式 */
+                /* .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");} */
+                /*改变了颜色和加粗的样式*/
+                .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l4.2%2C4.2L8.4%2C22l17.8%2C17.8L22%2C44L0%2C22z'%20fill%3D'%23cccccc'%2F%3E%3C%2Fsvg%3E");}
+
+                </style>
+        </div>
+        <div class="ui vertical stripe center aligned container">
+            <div class="ui container">
+                <h2 class="ui">
+                    <img src="./images/logo_new.png" width="35%"><br> 
+                </h2>
+                <!-- <h4>
+                    Welcome to USS(Ubiquitous System Security)&nbsp;&nbsp;Lab.<br> USS Lab. belongs to Electrical
+                    Engineering College in Zhejiang University. <br> We are working on universal security area
+                    including <br> traditional security, attack/defence and the security of internet of
+                    things(IoT).<br> And now we are mainly focus on IoT and embedded system security.
+                </h4> -->
+            </div>
+        </div>
+        <div class="ui vertical stripe container">
+            <h1 style="color: rgb(15, 7, 125);">团队简介</h1>
+            <div class="ui divider"></div>
+            <ul class="list">
+                <li class="list">隶属<a href="https://secsys.fudan.edu.cn">复旦大学系统软件与安全实验室</a>（由杨珉教授领衔）</li>
+                
+                <li class="list"><strong>团队负责人</strong>：张谧 教授（博导，<a href="https://mi-zhang-fdu.github.io">个人主页</a>）</li>
+              
+                <li class="list"><strong>科研</strong>：AI安全方面发表国际顶会顶刊论文 <strong>30篇</strong></li>
+                <ul>
+                    <li class="list"><strong>安全四大</strong>：IEEE Security & Privacy、USENIX Security、ACM CCS（共8篇）</li>
+                    <li class="list"><strong>AI顶会顶刊</strong>：TPAMI、ICML、CVPR、NeurIPS、ICDE、KDD、AAAI…</li>
+
+                </ul>
+                <li class="list"><strong>落地</strong>：多项AI安全研究成果服务国家、社会与行业</li>
+                <ul>
+                    <li class="list">发现人脸识别<strong>重大安全漏洞，获评2021年度CNVD最具价值漏洞</strong></li>
+                    <li class="list">技术成果收录于中国信安标委《人工智能安全标准化白皮书》(2022版)</li>
+                    <li class="list">与华为、奇安信、百度等大型IT企业具有深厚合作</li>
+                </ul>
+                <li class="list"><strong>获奖</strong>：多次斩获国内外科研竞赛奖项</li>
+                <ul>
+                    <li class="list">CCS最佳论文提名 (2020)</li>
+                    <li class="list">DEFCON无人驾驶安全攻防赛冠军（2021&2022）</li>
+                </ul>
+                <li class="list"><strong>培养</strong>：毕业学生遍布龙头企业（百度、字节、蚂蚁、阿里、腾讯、微软、网易、华为...）</li>
+
+            </li>
+        </div>
+        <div class="ui vertical stripe container segment">
+            <h1 style="color: rgb(15, 7, 125);">研究成果概览</h1>
+            <div class="ui divider"></div>
+            <h3 class="list text-center">全方位、多领域的AI理论功底和安全攻防技术积淀</h3>
+            <div class="row align-items-start">
+              <div class="col">
+                <h4 class="text-center"> 
+                  <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                  </svg> 时间序列</strong>
+                  <br>
+                      传感器数据
+                  <br>
+                  气象、金融
+                  <br>
+                  <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                    <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
+                    <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
+                  </svg> 自然语言</strong>
+                  <br>
+                      大语言模型
+                </h4>
+              </div>
+              <div class="col">
+                <h4 class="text-center"> 
+                  <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bounding-box" viewBox="0 0 16 16">
+                    <path d="M5 2V0H0v5h2v6H0v5h5v-2h6v2h5v-5h-2V5h2V0h-5v2H5zm6 1v2h2v6h-2v2H5v-2H3V5h2V3h6zm1-2h3v3h-3V1zm3 11v3h-3v-3h3zM4 15H1v-3h3v3zM1 4V1h3v3H1z"/>
+                  </svg> 图结构</strong>
+                  <br>
+                  社交网络
+                <br>
+                    知识图谱
+                <br>
+                  <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone-fill" viewBox="0 0 16 16">
+                    <path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"/>
+                  </svg> 移动应用</strong>
+                  <br>
+                      API序列
+                </h4>
+              </div>
+
+              <div class="col">
+                <h4 class="text-center"> 
+                <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                </svg> 机器视觉</strong>
+                <br>
+                    无人驾驶<small>（含点云）</small>
+                <br>
+                    人脸、深度伪造      
+                <br>
+                  <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
+                    <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
+                  </svg> 推荐系统</strong>
+                  <br>
+                  评分、Point-of-Interest      
+                  <br>
+                </h4>
+              </div>
+            </div>
+
+            <div id="proj-container" style="height: 800px">
+            </div>
+            <script type="text/javascript" src="./js/proj.js"></script>
+
+
+        </div>
+
+        <div class="ui inverted vertical footer segment">
+            <div class="ui center aligned container">
+                <!--<img src="assets/images/logo.png" class="ui centered mini image">-->
+                <div class="ui horizontal inverted small divided link list">
+                    Copyright © Whitzard AI. 2013-2023
+                    <br> Interdisciplinary Building No. 2 A6008, Fudan University, Shanghai, China. 310027
+                    <br> All Right Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>
