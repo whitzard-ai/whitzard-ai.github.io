@@ -33,6 +33,7 @@ itemStyle: {
 children: [
   {
     name: 'AI供应链\n安全',
+    url: "./projects.html#ai-supply-chain",
     children: [
       {
         class: '5☆',
@@ -53,6 +54,7 @@ children: [
   },
   {
     name: '模型保护\n与数据隐私',
+    url: "./projects.html#model-protection",
     children: [
       {
         class: '4☆',
@@ -71,6 +73,7 @@ children: [
   },
   {
     name: 'AI赋能安全',
+    
     children: [
       {
         class: '3☆',
@@ -94,8 +97,7 @@ children: [
         class: '2☆',
         children: [
           {
-            name: '泛化能力',
-            url: "./projects.html"
+            name: '泛化能力'
           },
           {
             name: '抗噪能力'
@@ -256,7 +258,7 @@ if (option && typeof option === 'object') {
 }
 
 myChart.on("click", function(params) {
-    if(params.name == "泛化能力"){
+    if(params.name == "AI供应链\n安全" || params.name == "模型保护\n与数据隐私"){
         console.log("hello")
         window.location.href = params.data.url
     }
