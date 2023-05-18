@@ -27,26 +27,31 @@ color: colors[3]
 const data = [
 {
 name: '白泽智能',
+nodeClick:false,
 itemStyle: {
   color: '#FFFFFF'
 },
 children: [
   {
     name: 'AI供应链\n安全',
-    url: "./projects.html#ai-supply-chain",
+    nodeClick:'link',
+    link: "./projects.html#ai-supply-chain",
     children: [
       {
         class: '5☆',
         name:"时间序列: 传感器数据, 气象、金融",
         children: [
           {
-            name: '对抗样本'
+            name: '对抗样本',
+            nodeClick:false
           },
           {
-            name: '后门攻防'
+            name: '后门攻防',
+            nodeClick:false
           },
           {
-            name: '分布式攻防'
+            name: '分布式攻防',
+            nodeClick:false
           }
         ]
       }
@@ -54,53 +59,65 @@ children: [
   },
   {
     name: '模型保护\n与数据隐私',
-    url: "./projects.html#model-protection",
+    nodeClick:'link',
+    link: "./projects.html#model-protection",
     children: [
       {
         class: '4☆',
         children: [
           {
-            name: '数据隐私'
+            name: '数据隐私',
+            nodeClick:false
           },
           {
-            name: '模型产权'
+            name: '模型产权',
+            nodeClick:false
           },
           {
-            name: '模型窃取'
+            name: '模型窃取',
+            nodeClick:false
           }
         ]
       }]
   },
   {
     name: 'AI赋能安全',
-    
+    nodeClick:'link',
+    link: "./projects.html#ai4sec",
     children: [
       {
         class: '3☆',
         children: [
           {
-            name: '黑产'
+            name: '黑产',
+            nodeClick:false
           },
           {
-            name: '移动安全'
+            name: '移动安全',
+            nodeClick:false
           },
           {
-            name: '漏洞挖掘'
+            name: '推荐与社交网络治理',
+            nodeClick:false
           }
         ]
       }]
   },
   {
     name: '模型测试\n与优化',
+    nodeClick:'link',
+    link: "./projects.html#model-testing",
     children: [
       {
         class: '2☆',
         children: [
           {
-            name: '泛化能力'
+            name: '泛化能力',
+            nodeClick:false
           },
           {
-            name: '抗噪能力'
+            name: '抗噪能力',
+            nodeClick:false
           }
         ]
       }
@@ -257,10 +274,9 @@ if (option && typeof option === 'object') {
   myChart.setOption(option);
 }
 
-myChart.on("click", function(params) {
-    if(params.name == "AI供应链\n安全" || params.name == "模型保护\n与数据隐私"){
-        console.log("hello")
-        window.location.href = params.data.url
-    }
-})
+// myChart.on("click", function(params) {
+//     if(params.name == "AI供应链\n安全" || params.name == "模型保护\n与数据隐私" || params.name == "模型测试\n与优化" || params.name == "AI赋能安全"){
+//         window.location.href = params.data.url
+//     }
+// })
 window.addEventListener('resize', myChart.resize);
