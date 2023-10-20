@@ -33,7 +33,7 @@ itemStyle: {
 },
 children: [
   {
-    name: 'AI供应链\n安全',
+    name: '模型安全',
     nodeClick:'link',
     link: "./projects.html#ai-supply-chain",
     children: [
@@ -48,17 +48,13 @@ children: [
           {
             name: '后门攻防',
             nodeClick:false
-          },
-          {
-            name: '分布式攻防',
-            nodeClick:false
           }
         ]
       }
     ]
   },
   {
-    name: '模型保护\n与数据隐私',
+    name: '数据安全',
     nodeClick:'link',
     link: "./projects.html#model-protection",
     children: [
@@ -70,11 +66,26 @@ children: [
             nodeClick:false
           },
           {
-            name: '模型产权',
+            name: '产权保护',
+            nodeClick:false
+          }
+        ]
+      }]
+  },
+  {
+    name: 'AIGC安全',
+    nodeClick:'link',
+    link: "./projects.html",
+    children: [
+      {
+        class: '3☆',
+        children: [
+          {
+            name: '内容合规检测',
             nodeClick:false
           },
           {
-            name: '模型窃取',
+            name: '生成内容溯源',
             nodeClick:false
           }
         ]
@@ -86,37 +97,14 @@ children: [
     link: "./projects.html#ai4sec",
     children: [
       {
-        class: '3☆',
+        class: '2☆',
         children: [
           {
-            name: '黑产',
+            name: '黑产打击',
             nodeClick:false
           },
           {
             name: '移动安全',
-            nodeClick:false
-          },
-          {
-            name: '推荐与社交网络治理',
-            nodeClick:false
-          }
-        ]
-      }]
-  },
-  {
-    name: '模型测试\n与优化',
-    nodeClick:'link',
-    link: "./projects.html#model-testing",
-    children: [
-      {
-        class: '2☆',
-        children: [
-          {
-            name: '泛化能力',
-            nodeClick:false
-          },
-          {
-            name: '抗噪能力',
             nodeClick:false
           }
         ]
