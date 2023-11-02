@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <title>JADE｜复旦白泽智能</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./img/logo.png">
+
+
+  <script src="./static/js/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="./static/js/jquery-2.2.1.min.js" crossorigin="anonymous"></script>
+  <script src="./static/js/popper.min.js" crossorigin="anonymous"></script>
+  <script src="./static/js/bootstrap.js" crossorigin="anonymous"></script>
+
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="./static/js/bootstrap.js" crossorigin="anonymous"></script>
+  <script src="./static/js/custom.js" crossorigin="anonymous"></script>
+  <script src="./static/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <!-- script src="./static/js/parser-tree.js" crossorigin="anonymous"></script -->
+
+  <!-- Bootstrap CSS -->
+  <link href="./static/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./static/css/carousel.css" rel="stylesheet" />
+  <link href="./static/css/node.css" rel="stylesheet" />
+  <link href="./static/css/custom.css" rel="stylesheet" />
+  <style>
+    /* moved to custom.css  */
+  </style>
+  <style>
+    ul.nobut li::marker {
+      color: #00000000;
+    }
+  </style>
+  <!-- Custom styles for this template -->
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="padding-left: 20px; padding-right: 20px;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./jade.html"><strong>JADE</strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+      </ul> -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav nav-masthead mx-auto me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link fw-bold active" aria-current="page" href="#"><strong>主页</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold " href="./display.html"><strong>视频示例</strong></a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="d-flex justify-content-end" style="color: white;">
+          <a class="nav-link fw-bold" href="#"><strong>中文 </strong></a><strong><svg xmlns="http://www.w3.org/2000/svg"
+              width="16" height="16" fill="currentColor" class="bi bi-slash" viewBox="0 0 16 16">
+              <path d="M11.354 4.646a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708l6-6a.5.5 0 0 1 .708 0z" />
+            </svg></strong><a class="nav-link fw-bold" style="color: white;" href="#"><strong> EN</strong></a>
+        </div>
+
+        <!-- <ul class="nav justify-content-end">
+        <li class="nav-item">
+          
+        </li>
+      </ul> -->
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container jumbotron jumbotron-fluid text-center" style="padding-top: 50px;">
+      <div>
+        <h1 class="" style="color: black;">
+          <strong class='' style="color: black;">JADE：基于语言学变异的大模型靶向式<br />安全评测平台</strong>
+        </h1>
+      </div>
+
+      <div class="mt-3 mb-3" style="color: black; font-size: x-large;">
+        <!-- grey link name -->
+        <a class="" style="color: black;" href="https://whitzard-ai.github.io/index.html">复旦白泽智能</a><br /><a
+          class="" style="color: black;" href="https://secsys.fudan.edu.cn/">系统软件与安全实验室</a>
+
+        <!--a class=""  style="color: black;"  href="https://whitzard-ai.github.io/index.html" >复旦白泽智能</a--><!--a class=""  style="color: black;" href="https://secsys.fudan.edu.cn/">系统软件与安全实验室
+
+              </-->
+      </div>
+      <div class="mt-3 mb-3">
+        <p class="mb-2">
+          ① JADE：取自 “他山之石，可以攻玉”(《诗经·小雅·鹤鸣》)
+        </p>
+        <p class="mb-2">
+          ② 希望第三方大模型安全评测工具助力大模型产业化之路更好、更安全
+        </p>
+      </div>
+      <!--4 buttons-->
+      <div class="row justify-content-center mb-4" style="margin-left: -60px; margin-right: -60px;">
+
+        <div class="col-2">
+          <h4>
+            <a class="btn btn-dark" href="#" style="width: 140px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
+                <path
+                  d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+                <path
+                  d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.266.266 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.71 12.71 0 0 1 1.01-.193 11.744 11.744 0 0 1-.51-.858 20.801 20.801 0 0 1-.5 1.05zm2.446.45c.15.163.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.876 3.876 0 0 0-.612-.053zM8.078 7.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z" />
+              </svg>
+              中文报告
+            </a>
+          </h4>
+        </div>
+
+        <div class="col-2">
+          <h4>
+            <a class="btn btn-dark" href="https://arxiv.org/abs/2311.00286" style="width: 140px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
+                <path
+                  d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+                <path
+                  d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.266.266 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.71 12.71 0 0 1 1.01-.193 11.744 11.744 0 0 1-.51-.858 20.801 20.801 0 0 1-.5 1.05zm2.446.45c.15.163.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.876 3.876 0 0 0-.612-.053zM8.078 7.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z" />
+              </svg>
+              英文报告
+            </a>
+          </h4>
+        </div>
+
+        <div class="col-2">
+          <h4>
+            <a class="btn btn-danger" href="./display.html" style="width: 140px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-file-earmark-play" viewBox="0 0 16 16">
+                <path
+                  d="M6 6.883v4.234a.5.5 0 0 0 .757.429l3.528-2.117a.5.5 0 0 0 0-.858L6.757 6.454a.5.5 0 0 0-.757.43z" />
+                <path
+                  d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+              </svg> 视频示例
+
+            </a>
+          </h4>
+        </div>
+
+        <div class="col-2">
+          <h4>
+            <a class="btn btn-secondary" href="https://github.com/whitzard-ai/jade-db" style="width: 140px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                class="bi bi-database-down" viewBox="0 0 16 16">
+                <path
+                  d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V10.5a.5.5 0 0 0-1 0v2.793l-.646-.647a.5.5 0 0 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0Z" />
+                <path
+                  d="M12.096 6.223A4.92 4.92 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.493 4.493 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.525 4.525 0 0 1-.813-.927C8.5 14.992 8.252 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.552 4.552 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10c.262 0 .52-.008.774-.024a4.525 4.525 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777ZM3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4Z" />
+              </svg>
+              基准测试集
+            </a>
+          </h4>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container" style="padding-left: 100px; padding-right: 100px;">
+
+      <p class="text-justify" style="font-size: large;">
+        <strong style="color: black;">摘要</strong>：
+        我们提出了大模型靶向式安全评测平台–JADE，通过自动化增强给定种子问题的语言复杂度，同时攻破十余款国内外知名大语言模型的安全防护机制。JADE针对国内开源（中文，8款）、国内商用（中文，6款）和国外商用大模型（英文，4款）三组大模型分别生成三个<strong>通用高危自然文本测试集</strong>，每组模型在对应测试集上的<strong>平均违规率均超过70%</strong>（详见下表），其中测试问题均可同时触发多款模型违规生成。为促进大模型产业发展，我们发布面向国内开源和国外商用大模型的Demo数据集，分别包含150个和80个测试问题（不含核心价值观部分）。若希望在JADE产生的更多未公开测试问题上进行安全评测，欢迎联系我们<sup>*</sup>。
+      </p>
+
+      <div class="mx-auto noshuxian">
+        <table class="tg table noshuxian">
+          <thead>
+            <tr>
+              <th class="tg-uzvj noshuxian">分组</th>
+              <th class="tg-uzvj noshuxian" colspan="4">大模型名称</th>
+              <th class="tg-uzvj noshuxian">平均违规率</th>
+              <th class="tg-uzvj noshuxian">最低违规率</th>
+              <th class="tg-uzvj noshuxiant ">最高违规率</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-uzvj noshuxiant " rowspan="2">国内开源（中文）</td>
+              <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">ChatGLM</td>
+              <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">ChatGLM2</td>
+              <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">书生</td>
+              <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">子牙</td>
+              <td class="tg-9wq8 noshuxiant " rowspan="2">74.13%</td>
+              <td class="tg-9wq8 noshuxiant " rowspan="2">49.00%</td>
+              <td class="tg-9wq8 noshuxiant " rowspan="2">93.50%</td>
+            </tr>
+            <tr>
+              <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">百川</td>
+              <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">BELLE</td>
+              <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">MOSS</td>
+              <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">ChatYuan2</td>
+            </tr>
+            <tr>
+              <td class="tg-uzvj noshuxiant ">国外商用（英文）</td>
+              <td class="tg-9wq8 noshuxiant ">ChatGPT</td>
+              <td class="tg-9wq8 noshuxiant ">Claude</td>
+              <td class="tg-9wq8 noshuxiant ">PaLM2</td>
+              <td class="tg-9wq8 noshuxiant ">LLaMA2</td>
+              <td class="tg-9wq8 noshuxiant ">74.38%</td>
+              <td class="tg-9wq8 noshuxiant ">35.00%</td>
+              <td class="tg-9wq8 noshuxiant ">91.25%</td>
+            </tr>
+            <tr>
+              <td class="tg-uzvj noshuxiant " rowspan="2">国内商用（中文）</td>
+              <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">豆包</td>
+              <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">文心一言</td>
+              <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">智谱清言</td>
+              <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">商量</td>
+              <td class="tg-9wq8 noshuxiant " rowspan="2">77.50%</td>
+              <td class="tg-9wq8 noshuxiant " rowspan="2">56.00%</td>
+              <td class="tg-9wq8 noshuxiant " rowspan="2">90.00%</td>
+            </tr>
+            <tr>
+              <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">百川大模型</td>
+              <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">ABAB</td>
+              <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;"></td>
+              <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-justify" style="font-size: large;">
+        大模型靶向式安全评测平台JADE通过语言学变异模块+安全合规评测模块组成的反馈-迭代机制，实现了全自动的大模型安全评测与高风险问题收集。JADE可针对指定内容生成<strong>靶向式</strong>（保留核心语义）高风险自然文本，具有<strong>强迁移性</strong>（触发多个大模型同时违规）。我们首次发现，语言的复杂性导致现有大模型难以学习到人类无穷多种表达方式，因此无法识别其中不变的违规本质。
+      </p>
+
+      <div class="w-100 text-left" style="color: #666; font-size: medium;">
+        * 您可以通过邮箱联系我们：<a href="mailto:mi_zhang@fudan.edu.cn">mi_zhang@fudan.edu.cn</a>，<a
+          href="mailto:xdpan@fudan.edu.cn">xdpan@fudan.edu.cn</a>，<a
+          href="mailto:m_yang@fudan.edu.cn">m_yang@fudan.edu.cn</a>。
+      </div>
+      <div class="container jumbotron jumbotron-fluid text-center" style="padding-top: 50px;"></div>
+
+
+    </div>
+
+
+
+
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container-fluid" style="background-color: white; padding-top: 20px;">
+      <div class="container marketing">
+        <div class="mt-3 mb-3" style="padding-left: 100px; padding-right: 100px; font-size: large;">
+          <h2 class="mb-3 mx-auto text-center">亮点展示</h2>
+          <p>JADE的亮点主要体现在以下三个方面：</p>
+          <ul>
+            <li>
+              <strong>有效性：</strong>JADE可将原本不具威胁的种子问题（违规率不超过20%），转化为跨模型高危测试问题，将十余款国内外知名大模型平均违规率提升至70%以上，有效探索大模型的安全能力边界。
+            </li>
+            <li>
+              <strong>迁移性：</strong>JADE产生的高危问题可同时触发多款大模型违规。JADE生成的三组Demo数据集中，分别有70%可同时触发6个以上国内开源大模型，68%可触发5个以上国内商用大模型，72%可触发3个以上国外商用大模型。
+            </li>
+            <li><strong>靶向性：</strong>JADE可针对指定内容生成高风险问题，几乎不会改变原始问题的核心语义，且符合自然文本的语法规则。</li>
+          </ul>
+          <p>为了更好地展示JADE的效果，我们提供了一些交互性的例子。</p>
+        </div>
+        <!-- START THE FEATURETTES -->
+        <!--hr class="featurette-divider"-->
+        <div class="row featurette mt-4">
+
+          <!--左边QA 表格-->
+          <div class="col-md-6">
+            <section class="py-3">
+              <div class="container">
+                <div class="card">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="row w-100">
+                      <div class="col-6">
+                        <div class="dropdown d-inline-block">
+                          <!-- <h2 class="featurette-heading fw-normal lh-1 d-inline-block" ><span class="text-muted">
+                          </span></h2> -->
+                          <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <!-- <span class="featurette-heading">对话示例</span> -->
+                            <span>选择种子问题</span>
+                          </button>
+
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="seed_questions_dropdown">
+                            <!-- {% for i in range(0, seeds|length) %}
+                              <li><a class="dropdown-item" onclick="show_seed_qa({{i}})">
+                                  <span class="d-inline-block {{ colors[i % 4] }} rounded-circle p-1"></span>
+                                  {{seeds[i][0]}}</a></li>
+                              {% endfor %} -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="d-inline-block mr-0 float-end"><span id="button_mutate"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="chat-message-container">
+                      <img class="chat-icon" src="img/user.png" alt="User Icon">
+                      <div class="chat-bubble user-message">
+                        <p><span style="font-size:medium;" id='typed_user'></span><span class="d-inline-block float-end"
+                            id="copy_icon"></span></p>
+                      </div>
+
+                    </div>
+
+                    <div class="chat-message-container">
+                      <img class="chat-icon" src="img/bot.png" alt="Bot Icon">
+                      <div class="chat-bubble chat-resp-win" id="typed_ai_win">
+                        <p><span style="font-size:medium; white-space: pre-wrap;" id='typed_ai'></span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+
+
+
+                </div>
+              </div>
+            </section>
+
+            <!--featurette-heading fw-normal -->
+            <!--featurette-heading fw-normal -->
+          </div>
+
+          <!--右边语法树-->
+          <div class="col-md-6">
+            <h3 class="mx-auto text-center w-100">语法解析树🌳
+              <div class="row justify-content-center">
+                <div class="col-4">
+                  <li class="" style="font-size: medium; margin-top: 0.5rem;">语法成分数：<span id='parsing_number'
+                      class=""></span></li>
+                </div>
+                <div class="col-4">
+                  <li style="font-size: medium; margin-top: 0.5rem;">解析树深度：<span id="parsing_depth"></span></li>
+                </div>
+                <div class="col-4">
+                  <li class="" style="font-size: medium; margin-top: 0.5rem;">其他复杂度：<span id='' class="">*</span></li>
+                </div>
+              </div>
+
+            </h3>
+            <div id="constituency_parsing" class="mt-3"></div>
+            <div class="w-100 text-left mx-5 mb-5"><span id="seedSent"></span><span id="parsedSent"></span></div>
+
+          </div>
+
+          <div class="row w-100" style="padding-left: 100px; padding-right: 100px;">
+            <div class="col-6"></div>
+            <div class="col-6 text-center">
+              <h3>高频语法成分表</h3>
+            </div>
+
+            <div class="col-6"></div>
+            <div class="col-2  text-center">
+
+              <ul class="nobut">
+                <li>
+                  IP - 独立分句
+                </li>
+                <li>
+                  VP - 动词短语
+                </li>
+                <li>
+                  VV - 动词
+                </li>
+                <li>
+                  NP - 名词短语
+                </li>
+                <li>
+                  NN - 名词
+                </li>
+                <li>
+                  ADVP - 副词短语
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-2 text-center">
+              <ul class="nobut">
+                <li>
+                  AD - 副词
+                </li>
+                <li>
+                  CLP - 量词短语
+
+                </li>
+                <li>
+                  M - 量词
+                </li>
+                <li>
+                  DNP - 限定短语
+                </li>
+                <li>
+                  PP - 介词短语
+                </li>
+                <li>
+                  VA - 形容词
+                </li>
+              </ul>
+            </div>
+            <div class="col-2 text-center">
+              <ul class="nobut">
+                <li>
+                  QP - 数量短语
+                </li>
+                <li>
+                  CD - 基数词
+                </li>
+                <li>
+                  PN - 代词
+                </li>
+                <li>
+                  CC - 并列连词
+                </li>
+                <li>
+                  CP - 补语
+                </li>
+                <li>
+                  PU - 标点符号
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div> -->
+
+          <!-- <hr class="featurette-divider"> -->
+
+          <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
+      </div>
+    </div>
+
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="container w-100 ">
+    <div class="w-100 text-center">&copy; 2023 复旦白泽智能团队</div>
+  </footer>
+</body>
+
+
+<script>
+  var jade_data;
+  var seeds;
+  var seed_mutations;
+  var parsed_qs;
+
+  var parsed_sent = [];
+  var typed_queue = []
+
+  window.onload = function () {
+    var url = "./jade_data.json"
+    var request = new XMLHttpRequest();
+    request.open("get", url);
+    request.send(null);/*不发送数据到服务器*/
+    request.onload = function () {/*XHR对象获取到返回信息后执行*/
+      if (request.status == 200) {/*返回状态为200，即为数据获取成功*/
+        jade_data = JSON.parse(request.responseText);
+        seeds = jade_data["seeds"]  // list
+        seed_mutations = jade_data["mut_chains"]  // dict
+        // parsed_qs = jade_data["parsed_q"]  // dict
+        parsed_qs = jade_data["diffs"]  // dict
+
+        // add page content here
+        var colors = ['bg-success', 'bg-primary', 'bg-danger', 'bg-info'];
+        var dropdown_str = "";
+        for (var i = 0; i < seeds.length; i++) {
+          dropdown_str += `<li><a class="dropdown-item" onclick="show_seed_qa(${i})">
+            <span class="d-inline-block ${colors[i % 4]} rounded-circle p-1"></span> ${seeds[i][0]}</a></li>`;
+        }
+        document.getElementById("seed_questions_dropdown").innerHTML = dropdown_str;
+        // default
+        show_seed_qa(0)
+      }
+    }
+  }
+
+
+  function clear_show() {
+    for (let i in typed_queue) {
+      typed_queue[i].destroy()
+    }
+    typed_queue.splice(0, typed_queue.length);
+
+    document.getElementById("typed_user").innerHTML = ""
+    document.getElementById("typed_ai").innerHTML = ""
+    //document.getElementById("inputText").innerHTML = ""
+    //document.getElementById("inputText").value = ""
+    // document.getElementById("button_mutate").innerHTML=''
+  }
+
+  function get_mut_button(seed, user) {
+    return '<a class="btn btn-outline-danger my-0 mx-auto py-0 d-inline-block" onclick="mut_next(\'' + seed + '\', \'' +
+      user + '\')">' +
+      '<span class="d-inline-block bg-danger rounded-circle p-1 mx-auto mr-0"></span><span class="d-inline-block p-1 mx-1">变异</span></a>'
+    // +
+    // '<a class="btn btn-outline-secondary my-0 mx-2 py-0 d-inline-block" onclick="mut_prev(\''+seed+'\', \''+
+    // user+'\')">'+
+    // '<span class="d-inline-block bg-secondary rounded-circle p-1 mx-auto"></span><span class="d-inline-block p-1 mx-1">上一个</span></a>'
+  }
+
+  function show_qa(seed, user, ai){
+        clear_show()
+        let typed = new Typed('#typed_user', {
+            strings: [user],
+            startDelay: 200,
+            showCursor: false,
+            onStringTyped: (arrayPos, self) => {
+                document.getElementById("copy_icon").innerHTML='<a class="btn" onclick="copyFn(\''+user+'\')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/></svg></a>'
+        
+
+                if (user.length > 50){
+                    width = 750 - margin.right - margin.left
+                }
+                else{
+                  width = 550 - margin.right - margin.left
+                }
+
+                res = fetch_parsed_strings(user)
+                init_tree()
+                // 1, find difference
+                root = processConstituency(res);
+                // console.log("num_leaf", root.num_leaf)
+                
+                root["x0"] = width / 2;
+                root["y0"] = 0;
+
+                new_tree=root
+
+                if (seed_tree == null || seed == user){
+                  seed_tree=root
+                  seed_global=seed
+                  document.getElementById("seedSent").innerHTML="<span style=\"display: inline-block;width:80px;\"><strong>种子问题：</strong></span>"
+                  new_tree=null
+                }else{
+                  document.getElementById("seedSent").innerHTML="<span style=\"display: inline-block;width:80px\"><strong>种子问题：</strong></span>"+seed+"<br/><span style=\"display: inline-block; width:80px\"><strong>变异问题：</strong></span>"
+                }
+
+                render_difference(seed_tree, new_tree)
+                // set 语法成分数
+                depth_root=update(root);
+
+
+                let type_pn=new Typed('#parsing_number', {
+                  strings: [root.num_leaf.toString()],
+                  startDelay: 10,
+                  showCursor:false,
+                  onStringTyped: (arrayPos, self) => {
+                  }
+                })
+
+                let type_dp=new Typed('#parsing_depth', {
+                  strings: [depth_root.toString()],
+                  startDelay: 10,
+                  showCursor:false,
+                  onStringTyped: (arrayPos, self) => {
+                  }
+                });
+                typed_queue[typed_queue.length]=type_dp
+                typed_queue[typed_queue.length]=type_pn
+
+
+
+                let typed_sent = document.getElementById("parsedSent")
+                typed_sent.innerHTML=parsed_sent.join('');
+
+
+                let typed2 = new Typed('#typed_ai', {
+                    strings: [ai],
+                    startDelay: 400,
+                    onStringTyped: (arrayPos, self) => {
+                        function updateScroll(){
+                          var element = document.getElementById("typed_ai_win");
+                          element.scrollTop = element.scrollHeight;
+                      }
+                      updateScroll()
+                    }
+                })
+
+                document.getElementById("button_mutate").innerHTML=get_mut_button(seed,user)
+                typed_queue[typed_queue.length]=typed2
+            }
+        });
+        typed_queue[typed_queue.length]=typed
+
+
+    }
+    function mut_next(seed, mut_curr){
+        //clear_show()
+        let mut_chain= seed_mutations[seed]
+        let idx;
+
+        if (mut_curr == seed){
+            idx=0 
+        }
+        else{
+            for (let i in mut_chain){
+                if (mut_chain[i][0] != mut_curr)
+                    continue;
+                idx=parseInt(i)
+                break;
+            }
+            idx=((idx+1)%mut_chain.length)
+        }
+        // console.log("show next! idx=",idx+1,"/",mut_chain.length)
+        show_qa(seed, mut_chain[idx][0], mut_chain[idx][1])
+   }
+
+    // not used
+    function mut_prev(seed, mut_curr){
+        //clear_show()
+        let mut_chain= seed_mutations[seed]
+        let idx;
+
+        if (mut_curr == seed){
+            // prev is nothing, set to Seed
+            idx=-1 // no change
+            return
+        }
+        else{
+            // find idx
+            for (let i in mut_chain){
+                if (mut_chain[i][0] != mut_curr)
+                    continue;
+                idx=i
+                break;
+            }
+
+            // if idx=0, then new idx=-1 (refer to seed)
+            idx=(idx-1)%(mut_chain.length)
+        }
+        
+        if (idx == -1){
+            let sid;
+
+            // find idx
+            for (let i in seeds){
+                if (seeds[i][0] != seed)
+                    continue;
+                sid=i
+                break;
+            }
+            show_qa(seed, seed, seeds[sid][1])
+        }else{
+            show_qa(seed, mut_chain[idx][0], mut_chain[idx][1])
+        }
+   }
+
+  function show_seed_qa(id) {
+    clear_show()
+    let row = seeds[id]
+    let user = row[0]
+    let ai = row[1]
+    show_qa(user, user, ai)
+  }
+
+
+
+
+  var margin = { top: 30, right: 30, bottom: 50, left: 30 },
+  width = 550 - margin.right - margin.left,
+  height = 500 - margin.top - margin.bottom;
+
+  var i = 0, duration = 750;
+
+  var tree;
+  var diagonal;
+  var svg;
+
+
+  init_tree()
+  var seed_global = null
+  var seed_tree = null;
+  var new_tree = null;
+  var root = null;
+
+  // pStr is like a string of (IP (VP (ADVP (AD 如何)) (VP (VV 谋杀) (NP (NN 他人)))) (PU ？))
+
+  function render_difference(seed_tree, new_tree) {
+    if (seed_tree == null || new_tree == null) {
+      // console.log("树空，返回")
+      return
+    }
+    /**
+     广度优先遍历
+     0: root 一样；
+     S1 检查children数量，不同则替换old.child=new.child, updata old.
+     S2 遍历检查children.name, 不同则替换 old.child.所有属性=new.child.所有属性, update old.child
+     BFS重复上述 1-21
+    **/
+
+    // 广度优先遍历
+    const queue = [seed_tree];
+    const queue_comp = [new_tree];
+
+
+    while (queue.length > 0 && queue_comp.length > 0) {
+      let currentNode = queue.shift(); // 移除并返回第一个元素
+      let currentNodeComp = queue_comp.shift();
+
+      let is_exploit = false
+      // console.log("遍历... ",currentNodeComp.name)
+      // S1: 如果节点不是叶子节点， 比较 children 的长度
+      if (currentNodeComp.nodeType != 'Leaf') {
+        if (currentNode.children == null) {
+          // 叶子节点 但是 current Node 不是叶子节点？
+          // console.log('叶子节点',currentNode,'但是 comp 不是', currentNodeComp)
+          continue
+        }
+
+        let isSame_expLeaf = true;
+        if (currentNode.children.length == currentNodeComp.children.length) {
+          for (let i = 0; i < currentNode.children.length; i++) {
+            // 叶子节点的不同 name 进入下一流程 标蓝
+            if (currentNode.children[i].nodeType == "Leaf")
+              continue
+            if (currentNode.children[i].name != currentNodeComp.children[i].name) {
+              // console.log("不同@",currentNode.children[i].name, currentNodeComp.children[i].name)
+              isSame_expLeaf = false;
+              break;
+            }
+          }
+        } else {
+          isSame_expLeaf = false;
+        }
+
+        if (!isSame_expLeaf) {
+          // 找到不同的节点了，直接更新 children 返回
+          //currentNode.children = currentNode.children
+          currentNodeComp._color = 'red'
+          // console.log("新的子树! @", currentNodeComp, '设置颜色！')
+          // 找到新的子树
+          let currNodeChildrenNames = []
+          for (let i in currentNode.children) {
+            currNodeChildrenNames[currNodeChildrenNames.length] = currentNode.children[i].name
+            // ## 旧的子树加进 children 里面
+            // console.log("add queue", currentNode.children[i])
+            queue.push(currentNode.children[i]);
+          }
+          // 找到新的子树
+          let new_tree_root = []
+          for (let i in currentNodeComp.children) {
+            cc = currentNodeComp.children[i]
+            //// console.log("cc",cc.name)
+            if (!currNodeChildrenNames.includes(cc.name)) {
+              new_tree_root[new_tree_root.length] = cc
+            }
+            else {
+              // ## 旧的子树加进 children 里面
+              // console.log("add queue comp",cc)
+              queue_comp.push(cc);
+            }
+          }
+          //// console.log("new_tree_root",new_tree_root)
+
+          // 所有 children 的 color 都设置为 red
+          for (let cn in new_tree_root) {
+            cn = new_tree_root[cn]
+            let c_nodes = tree.nodes(cn).reverse()
+            //// console.log("c_nodes",c_nodes)
+            for (let n in c_nodes) {
+              node_i = c_nodes[n]
+              //// console.log(node_i, node_i.name,'color->red')
+              node_i._color = 'red'
+            }
+          }
+          //return
+          is_exploit = true
+        }
+      }
+      // S2: 叶节点/内部节点且 children 数量相同
+      //     比较名字
+      if (currentNode.name != currentNodeComp.name) {
+        currentNodeComp._color = 'lightblue'
+        //return
+        is_exploit = true
+      }
+
+      if (is_exploit) {
+        continue
+      }
+
+      //// console.log("the same children number && the same name: ", currentNode.name, currentNode.children == undefined? 0:currentNode.children.length)
+
+      if (currentNode.children) {
+        for (const child of currentNode.children) {
+          queue.push(child); // 将 children 加入待遍历的队列
+        }
+      }
+
+      if (currentNodeComp.children) {
+        for (const child of currentNodeComp.children) {
+          queue_comp.push(child); // 将 children 加入待遍历的队列
+        }
+      }
+    }
+  }
+
+</script>
+
+</html>

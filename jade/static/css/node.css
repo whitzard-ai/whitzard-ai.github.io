@@ -1,0 +1,32 @@
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: #ccc;
+  stroke-width: 3px;
+}
+
+.node text {
+  font: 16px sans-serif;
+  stroke-width: 0.7px;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+
+.blue{
+  stroke: blue;
+}
+/* 
+div.inputs {
+  width: 300px;
+}
+
+#constituency_parsing {
+  width: 300px;
+} */
