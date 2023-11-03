@@ -34,39 +34,32 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="padding-left: 1%; padding-right: 1%">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="padding-left: 1%; padding-right: 1%;">
       <div class="container-fluid">
         <a class="navbar-brand" href="./jade.html"><strong>JADE</strong></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-      </ul> -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav nav-masthead mx-auto me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link fw-bold" aria-current="page" href="./jade.html"><strong>主页</strong></a>
+              <a class="nav-link fw-bold" href="./jade.html"><strong>主页</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold active" href="#"><strong>视频示例</strong></a>
+              <a class="nav-link fw-bold active" aria-current="page" href="#"><strong>视频示例</strong></a>
             </li>
+
           </ul>
+
         </div>
 
-        <div class="d-flex justify-content-end" style="color: white">
-          <a class="nav-link fw-bold" href="./jade.html"><strong>中文 </strong></a><strong><svg
-              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash"
-              viewBox="0 0 16 16">
+        <!-- <div class="d-flex justify-content-end" style="color: white;">
+          <a class="nav-link fw-bold" href="#"><strong>中文 </strong></a><strong><svg xmlns="http://www.w3.org/2000/svg"
+              width="16" height="16" fill="currentColor" class="bi bi-slash" viewBox="0 0 16 16">
               <path d="M11.354 4.646a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708l6-6a.5.5 0 0 1 .708 0z" />
-            </svg></strong><a class="nav-link fw-bold" style="color: white" href="#"><strong> EN</strong></a>
-        </div>
-
-        <!-- <ul class="nav justify-content-end">
-        <li class="nav-item">
-          
-        </li>
-      </ul> -->
+            </svg></strong><a class="nav-link fw-bold" style="color: white;" href="#"><strong> EN</strong></a>
+        </div> -->
       </div>
     </nav>
   </header>
@@ -182,8 +175,8 @@
       <div class="container" style="padding-left: 6%; padding-right: 6%;">
         <div class="mt-5 mx-auto" style="padding-left: 12%; padding-right: 12%; margin-bottom: -40px;">
           <h3 class="text-center">相关材料</h3>
-          <div style="padding-left: 20%;">
-            <ul>
+          <div class="text-center">
+            <ul class="nobut" style="list-style: none;">
               <li>中文报告：<a href="https://gitee.com/whitzard-ai/jade-db/raw/master/JADE__chn.pdf">https://gitee.com/whitzard-ai/jade-db/raw/master/JADE__chn.pdf</a></li>
               <li>英文报告：<a href="https://arxiv.org/abs/2311.00286">https://arxiv.org/abs/2311.00286</a></li>
               <li>视频示例：<a href="./jade-demo.html">JADE在国内外六款大模型上的效果展示</a></li>
