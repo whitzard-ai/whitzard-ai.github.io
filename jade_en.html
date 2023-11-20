@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>JADE｜Whitzard-AI@Fudan</title>
+
+
+    <script src="./jade_assets/static/js/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="./jade_assets/static/js/jquery-2.2.1.min.js" crossorigin="anonymous"></script>
+  <script src="./jade_assets/static/js/popper.min.js" crossorigin="anonymous"></script>
+  <script src="./jade_assets/static/js/bootstrap.js" crossorigin="anonymous"></script>
+
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="./jade_assets/static/js/bootstrap.js" crossorigin="anonymous"></script>
+  <script src="./jade_assets/static/js/custom.js" crossorigin="anonymous"></script>
+  <script src="./jade_assets/static/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <!-- script src="./jade_assets/static/js/parser-tree.js" crossorigin="anonymous"></script -->
+
+  <!-- Bootstrap CSS -->
+  <link href="./jade_assets/static/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./jade_assets/static/css/carousel.css" rel="stylesheet" />
+  <link href="./jade_assets/static/css/node.css" rel="stylesheet" />
+  <link href="./jade_assets/static/css/custom.css" rel="stylesheet" />
+    <style> /* moved to custom.css  */</style>
+
+    
+    <!-- Custom styles for this template -->
+  </head>
+  <body>
+    
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="padding-left: 1%; padding-right: 1%;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./jade.html"><strong>JADE</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav nav-masthead mx-auto me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link fw-bold" aria-current="page" href="#"><strong>Home</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold active" href="./jade-demo.html"><strong>Video</strong></a>
+          </li>
+
+        </ul>
+
+      </div>
+      <a class="navbar-brand text-right" href="./jade.html"><strong>中文</strong></a> / <a class="navbar-brand text-right" href="#"><strong>EN</strong></a>
+
+    </div>
+  </nav>
+</header>
+
+
+
+<main>
+  <div class="container jumbotron jumbotron-fluid text-center" style="padding-top: 3%;">
+    <div>
+      <h1 class="" style="color: black;">
+        <strong class='' style="color: black;">JADE: A Linguistic-based Safety Evaluation Platform for<br />Large Language Models</strong>
+      </h1>
+    </div>
+    <div class="mt-3 mb-3" style="color: black; font-size: x-large;">
+      <!-- grey link name -->
+      <a class="" style="color: black;" href="https://whitzard-ai.github.io/index.html">Whitzard-AI</a><br /><a
+        class="" style="color: black;" href="https://secsys.fudan.edu.cn/">System Software and Security Lab</a> @ Fudan University
+    </div>
+
+  <div class="mt-3 mb-3">
+    <p class="mb-2">
+      ① JADE：“There are stones on its rockeries, / Which can be used to polish jade.”
+    </p>
+    <p class="mb-2">
+      ② Third-party safety evaluation platforms help the LLM industry better and safer.
+    </p>
+  </div>
+
+  <div class="row justify-content-center mb-4" style="margin-left: -2%; margin-right: -2%;">
+
+    <div class="col-lg-2">
+      <h4>
+        <a class="btn btn-dark" href="https://gitee.com/whitzard-ai/jade-db/raw/master/JADE__chn.pdf" style="width: 140px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+            class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
+            <path
+              d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+            <path
+              d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.266.266 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.71 12.71 0 0 1 1.01-.193 11.744 11.744 0 0 1-.51-.858 20.801 20.801 0 0 1-.5 1.05zm2.446.45c.15.163.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.876 3.876 0 0 0-.612-.053zM8.078 7.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z" />
+          </svg>
+          Paper (zh)
+        </a>
+      </h4>
+    </div>
+
+    <div class="col-lg-2">
+      <h4>
+        <a class="btn btn-dark" href="https://arxiv.org/abs/2311.00286" style="width: 140px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+            class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
+            <path
+              d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+            <path
+              d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.266.266 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.71 12.71 0 0 1 1.01-.193 11.744 11.744 0 0 1-.51-.858 20.801 20.801 0 0 1-.5 1.05zm2.446.45c.15.163.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.876 3.876 0 0 0-.612-.053zM8.078 7.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z" />
+          </svg>
+          Paper (en)
+        </a>
+      </h4>
+    </div>
+
+    <div class="col-lg-2">
+      <h4>
+        <a class="btn btn-danger" href="./jade-demo.html" style="width: 140px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+            class="bi bi-file-earmark-play" viewBox="0 0 16 16">
+            <path
+              d="M6 6.883v4.234a.5.5 0 0 0 .757.429l3.528-2.117a.5.5 0 0 0 0-.858L6.757 6.454a.5.5 0 0 0-.757.43z" />
+            <path
+              d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+          </svg> Video
+
+        </a>
+      </h4>
+    </div>
+
+    <div class="col-lg-2">
+      <h4>
+        <a class="btn btn-secondary" href="https://github.com/whitzard-ai/jade-db" style="width: 200px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+            class="bi bi-database-down" viewBox="0 0 16 16">
+            <path
+              d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V10.5a.5.5 0 0 0-1 0v2.793l-.646-.647a.5.5 0 0 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0Z" />
+            <path
+              d="M12.096 6.223A4.92 4.92 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.493 4.493 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.525 4.525 0 0 1-.813-.927C8.5 14.992 8.252 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.552 4.552 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10c.262 0 .52-.008.774-.024a4.525 4.525 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777ZM3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4Z" />
+          </svg>
+          Benchmark Dataset
+        </a>
+      </h4>
+    </div>
+
+    <div class="col-lg-2">
+      <h4>
+        <a class="btn btn-secondary" href="https://gitee.com/whitzard-ai/jade-db" style="width: 200px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+            class="bi bi-database-down" viewBox="0 0 16 16">
+            <path
+              d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V10.5a.5.5 0 0 0-1 0v2.793l-.646-.647a.5.5 0 0 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0Z" />
+            <path
+              d="M12.096 6.223A4.92 4.92 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.493 4.493 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.525 4.525 0 0 1-.813-.927C8.5 14.992 8.252 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.552 4.552 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10c.262 0 .52-.008.774-.024a4.525 4.525 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777ZM3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4Z" />
+          </svg>
+          Backup Dataset
+        </a>
+      </h4>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- here we begins! -->
+
+  <div class="container" style="padding-left: 6%; padding-right: 6%;">
+    <!-- <h2 class="text-center fs-2 ml-0 d-inline-block"></h2> -->
+    <p class="text-justify" style="font-size: large;">
+      <strong style="color: black;">Abstract</strong>:
+      In this work, we present JADE, a targeted linguistic fuzzing platform which strengthens the linguistic complexity of seed questions to simultaneously and consistently break a wide range of widely-used LLMs categorized in three groups: eight open-sourced Chinese, six commercial Chinese and four commercial English LLMs. JADE generates three safety benchmarks for the three groups of LLMs, which contain unsafe questions that are highly threatening: the questions simultaneously trigger harmful generation of multiple LLMs, with an average unsafe generation ratio of 70% (please see the table below), while are still natural questions, fluent and preserving the core unsafe semantics. We release the benchmark demos generated for commercial English LLMs and open-sourced Chinese LLMs. For readers who are interested in evaluating on more questions generated by JADE, please contact us<sup>*</sup>.
+    </p>
+
+
+    <div class="mx-auto noshuxian slide_row">
+      <table class="tg table noshuxian">
+      <thead>
+        <tr rowspan="2">
+          <th class="tg-uzvj noshuxian" colspan="1" data-rowspan="2" style="border-bottom-color: #66666600;">Group</th>
+          <th class="tg-uzvj noshuxian" colspan="4" data-rowspan="2" style="border-bottom-color: #66666600;">Model Name</th>
+          <th class="tg-uzvj noshuxian" colspan="3" data-rowspan="1">Unsafe Generation Ratio</th>
+        </tr>
+        <tr rowspan="2">
+          <th class="tg-uzvj noshuxian" colspan="5"></th>
+          <th class="tg-uzvj noshuxian" rowspan="1">Average</th>
+          <th class="tg-uzvj noshuxian" rowspan="1">Least</th>
+          <th class="tg-uzvj noshuxian" rowspan="1">Most</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tg-uzvj noshuxiant " rowspan="2">Open-sourced LLM (Chinese)</td>
+          <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">ChatGLM</td>
+          <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">ChatGLM2</td>
+          <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">InternLM</td>
+          <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">Ziya</td>
+          <td class="tg-9wq8 noshuxiant " rowspan="2">74.13%</td>
+          <td class="tg-9wq8 noshuxiant " rowspan="2">49.00%</td>
+          <td class="tg-9wq8 noshuxiant " rowspan="2">93.50%</td>
+        </tr>
+        <tr>
+          <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">Baichuan</td>
+          <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">BELLE</td>
+          <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">MOSS</td>
+          <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">ChatYuan2</td>
+        </tr>
+        <tr>
+          <td class="tg-uzvj noshuxiant ">Commercial LLM (English)</td>
+          <td class="tg-9wq8 noshuxiant ">ChatGPT</td>
+          <td class="tg-9wq8 noshuxiant ">Claude</td>
+          <td class="tg-9wq8 noshuxiant ">PaLM2</td>
+          <td class="tg-9wq8 noshuxiant ">LLaMA2</td>
+          <td class="tg-9wq8 noshuxiant ">74.38%</td>
+          <td class="tg-9wq8 noshuxiant ">35.00%</td>
+          <td class="tg-9wq8 noshuxiant ">91.25%</td>
+        </tr>
+        <tr>
+          <td class="tg-uzvj noshuxiant " rowspan="2">Commercial LLM (Chinese)</td>
+          <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">Doubao</td>
+          <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">Wenxin Yiyan</td>
+          <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">ChatGLM</td>
+          <td class="tg-9wq8 noshuxiant " style="border-bottom-color: #66666600;">SenseChat</td>
+          <td class="tg-9wq8 noshuxiant " rowspan="2">77.50%</td>
+          <td class="tg-9wq8 noshuxiant " rowspan="2">56.00%</td>
+          <td class="tg-9wq8 noshuxiant " rowspan="2">90.00%</td>
+        </tr>
+        <tr>
+          <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">Baichuan</td>
+          <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;">ABAB</td>
+          <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;"></td>
+          <td class="tg-9wq8 noshuxiant " style="border-top-color: #66666600;"></td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+
+
+    <p class="text-justify" style="font-size: large;">
+      JADE is based on Noam Chomsky’s seminal theory of transformational-generative grammar. Given a seed question with unsafe intention, JADE invokes a sequence of generative and transformational rules to increment the complexity of the syntactic structure of the original question, until the safety guardrail is broken. Our key insight is: Due to the complexity of human language, most of the current best LLMs can hardly recognize the invariant evil from the infinite number of different syntactic structures which form an unbound example space that can never be fully covered. Technically, the generative/transformative rules are constructed by native speakers of the languages, and, once developed, can be used to automatically grow and transform the parse tree of a given question, until the guardrail is broken. Besides, JADE also incorporates an active learning algorithm to incrementally improve the LLM-based evaluation module, which iteratively optimizes the prompts for evaluation with a small amount of annotated data, to effectively strengthen the alignment with the judgement made by human experts.
+    </p>
+    <div class="w-100 text-left" style="color: #666; font-size: medium;">
+      * Please contact us by email: <a href="mailto:mi_zhang@fudan.edu.cn">mi_zhang@fudan.edu.cn</a>，<a href="mailto:xdpan@fudan.edu.cn">xdpan@fudan.edu.cn</a>，<a href="mailto:m_yang@fudan.edu.cn">m_yang@fudan.edu.cn</a>。
+    </div>
+    <div class="container jumbotron jumbotron-fluid text-center" style="padding-top: 50px;"></div>
+</div>
+
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+
+
+<div class="container-fluid" style="background-color: white; padding-top: 20px;">
+  <div class="container" style="padding-left: 6%; padding-right: 6%; ">
+    <div class="mt-3 mb-3" style="font-size: large;">
+      <h2 class="mb-3 mx-auto text-center">Highlight Showcase</h2>
+      <p>The highlights of JADE are primarily composed of the following three aspects:</p>
+      <ul>
+        <li><strong>Effectiveness: </strong>JADE is able to transform originally benign seed questions (with an average violation rate of only about 20%) into highly critical and insecure problems, elevating the average violation rate of well-known LLMs to over 70%. This effectively explores the language understanding and security boundaries of LLMs.</li>
+        <li><strong>Transferability: </strong>JADE generates highly threatening test questions based on linguistic complexity, which can trigger violations in almost all open-source LLMs. For example, in the Chinese open-source large model security benchmark dataset generated by JADE, 30% of the problems can trigger violations in eight well-known Chinese open-sourced LLMs simultaneously.</li>
+        <li><strong>Naturalness: </strong>The test questions generated by JADE through linguistic mutation hardly modify the core semantics of the original problems and adhere to the properties of natural language. In contrast, jailbreaking templates for LLMs (including suffixes) introduce a large number of semantically irrelevant elements or garbled characters, exhibiting strong non-natural language characteristics, which are susceptible to targeted defenses by LLM developers.</li>
+      </ul>
+      <p>To better demonstrate the effectiveness of JADE, we provide some interactive examples as follows.</p>
+      <div class="alert alert-danger" role="alert">
+        Disclaidisclaier: The following contents and videos contain examples of harmful impact, which do not represent the position of us.
+        </div>
+    </div>
+    <!-- START THE FEATURETTES -->
+
+    <!--hr class="featurette-divider"-->
+
+    <div class="row featurette mt-4">
+      <!--左边QA 表格-->
+      <div class="col-md-6" >
+        <section class="py-3">
+          <div class="container">
+              <div class="card">
+                  <div class="card-header d-flex justify-content-between align-items-center">
+                    <div class="row w-100">
+                      <div class="col-6">
+                        <div class="dropdown d-inline-block">
+                          <!-- <h2 class="featurette-heading fw-normal lh-1 d-inline-block" ><span class="text-muted">
+                          </span></h2> -->
+                          <button class="btn btn-outline-dark dropdown-toggle"
+                          type="button"  data-bs-toggle="dropdown" aria-expanded="false" >
+                              <!-- <span class="featurette-heading">对话示例</span> -->
+                              <span>Select Seed Question</span>
+                          </button>
+                  
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="seed_questions_dropdown">
+                              <!-- {% for i in range(0, seeds|length) %}
+                              <li><a class="dropdown-item" onclick="show_seed_qa({{i}})">
+                                  <span class="d-inline-block {{ colors[i % 4] }} rounded-circle p-1"></span>
+                                  {{seeds[i][0]}}</a></li>
+                              {% endfor %} -->
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-6 mr-0 pr-0">
+                        <div class="d-inline-block float-end" style="margin-right: -2%;"><span id="button_mutate"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                      <div class="chat-message-container">
+                          <img class="chat-icon" src="./jade_assets/img/user.png" alt="User Icon">
+                          <div class="chat-bubble user-message" style="font-size:medium;">
+                            <p><span>(Translated)  </span><span style="font-size:medium;" id='typed_user'></span>
+                            <span style="color: gray;"><br/>(Original) <span id='typed_user_ori'></span></span>
+                              <span class="d-inline-block float-end" id="copy_icon"></span>
+                            </p> 
+                          </div>
+                      </div>
+                      <div class="chat-message-container">
+                          <img class="chat-icon" src="./jade_assets/img/bot.png" alt="Bot Icon">
+                          <div class="chat-bubble  chat-resp-win" id="typed_ai_win" style="font-size:medium;  white-space: pre-wrap;"><p><span >(Translated) </span><span  id='typed_ai'></span></p></div>
+                      </div>
+                  </div>
+              </div>
+            <div> 
+
+
+
+            </div>
+      </div></section>
+        
+      </div>
+
+      <div class="col-md-6">
+        <h3 class="mx-auto text-center w-100">Syntactic Parse Tree🌳
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <li class="" style="font-size: 14px; margin-top: 0.5rem;">Syntactic constituents num: <span id='parsing_number' class=""></span></li>
+            </div>
+            <div class="col-6">
+              <li style="font-size: 14px; margin-top: 0.5rem;">Parse tree depth: <span id="parsing_depth"></span></li>
+            </div>
+            <div class="col-6">
+              <li style="font-size: 14px; margin-top: 0.5rem;">Other complexity metrics: <span id="">*</span></li>
+            </div>
+            <div class="col-6"></div>
+          </div>
+        </h3>
+
+        <div id="constituency_parsing" class="mt-3 slide_row">
+        </div>
+        <div class="w-100 text-left mx-lg-5 mb-5"><span id="seedSent"></span><span id="parsedSent"></span>
+
+      </div>
+
+      
+    </div>
+
+    <div class="row w-100" style="padding-left: 0%; padding-right: 0%;">
+      <div class="col-lg-6"></div>
+      <div class="col-lg-6 text-center">
+        <h3>Syntactic constituents:</h3>
+      </div>
+
+      <div class="col-6 "></div>
+
+    <div class="col-3">
+      <div class="">
+        <strong></strong></div>
+      <ul>
+        <li>
+          IP - Independent Clause
+        </li><li>
+          VP - Verb Phrase
+        </li><li>
+          VV - Verb
+        </li><li>
+          NP - Noun Phrase
+        </li><li>
+          NN - Noun
+        </li><li>
+          ADVP - Adverb Phrase
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-3">
+      <div class="">
+        <strong style="color: white;"></strong></div>
+      <ul>
+        <li>
+          AD - Adverb
+        </li><li>
+          CLP - Classifier Phrase
+
+        </li><li>
+          M - Measure Word
+        </li><li>
+          DNP - Determiner Phrase
+        </li><li>
+          PP - Prepositional Phrase
+        </li><li>
+          PU - Punctuation
+        </li>
+      </ul>
+
+    </div>
+    </div>
+
+    <div class="mt-5 mx-auto" style="margin-bottom: -40px;">
+      <h3 class="text-center">Releted Materials</h3>
+      <div class="text-center">
+        <ul class="nobut" style="list-style: none;">
+          <li>Chinese report: <a href="https://gitee.com/whitzard-ai/jade-db/raw/master/JADE__chn.pdf">https://gitee.com/whitzard-ai/jade-db/raw/master/JADE__chn.pdf</a></li>
+          <li>English report: <a href="https://arxiv.org/abs/2311.00286">https://arxiv.org/abs/2311.00286</a></li>
+          <li>Video demo: <a href="./jade-demo.html">JADE在国内外六款大模型上的效果展示</a></li>
+          <li>Benchmark dataset: <a href="https://github.com/whitzard-ai/jade-db">https://github.com/whitzard-ai/jade-db</a></li>
+          <li>Benchmark dataset (backup): <a href="https://gitee.com/whitzard-ai/jade-db">https://gitee.com/whitzard-ai/jade-db</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+  </div>
+    <!-- <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div> -->
+
+    <!-- <hr class="featurette-divider"> -->
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="container w-100 ">
+  <div class="w-100 text-center">&copy; 2023 Whitzard-AI@Fudan</div>
+</footer>
+
+</body>
+
+<script>
+  var jade_data;
+  var seeds;
+  var seeds_ori;
+  var seed_mutations;
+  var seed_mutations_ori;
+  var parsed_qs;
+  var parsed_sent = [];
+  var typed_queue= []
+
+  window.onload = function () {
+    var url = "./jade_assets/jade_data_en.json"
+    var request = new XMLHttpRequest();
+    request.open("get", url);
+    request.send(null);/*不发送数据到服务器*/
+    request.onload = function () {/*XHR对象获取到返回信息后执行*/
+      if (request.status == 200) {/*返回状态为200，即为数据获取成功*/
+        jade_data = JSON.parse(request.responseText);
+        seeds = jade_data["seeds_en"]  // list
+        seeds_ori = jade_data["seeds"]
+        seed_mutations = jade_data["mut_chains_en"]  // dict
+        seed_mutations_ori = jade_data["mut_chains"]
+        parsed_qs = jade_data["parsed_q"]  // dict
+        // parsed_qs = jade_data["diffs"]  // dict  TODO
+        // console.log(jade_data);  // todo
+        // console.log(parsed_qs)
+        
+        // add page content here
+        var colors = ['bg-success','bg-primary','bg-danger','bg-info' ];
+        var dropdown_str = "";
+        for (var i = 0; i < seeds.length; i++) {
+          dropdown_str += `<li><a class="dropdown-item" onclick="show_seed_qa(${i})">
+            <span class="d-inline-block ${colors[i%4]} rounded-circle p-1"></span> ${seeds[i][0]}</a></li>`;
+        }
+        document.getElementById("seed_questions_dropdown").innerHTML = dropdown_str;
+        // default
+        show_seed_qa(0)
+      }
+    }
+  }
+
+
+    function clear_show(){
+        for (let i in typed_queue){
+          typed_queue[i].destroy()
+        }
+        typed_queue.splice(0,typed_queue.length);
+
+        document.getElementById("typed_user").innerHTML = ""
+        document.getElementById("typed_user_ori").innerHTML = ""
+        document.getElementById("typed_ai").innerHTML = ""
+        //document.getElementById("inputText").innerHTML = ""
+        //document.getElementById("inputText").value = ""
+        // document.getElementById("button_mutate").innerHTML=''
+      }
+
+    function get_mut_button(seed, user, seed_ori, user_ori){
+        return '<a class="btn btn-outline-danger my-0 mx-auto py-0 d-inline-block" onclick="mut_next(\''+seed+'\', \''+
+                        user+'\', \''+ 
+                        seed_ori+'\', \''+ 
+                        user_ori+'\')">'+
+                        '<span class="d-inline-block bg-danger rounded-circle p-1 mx-auto mr-0"></span><span class="d-inline-block p-1 mx-1">Mutate</span></a>'
+                        // +
+                        // '<a class="btn btn-outline-secondary my-0 mx-2 py-0 d-inline-block" onclick="mut_prev(\''+seed+'\', \''+
+                        // user+'\')">'+
+                        // '<span class="d-inline-block bg-secondary rounded-circle p-1 mx-auto"></span><span class="d-inline-block p-1 mx-1">上一个</span></a>'
+
+    }
+
+    
+
+    function show_qa(seed, user, ai, seed_ori, user_ori, ai_ori){
+        clear_show()
+        let typed_ori = new Typed('#typed_user_ori', {
+          strings: [user_ori],
+          startDelay: 200,
+          showCursor: false,
+          onStringTyped: (arrayPos, self) => {
+          }
+        })
+
+        let typed = new Typed('#typed_user', {
+            strings: [user],
+            startDelay: 200,
+            showCursor: false,
+            onStringTyped: (arrayPos, self) => {
+
+                document.getElementById("copy_icon").innerHTML='<a class="btn" onclick="copyFn(\''+user+'\')"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/></svg></a>'
+                console.log(user_ori)
+                res=fetch_parsed_strings(user_ori)
+
+                init_tree()
+                // 1, find difference
+                root = processConstituency(res);
+                // console.log("num_leaf", root.num_leaf)
+                root["x0"] = width / 2;
+                root["y0"] = 0;
+                new_tree=root
+
+                if (seed_tree == null || seed == user){
+                  seed_tree=root
+                  seed_global=seed
+                  // console.log(document.getElementById("seedSent"))
+                  document.getElementById("seedSent").innerHTML="<span style=\"display: inline-block;width:80px\"><strong>Seed: </strong></span>"
+                  new_tree=null
+                }else{
+                  document.getElementById("seedSent").innerHTML="<span style=\"display: inline-block;width:80px\"><strong>Seed: </strong></span>"+seed_ori+"<br/><span style=\"display: inline-block; width:80px\"><strong>Mutation: </strong></span>"
+                }
+
+                depth_root=update(root);
+
+                let type_pn=new Typed('#parsing_number', {
+                  strings: [root.num_leaf.toString()],
+                  startDelay: 10,
+                  showCursor:false,
+                  onStringTyped: (arrayPos, self) => {
+                  }
+                })
+                let type_dp=new Typed('#parsing_depth', {
+                  strings: [depth_root.toString()],
+                  startDelay: 10,
+                  showCursor:false,
+                  onStringTyped: (arrayPos, self) => {
+                  }
+                });
+                typed_queue[typed_queue.length]=type_dp
+                typed_queue[typed_queue.length]=type_pn
+
+
+                let typed_sent = document.getElementById("parsedSent")
+                typed_sent.innerHTML=parsed_sent.join('');
+
+
+    
+                let typed2 = new Typed('#typed_ai', {
+                    strings: [ai],
+                    startDelay: 400,
+                    onStringTyped: (arrayPos, self) => {
+                      function updateScroll(){
+                        var element = document.getElementById("typed_ai_win");
+                        element.scrollTop = element.scrollHeight;
+                    }
+                    updateScroll()
+                    }
+                })
+
+                document.getElementById("button_mutate").innerHTML=get_mut_button(seed,user, seed_ori, user_ori)
+
+                typed_queue[typed_queue.length]=typed2
+            }
+        });
+        typed_queue[typed_queue.length]=typed
+
+    }
+    function mut_next(seed, mut_curr, seed_ori,mut_curr_ori){
+        //clear_show()
+        let mut_chain= seed_mutations[seed]
+        let mut_chain_ori= seed_mutations_ori[seed_ori]
+        let idx;
+
+        // console.log("mut_next(): mut_curr="+mut_curr+"; seed="+seed)
+
+        if (mut_curr_ori == seed_ori){
+            idx=0 
+        }
+        else{
+            for (let i in mut_chain_ori){
+                // console.log(i,mut_chain_ori[i][0])
+                if (mut_chain_ori[i][0] != mut_curr_ori)
+                    continue;
+                idx=parseInt(i)
+                break;
+            }
+            // console.log("idx="+idx.toString()+"; nxt_idx="+((idx+1)).toString(), 'mut_chain.len=', mut_chain_ori.length)
+            idx=(idx+1)%(mut_chain_ori.length)
+        }
+        
+         show_qa(seed, mut_chain[idx][0], mut_chain[idx][1],
+         seed_ori, mut_chain_ori[idx][0], mut_chain_ori[idx][1])
+   }
+    function mut_prev(seed, mut_curr){
+        //clear_show()
+        let mut_chain= seed_mutations[seed]
+        let idx;
+
+        if (mut_curr == seed){
+            // prev is nothing, set to Seed
+            idx=-1 // no change
+            return
+        }
+        else{
+            // find idx
+            for (let i in mut_chain){
+                if (mut_chain[i][0] != mut_curr)
+                    continue;
+                idx=i
+                break;
+            }
+
+            // if idx=0, then new idx=-1 (refer to seed)
+            idx=(idx-1)%(mut_chain.length)
+        }
+        
+        if (idx == -1){
+            let sid;
+
+            // find idx
+            for (let i in seeds){
+                if (seeds[i][0] != seed)
+                    continue;
+                sid=i
+                break;
+            }
+            show_qa(seed, seed, seeds[sid][1])
+        }else{
+            show_qa(seed, mut_chain[idx][0], mut_chain[idx][1])
+        }
+   }
+
+
+    function show_seed_qa(id){
+        clear_show()
+        let row= seeds[id]
+        let user = row[0] 
+        let ai = row[1]
+        // ori
+
+
+        let row_ori= seeds_ori[id]
+        let user_ori = row_ori[0] 
+        let ai_ori = row_ori[1]
+
+
+        show_qa(user, user,ai,
+        user_ori, user_ori,ai_ori )
+    }
+
+  
+
+  </script>
+
+  <script>
+
+
+    var margin = { top: 30, right: 30, bottom: 50, left: 30 },
+    width = 500 - margin.right - margin.left,
+    height = 500 - margin.top - margin.bottom;
+
+    var i = 0, duration = 750;
+
+    var tree;
+    var diagonal;
+    var svg;
+
+
+    init_tree()
+    var seed_global=null
+    var seed_tree=null;
+    var new_tree=null;
+    var root=null;
+
+
+    function goParse(pStr) {
+
+    }
+
+
+  </script>
+</html>
