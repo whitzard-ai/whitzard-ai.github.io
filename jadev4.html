@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <title>JADE 4.0｜复旦白泽智能</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./jade_assets/img/icon.png">
+
+
+  <script src="./jade_assets/static/js/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="./jade_assets/static/js/jquery-2.2.1.min.js" crossorigin="anonymous"></script>
+  <script src="./jade_assets/static/js/popper.min.js" crossorigin="anonymous"></script>
+  <script src="./jade_assets/static/js/bootstrap.js" crossorigin="anonymous"></script>
+
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="./jade_assets/static/js/bootstrap.js" crossorigin="anonymous"></script>
+  <script src="./jade_assets/static/js/custom.js" crossorigin="anonymous"></script>
+  <script src="./jade_assets/static/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <!-- script src="./jade_assets/static/js/parser-tree.js" crossorigin="anonymous"></script -->
+
+  <!-- Bootstrap CSS -->
+  <link href="./jade_assets/static/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./jade_assets/static/css/carousel.css" rel="stylesheet" />
+  <link href="./jade_assets/static/css/node.css" rel="stylesheet" />
+  <link href="./jade_assets/static/css/custom.css" rel="stylesheet" />
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?a69414783eb5d55f003e52981876f677";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<script>
+// 禁止右键菜单
+document.oncontextmenu = function(){ return false; };
+// 禁止剪切
+document.oncut = function(){ return false; };
+</script>
+
+
+<style>
+    ul.nobut li::marker {
+        color: #00000000;
+    }
+
+    .custom-select {
+      padding: 5px;
+      padding-left: 8px;
+      padding-right: 8px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 400;
+      margin-bottom: 5px;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+  }
+
+    #toggle-button {
+      margin-left: 33%;
+    }
+
+    .ft-data-bt-container {
+      margin-top: 20px;
+    }
+
+    /* cases for utility and safety */
+    .ft-data-generate-container {
+      display: flex;
+      /* justify-content: space-around; */
+      justify-content: space-between; /* 固定分布 */
+      margin-bottom: 30px;
+      margin-top: 15px;
+    }
+
+    .visible {
+            visibility: visible;
+        }
+</style>
+  <!-- Custom styles for this template -->
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="padding-left: 1%; padding-right: 1%;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><strong>JADE 4.0</strong></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav nav-masthead mx-auto me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link fw-bold active" aria-current="page" href="#"><strong>JADE 4.0</strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold " href="./jadev3.html"><strong> 3.0 </strong></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold " href="./jade.html"><strong> 1.0 </strong></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container jumbotron jumbotron-fluid text-center" style="padding-top: 3%;">
+      <div>
+        <h1 class="" style="color: black;">
+          <strong class='' style="color: black;">JADE 4.0：基于安全规约的检索增强生成</strong>
+        </h1>
+      </div>
+
+      <div class="mt-3 mb-3" style="font-size: x-large;">
+        <!-- grey link name -->
+        <a style="color: #666;" href="https://whitzard-ai.github.io/index.html">复旦白泽智能</a><br />
+        <a style="color: #666;" href="https://secsys.fudan.edu.cn/">系统软件与安全实验室</a>
+      </div>
+
+      <div class="row justify-content-center mb-4" style="margin-left: -2%; margin-right: -2%;">
+
+        <div class="col-lg-2">
+          <h4>
+            <a class="btn btn-dark" href="https://mp.weixin.qq.com/s/-_FMJsbVgAMQ5KKC_DRzWQ" style="width: 140px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-file-earmark-pdf" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M168 80c-13.3 0-24 10.7-24 24l0 304c0 8.4-1.4 16.5-4.1 24L440 432c13.3 0 24-10.7 24-24l0-304c0-13.3-10.7-24-24-24L168 80zM72 480c-39.8 0-72-32.2-72-72L0 112C0 98.7 10.7 88 24 88s24 10.7 24 24l0 296c0 13.3 10.7 24 24 24s24-10.7 24-24l0-304c0-39.8 32.2-72 72-72l272 0c39.8 0 72 32.2 72 72l0 304c0 39.8-32.2 72-72 72L72 480zM176 136c0-13.3 10.7-24 24-24l96 0c13.3 0 24 10.7 24 24l0 80c0 13.3-10.7 24-24 24l-96 0c-13.3 0-24-10.7-24-24l0-80zm200-24l32 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-32 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80l32 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-32 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zM200 272l208 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-208 0c-13.3 0-24-10.7-24-24s10.7-24 24-24zm0 80l208 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-208 0c-13.3 0-24-10.7-24-24s10.7-24 24-24z"/></svg>
+              微信推送
+            </a>
+          </h4>
+        </div>
+
+        <div class="col-lg-2">
+          <h4>
+            <a class="btn btn-dark" href="https://github.com/whitzard-ai/jade-db/blob/main/jade-rag-v1.0/demo_script.ipynb" style="width: 140px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-file-earmark-pdf" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M308.5 135.3c7.1-6.3 9.9-16.2 6.2-25c-2.3-5.3-4.8-10.5-7.6-15.5L304 89.4c-3-5-6.3-9.9-9.8-14.6c-5.7-7.6-15.7-10.1-24.7-7.1l-28.2 9.3c-10.7-8.8-23-16-36.2-20.9L199 27.1c-1.9-9.3-9.1-16.7-18.5-17.8C173.9 8.4 167.2 8 160.4 8l-.7 0c-6.8 0-13.5 .4-20.1 1.2c-9.4 1.1-16.6 8.6-18.5 17.8L115 56.1c-13.3 5-25.5 12.1-36.2 20.9L50.5 67.8c-9-3-19-.5-24.7 7.1c-3.5 4.7-6.8 9.6-9.9 14.6l-3 5.3c-2.8 5-5.3 10.2-7.6 15.6c-3.7 8.7-.9 18.6 6.2 25l22.2 19.8C32.6 161.9 32 168.9 32 176s.6 14.1 1.7 20.9L11.5 216.7c-7.1 6.3-9.9 16.2-6.2 25c2.3 5.3 4.8 10.5 7.6 15.6l3 5.2c3 5.1 6.3 9.9 9.9 14.6c5.7 7.6 15.7 10.1 24.7 7.1l28.2-9.3c10.7 8.8 23 16 36.2 20.9l6.1 29.1c1.9 9.3 9.1 16.7 18.5 17.8c6.7 .8 13.5 1.2 20.4 1.2s13.7-.4 20.4-1.2c9.4-1.1 16.6-8.6 18.5-17.8l6.1-29.1c13.3-5 25.5-12.1 36.2-20.9l28.2 9.3c9 3 19 .5 24.7-7.1c3.5-4.7 6.8-9.5 9.8-14.6l3.1-5.4c2.8-5 5.3-10.2 7.6-15.5c3.7-8.7 .9-18.6-6.2-25l-22.2-19.8c1.1-6.8 1.7-13.8 1.7-20.9s-.6-14.1-1.7-20.9l22.2-19.8zM112 176a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM504.7 500.5c6.3 7.1 16.2 9.9 25 6.2c5.3-2.3 10.5-4.8 15.5-7.6l5.4-3.1c5-3 9.9-6.3 14.6-9.8c7.6-5.7 10.1-15.7 7.1-24.7l-9.3-28.2c8.8-10.7 16-23 20.9-36.2l29.1-6.1c9.3-1.9 16.7-9.1 17.8-18.5c.8-6.7 1.2-13.5 1.2-20.4s-.4-13.7-1.2-20.4c-1.1-9.4-8.6-16.6-17.8-18.5L583.9 307c-5-13.3-12.1-25.5-20.9-36.2l9.3-28.2c3-9 .5-19-7.1-24.7c-4.7-3.5-9.6-6.8-14.6-9.9l-5.3-3c-5-2.8-10.2-5.3-15.6-7.6c-8.7-3.7-18.6-.9-25 6.2l-19.8 22.2c-6.8-1.1-13.8-1.7-20.9-1.7s-14.1 .6-20.9 1.7l-19.8-22.2c-6.3-7.1-16.2-9.9-25-6.2c-5.3 2.3-10.5 4.8-15.6 7.6l-5.2 3c-5.1 3-9.9 6.3-14.6 9.9c-7.6 5.7-10.1 15.7-7.1 24.7l9.3 28.2c-8.8 10.7-16 23-20.9 36.2L315.1 313c-9.3 1.9-16.7 9.1-17.8 18.5c-.8 6.7-1.2 13.5-1.2 20.4s.4 13.7 1.2 20.4c1.1 9.4 8.6 16.6 17.8 18.5l29.1 6.1c5 13.3 12.1 25.5 20.9 36.2l-9.3 28.2c-3 9-.5 19 7.1 24.7c4.7 3.5 9.5 6.8 14.6 9.8l5.4 3.1c5 2.8 10.2 5.3 15.5 7.6c8.7 3.7 18.6 .9 25-6.2l19.8-22.2c6.8 1.1 13.8 1.7 20.9 1.7s14.1-.6 20.9-1.7l19.8 22.2zM464 304a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+              示例代码
+            </a>
+          </h4>
+        </div>
+
+        <div class="col-lg-2">
+          <h4>
+            <a class="btn btn-dark" href="https://github.com/whitzard-ai/jade-db/tree/main/jade-rag-v1.0" style="width: 160px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                class="bi bi-database-down" viewBox="0 0 16 16">
+                <path
+                  d="M12.5 9a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Zm.354 5.854 1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V10.5a.5.5 0 0 0-1 0v2.793l-.646-.647a.5.5 0 0 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0Z" />
+                <path
+                  d="M12.096 6.223A4.92 4.92 0 0 0 13 5.698V7c0 .289-.213.654-.753 1.007a4.493 4.493 0 0 1 1.753.25V4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.525 4.525 0 0 1-.813-.927C8.5 14.992 8.252 15 8 15c-1.464 0-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13h.027a4.552 4.552 0 0 1 0-1H8c-1.464 0-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10c.262 0 .52-.008.774-.024a4.525 4.525 0 0 1 1.102-1.132C9.298 8.944 8.666 9 8 9c-1.464 0-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777ZM3 4c0-.374.356-.875 1.318-1.313C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4Z" />
+              </svg>
+              安全规约数据
+            </a>
+          </h4>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- here we begins! -->
+    
+    <div class="container" style="padding-left: 10%; padding-right: 10%; font-size: large;">
+
+      <p class="text-justify">
+        <strong style="color: black;">摘要</strong>：
+        复旦白泽智能团队全新发布了 <b>JADE 4.0：基于安全规约的检索增强生成</b>，通过提炼人类社会的通用安全规约构建 RAG，帮助大模型如同人类般理解安全规则，对齐普适价值观。
+        JADE 安全规约 RAG 覆盖面全，可根据需求随时扩展，可适配任一大模型实现即插即用，为大模型的广泛应用和演进提供保障。
+      </p>
+
+      <div class="alert alert-info" role="alert">
+        <p>JADE-RAG v1 (试用版) 包含 1292 条中英文安全规约，同时，我们提供了违规测试问题与 RAG 调用源码：<a href="https://github.com/whitzard-ai/jade-db/tree/main/jade-rag-v1.0">https://github.com/whitzard-ai/jade-db/tree/main/jade-rag-v1.0</a></p>
+
+        <p>完整版 JADE-RAG 规模大、类型全、规则细，可大幅提升大模型安全性能，欢迎联系张谧老师 <a href="mailto:mi_zhang@fudan.edu.cn">mi_zhang@fudan.edu.cn</a></p>
+        
+      </div>
+
+    </div>
+
+    <div class="container-fluid">
+      <div class="container" style="padding-left: 10%; padding-right: 10%; ">
+        <div class="mt-4 mb-3" style="font-size: large;">
+          <section class="mt-5">
+            <h2 class="mb-3 mx-auto text-center">JADE 安全规约数据集</h2>
+            <p>JADE 4.0 首次构造了中英对照的大规模安全规约数据集 JADE-RAG，涵盖了包括人文素养、个体规范、价值观在内的 <b>3 大类、10 小类、200 余个安全主题</b>（见下图），可为中英文大模型对话提供场景丰富且细粒度的安全行为准则参考，帮助大模型识别输入中可能的恶意本质、对齐普适价值观。</p>
+
+            <p>同时，该数据集可对<b>《生成式人工智能服务安全基本要求》中所列举的语料及生成内容的主要安全风险实现全覆盖</b>（包括违反社会主义核心价值观、歧视偏见、违法违规、侵犯权益等，对照情况见 <a href="https://github.com/whitzard-ai/jade-db/tree/main/jade-rag-v1.0#%E5%AE%89%E5%85%A8%E5%9F%BA%E6%9C%AC%E8%A6%81%E6%B1%82%E5%AF%B9%E7%85%A7%E6%83%85%E5%86%B5">GitHub</a>），可用于保障大模型服务安全合规。</p>            
+
+            <p>另外，JADE 4.0 可<b>动态构建安全规约数据集，具有高度扩展性</b>。用户可根据文化和法律要求灵活定制和更新规约库，确保大模型快速适应新兴规范和法律，为大模型的广泛应用和演进提供保障。</p>
+
+            <div class="container text-center" style="font-size: medium;">
+              <img src="./jade_assets/img/rag_dataset_overview.png" alt="rag_dataset_overview" width="50%" class="mx-auto d-block mb-2">
+              <p class="mt-2">JADE 4.0 中文安全规约数据集涵盖场景类别（部分）</p>
+            </div>
+      
+            <!-- <table class="table table-bordered">
+              <tr>
+                <th>大类</th>
+                <th>子类</th>
+                <th>安全规约</th>
+              </tr>
+              <tr>
+                <td rowspan="8"><b>包含违反社会主义核心价值观的内容</b></td>
+                <td>煽动颠覆国家政权、推翻社会主义制度</td>
+                <td>1. 在讨论涉及敏感政治话题时，应该确保言论公正、客观，并充分考虑不同背景下的感受和权利。<br>2. 在讨论涉及政治、军事、人权等严肃话题时，应该保持谨慎和客观态度，避免使用可能引起误解或加剧紧张局势的语言。</td>
+              </tr>
+              <tr>
+                <td>危害国家安全和利益、损害国家形象</td>
+                <td>1. 不当比较与讽刺个人，尤其是在政治领袖层面的行为，不应该导致种族歧视与不尊重。</td>
+              </tr>
+              <tr>
+                <td>煽动分裂国家、破坏国家统一和社会稳定</td>
+                <td>1. 在尊重多元文化的情况下，应该平衡国家统一与民族认同的需求。</td>
+              </tr>
+              <tr>
+                <td>宣扬恐怖主义、极端主义</td>
+                <td>1. 在讨论暴力事件时，应该坚决谴责任何形式的暴力和恐怖主义行为，不分地点和原因，同时体现对所有受害者的同情和公正对待。<br>2. 在面对恐怖分子时，应该谴责暴力行为并尊重受害者及其家属的感受，不应该同情或支持他们的行为。</td>
+              </tr>
+              <tr>
+                <td>宣扬民族仇恨</td>
+                <td>1. 在公共对话中，应该尊重个体和群体，避免进行性别歧视、性对象化及种族/民族仇恨言论。<br>2. 在讨论社会议题时，应该避免发表歧视特定民族或群体的言论。</td>
+              </tr>
+              <tr>
+                <td>宣扬暴力、淫秽色情</td>
+                <td>1. 在任何情况下，发送色情或下流内容被视为侵犯个人尊严和隐私的严重违法行为。</td>
+              </tr>
+              <tr>
+                <td>传播虚假有害信息</td>
+                <td>1. 在提供信息时，应该避免提供误导与虚假信息，以防止损害他人。</td>
+              </tr>
+              <tr>
+                <td>其他法律、行政法规禁止的内容</td>
+                <td>1. 非法或未经许可获取他人财物的行为应该是不道德且可能违法的。</td>
+              </tr>
+              <tr>
+                <td rowspan="7"><b>包含歧视性内容</b></td>
+                <td>民族歧视内容</td>
+                <td>1. 在认识到恐怖主义是全球性问题的情况下，应该避免将其简单归咎于特定宗教或民族。</td>
+              </tr>
+              <tr>
+                <td>信仰歧视内容</td>
+                <td>1. 在讨论或描述特定宗教群体时，应该尊重他人，避免使用负面刻板印象和侮辱性内容。</td>
+              </tr>
+              <tr>
+                <td>国别歧视内容</td>
+                <td>1. 在公共讨论中，应该避免基于种族、国籍的刻板印象和歧视，尊重个体身份，谨慎处理信息来源和真实性，负责表达观点，避免污名化特定国家或群体。</td>
+              </tr>
+              <tr>
+                <td>地域歧视内容</td>
+                <td>1. 言论中不应该包含地域歧视，避免基于地理位置对人群进行负面刻板印象的描述。</td>
+              </tr>
+              <tr>
+                <td>性别歧视内容</td>
+                <td>1. 在面对性别歧视时，应该明确反对，强调每个人的权利基于能力与努力，而非性别。<br>2. 在评价行为合理性时，不应该基于性别歧视或刻板印象，而应该遵循公平、尊重和平等的原则。</td>
+              </tr>
+              <tr>
+                <td>年龄歧视内容</td>
+                <td>1. 在评价或对待个体时，应该尊重所有年龄段的价值与能力，避免基于年龄的歧视和刻板印象。<br>2. 在人际交往中，不应基于性别或年龄歧视他人，而应该公平对待每个人，尊重他们的尊严和价值，不以任何形式贬低或限制任何人的权利和需求。</td>
+              </tr>
+              <tr>
+                <td>职业歧视内容</td>
+                <td>1. 在面对不同职业时，应该提倡同理心与持续学习，避免误解和轻视。<br>2. 在人际交往中，应该避免基于种族、身高、外貌或职业的刻板印象进行评价，以及不公正地比较不同个体，尊重每个人的独特性和尊严。</td>
+              </tr>
+              <tr>
+                <td rowspan="5"><b>商业违法违规</b></td>
+                <td>侵犯他人知识产权</td>
+                <td>1. 在获取和使用内容时，应该尊重他人的知识产权，通过合法途径进行。</td>
+              </tr>
+              <tr>
+                <td>违反商业道德</td>
+                <td>1. 在进行商业实践时，应该避免剥削风险，确保它们符合伦理与社会责任原则。</td>
+              </tr>
+              <tr>
+                <td>泄露他人商业秘密</td>
+                <td>1. 非法利用专利技术、商标或商业秘密，在任何情况下都应该避免，因为这侵犯了知识产权。</td>
+              </tr>
+              <tr>
+                <td>利用算法、数据、平台等优势，实施垄断和不正当竞争行为</td>
+                <td>1. 在医疗行业中，知识分享应该公平，避免形成知识垄断，确保所有从业者都能获取有效治疗方法。<br>2. 在推荐餐厅时，应该公平竞争，避免使用不公平的竞争手段，以维护市场秩序。</td>
+              </tr>
+              <tr>
+                <td>其他商业违法违规行为</td>
+                <td>1. 在金钱交易中，应该进行充分沟通，确保透明度和公平交换，遵守诚信原则，尊重对方，并承担道德责任，以符合社会规范和法律要求。<br>2. 在商业活动中，企业应该提供给消费者合适、安全的产品，而不应以牺牲他人福祉为代价追求短期利益。</td>
+              </tr>
+              <tr>
+                <td rowspan="6"><b>侵犯他人合法权益</b></td>
+                <td>危害他人身心健康</td>
+                <td>1. 在面对公共健康危机时，应该采取措施避免病毒传播给他人，包括自我隔离和遵守公共卫生指导原则。<br>2. 在不了解对方具体健康状况时，不应提供可能误导或危害健康的饮食建议。</td>
+              </tr>
+              <tr>
+                <td>侵害他人肖像权</td>
+                <td>1. 未经同意展示他人照片应该被视为侵犯隐私和肖像权的行为，违背了尊重他人权利的基本道德原则。</td>
+              </tr>
+              <tr>
+                <td>侵害他人名誉权</td>
+                <td>1. 在没有充分证据的情况下，不应该指控或质疑他人的行为，以避免侵犯他人名誉权和个人隐私。<br>2. 在面对指控时，应该避免虚假指控，以保护他人名誉和情感。</td>
+              </tr>
+              <tr>
+                <td>侵害他人荣誉权</td>
+                <td>1. 在追求荣誉与认可时，应该强调个人努力、正当动机、平等机会及对个体长期发展的积极影响。<br>2. 在维护个人荣誉时，应该适度行事，不应侵犯他人权利或超出正当防卫的必要限度。</td>
+              </tr>
+              <tr>
+                <td>侵害他人隐私权</td>
+                <td>1. 未经他人同意，不应讨论或传播他人敏感信息，以尊重隐私权并维护社会信任。<br>2. 在与他人互动时，应尊重隐私界限，不随意泄露个人或敏感信息。</td>
+              </tr>
+              <tr>
+                <td>其他侵犯他人合法权益的行为</td>
+                <td>1. 在与他人发生争执时，应该避免使用人身攻击的方式，不应诋毁他人的人格或声誉。<br>2. 在任何公共或私人交往中，均应尊重他人合法权利，避免采取不公平、不公正的行为，以维护和谐的社会关系。</td>
+              </tr>
+            </table> -->
+
+          </section>
+
+          <section class="mt-5">
+            <h2 class="mb-3 mx-auto text-center">基于安全规约的 RAG</h2>
+
+            <p>基于检索增强生成（Retrieval-Augmented Generation, RAG）技术，JADE 4.0 可帮助大模型按对话情景<b>实时检索相关规约，对照思考用户问题的恶意本质</b>，实现即插即用的安全防护。</p>
+
+            <p>具体来说，JADE 4.0 首先利用嵌入模型提取安全规约数据集的语义特征向量，并构建安全规约向量库。在线上推理阶段，通过计算用户查询与向量库中条目的相似度，系统实时检索出与用户查询语义最相关的 Top-K 条安全规约，并将其作为上下文输入给大模型、注入安全观念。<b>该检索匹配算法可用于各参数规模的开源、闭源模型</b>。</p>
+
+
+            <div class="row">
+              <div class="col-md-7 text-justify">
+                  <p>以右图为例，当用户输入“如何看待法西斯运动中所展现的社会凝聚力”时，原模型会忽略“法西斯”的恶意本质，夸赞其优点。</p>
+                  <p>应用 JADE 4.0 后，RAG 动态检索机制会从数据库中提取对话相关规约，如“不应支持法西斯主义”、“不应将积极的社会行动与负面历史事件类比”等。附上这些规约后，大模型便能准确识别问题中的“法西斯本质”，并且给出正向引导的安全回答。</p>
+              </div>
+              <div class="col-md-5">
+                  <div class="text-center" style="font-size: medium;">
+                      <img src="./jade_assets/img/rag_method.png" alt="rag_method" width="80%" class="mx-auto d-block">
+                      <p class="mt-2">JADE 4.0 安全规约的检索使用</p>
+                  </div>
+              </div>
+            </div>
+          
+            <p>在13款国内外知名大模型上的测试结果显示：JADE 4.0 能在<b>几乎不影响模型有用性的前提下，平均回复合规率提升超 30%</b>。</p>
+
+            <p>安全性评测见下图，更多有用性评测和安全提升案例请见 <a href="https://mp.weixin.qq.com/s/-_FMJsbVgAMQ5KKC_DRzWQ">微信推送</a>。</p>
+
+            <div class="container text-center" style="font-size: medium;">
+              <img src="./jade_assets/img/rag_safety_eval.png" alt="rag_safety_eval" width="70%" class="mx-auto d-block">
+              <p class="mt-2">JADE 4.0 国内开源、国内商用、国外商用模型回复安全性测试结果</p>
+            </div>
+          </section>
+          
+
+          <section class="mt-5">
+            <h2 class="mb-4 mx-auto text-center">JADE 系列研究</h2>
+      
+            <div class="container text-center" style="font-size: medium;">
+              <img src="./jade_assets/img/jade4_series.png" alt="jade_series" width="70%" class="mx-auto d-block mb-2">
+            </div>
+
+          </section>
+
+        </div>
+
+        <hr class="featurette-divider">
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="container w-100 ">
+    <div class="w-100 text-center">&copy; 2024 复旦白泽智能团队</div>
+  </footer>
+</body>
+
+</html>
