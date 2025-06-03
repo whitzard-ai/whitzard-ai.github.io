@@ -33,13 +33,13 @@ itemStyle: {
 },
 children: [
   {
-    name: '模型安全',
+    name: '模型供应链',
     nodeClick:'link',
     link: "./projects.html#ai-supply-chain",
     children: [
       {
         class: '5☆',
-        name:"时间序列: 传感器数据, 气象、金融",
+        // name:"时间序列: 传感器数据, 气象、金融",
         children: [
           {
             name: '对抗样本',
@@ -48,63 +48,95 @@ children: [
           {
             name: '后门攻防',
             nodeClick:false
+          },
+          {
+            name: '分布式攻防',
+            nodeClick:false
+          },
+          {
+            name: '鲁棒性与泛化性',
+            nodeClick:false
           }
         ]
       }
     ]
   },
   {
-    name: '数据安全',
+    name: '数据隐私',
     nodeClick:'link',
-    link: "./projects.html#model-protection",
+    link: "./projects.html#data-protection",
     children: [
       {
         class: '4☆',
         children: [
           {
-            name: '数据隐私',
+            name: '属性推理',
             nodeClick:false
           },
           {
-            name: '产权保护',
+            name: '成员推理',
+            nodeClick:false
+          },
+          {
+            name: '数据重建',
+            nodeClick:false
+          },
+          {
+            name: '模型反演',
             nodeClick:false
           }
         ]
       }]
   },
   {
-    name: 'AIGC安全',
+    name: '模型产权',
     nodeClick:'link',
-    link: "./projects.html",
+    // link: "./projects.html",
     children: [
       {
         class: '3☆',
         children: [
           {
-            name: '内容合规检测',
+            name: '模型水印',
             nodeClick:false
           },
           {
-            name: '生成内容溯源',
+            name: '模型指纹',
+            nodeClick:false
+          },
+          {
+            name: '模型窃取',
+            nodeClick:false
+          },
+          {
+            name: '模型溯源',
             nodeClick:false
           }
         ]
       }]
   },
   {
-    name: 'AI赋能安全',
+    name: '大模型安全',
     nodeClick:'link',
-    link: "./projects.html#ai4sec",
+    link: "./index.html#llm-security",
     children: [
       {
         class: '2☆',
         children: [
           {
-            name: '黑产打击',
+            name: '文本大模型安全',
             nodeClick:false
           },
           {
-            name: '移动安全',
+            name: '多模态大模型安全',
+            nodeClick:false
+          },
+          {
+            name: '文生图大模型安全',
+            nodeClick:false
+          },
+          {
+            name: 'Agent安全',
             nodeClick:false
           }
         ]
