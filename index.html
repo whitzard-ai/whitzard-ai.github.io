@@ -186,16 +186,44 @@
             line-height: 150%;
         }
         .dropdown:hover>.dropdown-menu {
-  display: block;
-}
+            display: block;
+        }
 
-.dropdown>.dropdown-toggle:active {
-  /*Without this, clicking will make it sticky*/
-    pointer-events: none;
-}
-        
+        .dropdown>.dropdown-toggle:active {
+        /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
 
+        /* 以下是折叠news的样式设计 */
+        #news-list-container {
+            max-height: 500px; /* （折叠时）假设每条新闻占据 40px 高度 */
+            overflow: hidden;
+            transition: max-height 0.1s ease-in-out;
+            padding-bottom: 20px;
+        }
 
+        #news-list-container.expanded {
+            max-height: 20000px; /* （被展开时）设定一个足够大的高度，以显示所有内容 */
+            overflow: visible;
+        }
+
+        .toggle-button-container {
+            text-align: center;
+            padding: 10px 0;
+            background: #fff;
+            position: sticky;
+            bottom: 0;
+        }
+
+        .toggle-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            user-select: none;
+        }
     </style>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/visibility.js"></script>
@@ -344,47 +372,74 @@
         <div class="ui vertical stripe container">
             <h1 style="color: rgb(15, 7, 125);">近期新闻</h1>
             <div class="ui divider"></div>
-                <ul class='list'>
-                    <li class="list">[2025/10/25] 张谧教授受邀参加CNCC 2025“大模型水印：人工智能生成内容溯源的机遇与挑战”分会，并分享报告《白泽智能解读大模型时代的水印技术》 [<a href="https://ccf.org.cn/cncc2025/schedule_d_4043">链接</a>]</li>
-                    <li class="list">[2025/10/24] 张谧教授受邀参加CNCC 2025“浦江大讲堂：生成式AI安全治理——从数据到模型”分会，并参与Panel讨论</li>
-                    <li class="list">[2025/10/23] 我们发布了 <a href="https://mp.weixin.qq.com/s/7nGBY4oIOsVWkfzSj2EKtg">JADE 8.0：首个面向大型推理模型的推理链安全防护工具</a>，并提供 <a href="https://github.com/whitzard-ai/jade-db/tree/main/jade-lrmguard">JadeLRMGuard工具</a>！</li>
-                    <li class="list">[2025/10/15] 我们发布了 <a href="https://mp.weixin.qq.com/s/9De_RR-jX-c04hhaBuhniQ">JADE 7.0：面向智能体安全的MCP恶意server实例集合</a>，并开源 <a href="https://github.com/whitzard-ai/jade-db/tree/main/jade-mcp-v1.0">JADE-MCP Benchmark数据集</a>！</li>
-                    <li class="list">[2025/09/19] 1篇论文被NeurIPS 2025录用😊恭喜邱虎鸣同学
-                    <li class="list">[2025/09/12] 张谧教授受南都大数据研究院采访，分享治理AI虚假信息传播、复旦白泽智能提供有效方案 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202509131122895.html">链接</a>]</li>
-                    <li class="list">[2025/09/12] 张谧教授受邀参加Inclusion外滩大会“规范AI内容 共筑清朗生态”论坛，并分享报告《大模型安全治理-JADE助力负责任AI》 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202509121122718.html?layer=3&share=chat&isndappinstalled=0">链接</a>]</li>
-                    <li class="list">[2025/08/07] 张谧教授受国家教育行政学院邀请，为网络安全研讨班录制课程，主题为《大模型安全前世今生：从ChatGPT到Grok4》</li>
-                    <li class="list">[2025/07/27] 张谧教授受邀参加世界人工智能大会 WAIC 2025 “人工智能的创新发展：伦理引领，治理赋能”论坛，并分享报告《大模型安全风险与治理——复旦白泽助力负责任AI》</li>
-                    <li class="list">[2025/07/18] 张谧教授受邀华为应用安全技术实验室先锋论坛，直播讲解大模型安全前世今生，并介绍 JADE 系列研究，现场解答各类安全问题</li>
-                    <li class="list">[2025/06/28] 我们发布了 <a href="https://mp.weixin.qq.com/s/SMY2vth3WKq1pxq6M-OErQ">JADE 6.0：首个面向多模态大模型的幻觉测评</a>，并开源 <a href="https://github.com/whitzard-ai/jade-db/tree/main/jade-hal-v1.0">JADE-HAL 红队数据集</a>！</li>
-                    <li class="list">[2025/06/18] 张谧教授受邀华为-复旦workshop，演讲分享关于多模态大模型的安全风险</li>
-                    <li class="list">[2025/06/18] 与华为合作的大模型安全项目顺利结题，结题会在黄大年茶思屋举行</li>
-                    <li class="list">[2025/06/12] 张谧教授受邀上海计算机学会与华为联合论坛，演讲分享关于通用大模型的安全治理</li>
-                    <li class="list">[2025/04/10] 张谧教授受南都大数据研究院采访，分享大模型的安全评测与治理，指出大模型需像人一样学习安全本质 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202504091067733.html?layer=3&share=chat&isndappinstalled=0">链接</a>]</li>
-                    <li class="list">[2025/03/05] 与阿里合作的大模型安全项目顺利结题，结题会在阿里西溪园区举行</li>
-                    <li class="list">[2025/02/27] 1篇论文被CVPR 2025录用😊恭喜李菲菲同学
-                    <li class="list">[2025/02/24] 我们发布了 <a href="./jadev5.html">JADE 5.0：文生图大模型内容安全评测</a>，并开源 <a href="https://github.com/whitzard-ai/jade-db/tree/main/jade-t2i-v1.0">JADE-T2I Benchmark数据集</a>！</li>
-                    <li class="list">[2025/01/24] 1篇论文被USENIX Security 2025录用😊恭喜汪亦凝同学
-                    <li class="list">[2025/01/20] 1篇论文被WWW 2025录用😊恭喜黄元敏同学
-                    <li class="list">[2024/12/04] 我们与阿里安全联合举办“大模型安全挑战者计划”大赛，欢迎关注！ [<a href="https://s.alibaba.com/aichallenge">大赛官网</a>]
-                    <li class="list">[2024/11/29] 复旦白泽智能参加DataCon2024，并在AI安全赛道荣获二等奖！ [<a href="https://mp.weixin.qq.com/s/f5W3SDWX3UBYfDrcnMldmw">榜单</a>]
-                    <li class="list">[2024/11/26] 我们发布了 <a href="./jadev4.html">JADE 4.0：基于安全规约的检索增强生成</a>，通过提炼人类社会的通用安全规约构建 RAG，帮助大模型如同人类般理解安全规则，对齐普适价值观！
-                    <li class="list">[2024/10/26] 黄元敏、陆逸凡同学受 PaperWeekly 邀请，直播分享《大模型安全生态总览：前沿进展与挑战》 [<a href="https://mp.weixin.qq.com/s/A-dEjJAwWKBbR4n-TigGFA">链接</a>]（手机微信打开可观看回放）
-                    <li class="list">[2024/09/19] 张谧教授受邀参加APSARA云栖大会，并在圆桌论坛分享AI科技的责任与未来：伦理、安全与协同共治 [<a href="https://yunqi.aliyun.com/2024/solitary?spm=5176.29615464.J_7493026540.2.7aae4c84DbaRO4&agendaId=5449">回放</a>]
-                    <li class="list">[2024/08/24] 1篇论文被CCS 2024录用😊恭喜陆逸凡同学
-                    <li class="list">[2024/06/26] 我们发布了 <a href="./jadev3.html">JADE 3.0：大模型安全对齐</a>，在多款中文大模型上实现内生安全性与有用性的同时提升！</li>
-                    <li class="list">[2024/03/09] 1篇论文被S&P 2024录用😊恭喜邱虎鸣同学
-                    <li class="list">[2024/02/26] 2篇论文被CVPR 2024录用（其中一篇为Highlight）😊😊恭喜黄元敏、汪亦凝等同学
-                    <li class="list">[2024/01/23] 1篇论文被WWW 2024录用😊恭喜游小钰等同学
-                    <li class="list">[2024/01/10] 张谧教授做客《追AI的人》第34期，带你领略大模型安全伦理风险与治理前沿 [<a href="https://mp.weixin.qq.com/s/9wJ46y-k13JlAG8A1s11gw">链接</a>]
-                    <li class="list">[2023/12/27] 张谧教授受邀参加AI发展与治理创新研讨会并分享《通用人工智能风险与治理——从OpenAI Q*谈起》
-                    <br> 媒体报道：[<a href="http://www.xinhuanet.com/tech/20231227/1e6e33282a194ac884740ed120537616/c.html">新华网</a>][<a href="https://3w.huanqiu.com/a/c36dc8/4FvnVIbEDD0">环球网</a>][<a href="https://it.gmw.cn/2023-12/27/content_37056703.htm">光明网</a>][<a href="https://finance.ifeng.com/c/8Vsrff36we9">凤凰网</a>]
-                    <li class="list">[2023/12/20] 恭喜白泽智能的3位小伙伴顺利毕业：毕业快乐！</li>
-                    <li class="list">[2023/11/20] 我们再次发布 <a href="https://mp.weixin.qq.com/s/7llgKhB78-5OJe-itWQ5AA">JADE 2.0：大模型安全通用测试集</a>，提供更多难度等级的测试问题！</li>
-                    <li class="list">[2023/11/12] 复旦白泽智能凭借作品LLM Shield在“华为杯”第二届中国研究生网络安全创新大赛——大模型隐私安全赛道上荣获一等奖！ [<a href="https://mp.weixin.qq.com/s/hGau16AgUO2DzzOOf3f5dw">推送</a>]</li>
-                    <li class="list">[2023/11/03] 复旦白泽智能发布了基于语言学变异的大模型靶向式安全评测平台 <a href="./jade.html">JADE</a>！</li>
-                    <li class="list">[2023/10/18] 复旦白泽智能在“第六届中国软件开源创新大赛——ModelScope挑战赛”中荣获一等奖！[<a href="https://mp.weixin.qq.com/s/xqXt-aU5GSByCYqzOXiLtg">推送</a>][<a href="https://mp.weixin.qq.com/s/JCjOrg8pFsdOsiJvlgx_zQ">经验分享</a>]</li>
-                </ul>
+                <div id="news-list-container">
+                    <ul class='list'>
+                        <li class="list">[2025/10/25] 张谧教授受邀参加CNCC 2025“大模型水印：人工智能生成内容溯源的机遇与挑战”分会，并分享报告《白泽智能解读大模型时代的水印技术》 [<a href="https://ccf.org.cn/cncc2025/schedule_d_4043">链接</a>]</li>
+                        <li class="list">[2025/10/24] 张谧教授受邀参加CNCC 2025“浦江大讲堂：生成式AI安全治理——从数据到模型”分会，并参与Panel讨论</li>
+                        <li class="list">[2025/10/23] 我们发布了 <a href="https://mp.weixin.qq.com/s/7nGBY4oIOsVWkfzSj2EKtg">JADE 8.0：首个面向大型推理模型的推理链安全防护工具</a>，并提供 <a href="https://github.com/whitzard-ai/jade-db/tree/main/jade-lrmguard">JadeLRMGuard工具</a>！</li>
+                        <li class="list">[2025/10/15] 我们发布了 <a href="https://mp.weixin.qq.com/s/9De_RR-jX-c04hhaBuhniQ">JADE 7.0：面向智能体安全的MCP恶意server实例集合</a>，并开源 <a href="https://github.com/whitzard-ai/jade-db/tree/main/jade-mcp-v1.0">JADE-MCP Benchmark数据集</a>！</li>
+                        <li class="list">[2025/09/19] 1篇论文被NeurIPS 2025录用😊恭喜邱虎鸣同学
+                        <li class="list">[2025/09/12] 张谧教授受南都大数据研究院采访，分享治理AI虚假信息传播、复旦白泽智能提供有效方案 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202509131122895.html">链接</a>]</li>
+                        <li class="list">[2025/09/12] 张谧教授受邀参加Inclusion外滩大会“规范AI内容 共筑清朗生态”论坛，并分享报告《大模型安全治理-JADE助力负责任AI》 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202509121122718.html?layer=3&share=chat&isndappinstalled=0">链接</a>]</li>
+                        <li class="list">[2025/08/07] 张谧教授受国家教育行政学院邀请，为网络安全研讨班录制课程，主题为《大模型安全前世今生：从ChatGPT到Grok4》</li>
+                        <li class="list">[2025/07/27] 张谧教授受邀参加世界人工智能大会 WAIC 2025 “人工智能的创新发展：伦理引领，治理赋能”论坛，并分享报告《大模型安全风险与治理——复旦白泽助力负责任AI》</li>
+                        <li class="list">[2025/07/18] 张谧教授受邀华为应用安全技术实验室先锋论坛，直播讲解大模型安全前世今生，并介绍 JADE 系列研究，现场解答各类安全问题</li>
+                        <li class="list">[2025/06/28] 我们发布了 <a href="https://mp.weixin.qq.com/s/SMY2vth3WKq1pxq6M-OErQ">JADE 6.0：首个面向多模态大模型的幻觉测评</a>，并开源 <a href="https://github.com/whitzard-ai/jade-db/tree/main/jade-hal-v1.0">JADE-HAL 红队数据集</a>！</li>
+                        <li class="list">[2025/06/18] 张谧教授受邀华为-复旦workshop，演讲分享关于多模态大模型的安全风险</li>
+                        <li class="list">[2025/06/18] 与华为合作的大模型安全项目顺利结题，结题会在黄大年茶思屋举行</li>
+                        <li class="list">[2025/06/12] 张谧教授受邀上海计算机学会与华为联合论坛，演讲分享关于通用大模型的安全治理</li>
+                        <li class="list">[2025/04/10] 张谧教授受南都大数据研究院采访，分享大模型的安全评测与治理，指出大模型需像人一样学习安全本质 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202504091067733.html?layer=3&share=chat&isndappinstalled=0">链接</a>]</li>
+                        <li class="list">[2025/03/05] 与阿里合作的大模型安全项目顺利结题，结题会在阿里西溪园区举行</li>
+                        <li class="list">[2025/02/27] 1篇论文被CVPR 2025录用😊恭喜李菲菲同学
+                        <li class="list">[2025/02/24] 我们发布了 <a href="./jadev5.html">JADE 5.0：文生图大模型内容安全评测</a>，并开源 <a href="https://github.com/whitzard-ai/jade-db/tree/main/jade-t2i-v1.0">JADE-T2I Benchmark数据集</a>！</li>
+                        <li class="list">[2025/01/24] 1篇论文被USENIX Security 2025录用😊恭喜汪亦凝同学
+                        <li class="list">[2025/01/20] 1篇论文被WWW 2025录用😊恭喜黄元敏同学
+                        <li class="list">[2024/12/04] 我们与阿里安全联合举办“大模型安全挑战者计划”大赛，欢迎关注！ [<a href="https://s.alibaba.com/aichallenge">大赛官网</a>]
+                        <li class="list">[2024/11/29] 复旦白泽智能参加DataCon2024，并在AI安全赛道荣获二等奖！ [<a href="https://mp.weixin.qq.com/s/f5W3SDWX3UBYfDrcnMldmw">榜单</a>]
+                        <li class="list">[2024/11/26] 我们发布了 <a href="./jadev4.html">JADE 4.0：基于安全规约的检索增强生成</a>，通过提炼人类社会的通用安全规约构建 RAG，帮助大模型如同人类般理解安全规则，对齐普适价值观！
+                        <li class="list">[2024/10/26] 黄元敏、陆逸凡同学受 PaperWeekly 邀请，直播分享《大模型安全生态总览：前沿进展与挑战》 [<a href="https://mp.weixin.qq.com/s/A-dEjJAwWKBbR4n-TigGFA">链接</a>]（手机微信打开可观看回放）
+                        <li class="list">[2024/09/19] 张谧教授受邀参加APSARA云栖大会，并在圆桌论坛分享AI科技的责任与未来：伦理、安全与协同共治 [<a href="https://yunqi.aliyun.com/2024/solitary?spm=5176.29615464.J_7493026540.2.7aae4c84DbaRO4&agendaId=5449">回放</a>]
+                        <li class="list">[2024/08/24] 1篇论文被CCS 2024录用😊恭喜陆逸凡同学
+                        <li class="list">[2024/06/26] 我们发布了 <a href="./jadev3.html">JADE 3.0：大模型安全对齐</a>，在多款中文大模型上实现内生安全性与有用性的同时提升！</li>
+                        <li class="list">[2024/03/09] 1篇论文被S&P 2024录用😊恭喜邱虎鸣同学
+                        <li class="list">[2024/02/26] 2篇论文被CVPR 2024录用（其中一篇为Highlight）😊😊恭喜黄元敏、汪亦凝等同学
+                        <li class="list">[2024/01/23] 1篇论文被WWW 2024录用😊恭喜游小钰等同学
+                        <li class="list">[2024/01/10] 张谧教授做客《追AI的人》第34期，带你领略大模型安全伦理风险与治理前沿 [<a href="https://mp.weixin.qq.com/s/9wJ46y-k13JlAG8A1s11gw">链接</a>]
+                        <li class="list">[2023/12/27] 张谧教授受邀参加AI发展与治理创新研讨会并分享《通用人工智能风险与治理——从OpenAI Q*谈起》
+                        <br> 媒体报道：[<a href="http://www.xinhuanet.com/tech/20231227/1e6e33282a194ac884740ed120537616/c.html">新华网</a>][<a href="https://3w.huanqiu.com/a/c36dc8/4FvnVIbEDD0">环球网</a>][<a href="https://it.gmw.cn/2023-12/27/content_37056703.htm">光明网</a>][<a href="https://finance.ifeng.com/c/8Vsrff36we9">凤凰网</a>]
+                        <li class="list">[2023/12/20] 恭喜白泽智能的3位小伙伴顺利毕业：毕业快乐！</li>
+                        <li class="list">[2023/11/20] 我们再次发布 <a href="https://mp.weixin.qq.com/s/7llgKhB78-5OJe-itWQ5AA">JADE 2.0：大模型安全通用测试集</a>，提供更多难度等级的测试问题！</li>
+                        <li class="list">[2023/11/12] 复旦白泽智能凭借作品LLM Shield在“华为杯”第二届中国研究生网络安全创新大赛——大模型隐私安全赛道上荣获一等奖！ [<a href="https://mp.weixin.qq.com/s/hGau16AgUO2DzzOOf3f5dw">推送</a>]</li>
+                        <li class="list">[2023/11/03] 复旦白泽智能发布了基于语言学变异的大模型靶向式安全评测平台 <a href="./jade.html">JADE</a>！</li>
+                        <li class="list">[2023/10/18] 复旦白泽智能在“第六届中国软件开源创新大赛——ModelScope挑战赛”中荣获一等奖！[<a href="https://mp.weixin.qq.com/s/xqXt-aU5GSByCYqzOXiLtg">推送</a>][<a href="https://mp.weixin.qq.com/s/JCjOrg8pFsdOsiJvlgx_zQ">经验分享</a>]</li>
+                    </ul>
+                </div>
+                <div class="toggle-button-container">
+                    <button class="toggle-button" id="toggle-news-btn">查看更多内容</button>
+                </div>
         </div>
+
+        <script>
+            // 展开和折叠的JS逻辑
+            document.addEventListener('DOMContentLoaded', function() {
+                const container = document.getElementById('news-list-container');
+                const button = document.getElementById('toggle-news-btn');
+
+                let isExpanded = false; 
+
+                button.addEventListener('click', function() {
+                    if (!isExpanded) {
+                        container.classList.add('expanded');
+                        button.textContent = '收起内容';
+                        isExpanded = true;
+                    } else {
+                        container.classList.remove('expanded');
+                        button.textContent = '查看更多内容';
+                        isExpanded = false;
+                    }
+                });
+            });
+        </script>
 
         <div class="ui vertical stripe container">
             <h1 style="color: rgb(15, 7, 125);">研究成果概览</h1>
@@ -395,14 +450,93 @@
                 <p>JADE 系列以安全评测为切入点，提出红队构建方法并发布高质量 Benchmark 数据集，深入剖析大模型的共性安全问题，挖掘风险生成机理并探索治理方案。</p>
 
                 <ul class="list">
-                    <li class="list"><strong>大语言模型：</strong><a href="./jade.html">JADE 1.0/2.0</a>（文本合规评测），<a href="./jadev3.html">JADE 3.0</a>（内生安全对齐），<a href="./jadev4.html">JADE 4.0</a>（外挂安全对齐）</li>
+                    <li class="list"><strong>大语言模型：</strong><a href="./jade.html">JADE 1.0/2.0</a>（文本合规评测），<a href="./jadev3.html">JADE 3.0</a>（内生安全对齐），<a href="./jadev4.html">JADE 4.0</a>（外挂安全对齐），<a href="https://mp.weixin.qq.com/s/7nGBY4oIOsVWkfzSj2EKtg">JADE 8.0</a>（推理链安全防护）</li>
                     <li class="list"><strong>多模态大模型：</strong><a href="https://arxiv.org/abs/2501.15269">USENIX Security 2025</a>（幻觉攻击），<a href="https://mp.weixin.qq.com/s/SMY2vth3WKq1pxq6M-OErQ">JADE 6.0</a>（幻觉评测）</li>
                     <li class="list"><strong>文生图大模型：</strong><a href="./jadev5.html">JADE 5.0</a>（图像合规评测），<a href="https://arxiv.org/abs/2503.15197">CVPR 2025</a>（安全对齐）</li>
+                    <li class="list"><strong>智能体：</strong><a href="https://mp.weixin.qq.com/s/9De_RR-jX-c04hhaBuhniQ">JADE 7.0</a>（MCP安全评测）</li>
                 </ul>
             </div>
       
             <div class="container text-center mb-5" style="font-size: medium;">
-              <img src="./jade_assets/img/jade5_overview.png" alt="jade_series" width="80%" class="mx-auto d-block mb-5">
+              <img src="./jade_assets/img/jadev8_overview.png" alt="jade_series" width="80%" class="mx-auto d-block mb-5">
+            </div>
+
+            <h3 class="list text-center mt-4">JADE 系列微信推送二维码</h3>
+
+            <style>
+                .qrcode-gallery {
+                    display: grid;
+                    /* 定义 4 个等宽的列 */
+                    grid-template-columns: repeat(4, 1fr); 
+                    gap: 15px; /* 网格间距 */
+                    max-width: 1000px; /* 限制最大宽度，保持美观 */
+                    margin: 20px auto 50px auto; /* 居中显示 */
+                    padding: 0 15px;
+                }
+
+                .qrcode-item {
+                    text-align: center;
+                    /* 确保图片自适应容器 */
+                }
+
+                .qrcode-item img {
+                    width: 100%; 
+                    max-width: 150px; /* 限制二维码图片的最大尺寸 */
+                    height: auto;
+                    border: 1px solid #eee;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+
+                .qrcode-item p {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    color: #555;
+                }
+
+                /* 响应式调整：在小屏幕上显示 2 列 */
+                @media (max-width: 768px) {
+                    .qrcode-gallery {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+            </style>
+            
+            <div class="qrcode-gallery">
+                
+                <div class="qrcode-item">
+                    <img src="./jade_assets/img/qr_codes/qrcode_jade_1_0.png" alt="JADE 1.0 二维码">
+                    <p>JADE 1.0 大模型靶向式评测</p>
+                </div>
+                <div class="qrcode-item">
+                    <img src="./jade_assets/img/qr_codes/qrcode_jade_2_0.png" alt="JADE 2.0 二维码">
+                    <p>JADE 2.0 安全通用测试集</p>
+                </div>
+                <div class="qrcode-item">
+                    <img src="./jade_assets/img/qr_codes/qrcode_jade_3_0.png" alt="JADE 3.0 二维码">
+                    <p>JADE 3.0 内生安全对齐</p>
+                </div>
+                <div class="qrcode-item">
+                    <img src="./jade_assets/img/qr_codes/qrcode_jade_4_0.png" alt="JADE 4.0 二维码">
+                    <p>JADE 4.0 外挂安全对齐</p>
+                </div>
+
+                <div class="qrcode-item">
+                    <img src="./jade_assets/img/qr_codes/qrcode_jade_5_0.png" alt="JADE 5.0 二维码">
+                    <p>JADE 5.0 图像合规评测</p>
+                </div>
+                <div class="qrcode-item">
+                    <img src="./jade_assets/img/qr_codes/qrcode_jade_6_0.png" alt="JADE 6.0 二维码">
+                    <p>JADE 6.0 多模态幻觉评测</p>
+                </div>
+                <div class="qrcode-item">
+                    <img src="./jade_assets/img/qr_codes/qrcode_jade_7_0.png" alt="JADE 7.0 二维码">
+                    <p>JADE 7.0 MCP安全评测</p>
+                </div>
+                <div class="qrcode-item">
+                    <img src="./jade_assets/img/qr_codes/qrcode_jade_8_0.png" alt="JADE 8.0 二维码">
+                    <p>JADE 8.0 推理链安全防护</p>
+                </div>
             </div>
 
             <h3 class="list text-center mt-5">全方位、多领域的AI理论功底和安全攻防技术积淀</h3>
