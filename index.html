@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="./images/icon.png">
     <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/contact-popover.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
@@ -185,6 +186,7 @@
             font-size: larger;
             line-height: 150%;
         }
+
         .dropdown:hover>.dropdown-menu {
             display: block;
         }
@@ -269,16 +271,22 @@
                 <img class="logo" src="./images/icon.png"> 复旦JADE
             </a>
         <a class="active item" href="./index.html">首页</a>
-        <a class="item" href="./projects.html">科研成果</a>
-        <a class="item" href="./publications.html">论文发表</a>
+        <a class="item" href="./projects.html">技术成果</a>
+        <a class="item" href="./publications.html">学术论文</a>
         <a class="item" href="./member.html">团队成员</a>
         <a class="item" href="./jade.html">🔥大模型安全评测JADE🔥</a>
 <!--         <a class="item" href="./">课程</a>
         <a class="item" href="./">软件</a>
         <a class="item" href="./">组会</a> -->
-        <a class="right item dropdown-toggle" href="mailto:mi_zhang@fudan.edu.cn">联系我们&nbsp<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        <div class="right item contact-menu" tabindex="0" role="button" aria-label="查看联系邮箱">
+            <span class="contact-trigger">联系我们&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-          </svg></a>
+          </svg></span>
+            <div class="contact-popover" role="tooltip">
+                <div class="contact-popover-title">联系邮箱</div>
+                <span class="contact-email">mi_zhang@fudan.edu.cn</span>
+            </div>
+        </div>
         </div>
     </div>
     <!-- Sidebar Menu -->
@@ -290,16 +298,22 @@
             <a href="./index.html"><b>复旦JADE</b></a>
         </div>
         <a class="active item" href="./index.html">首页</a>
-        <a class="item" href="./projects.html">科研成果</a>
-        <a class="item" href="./publications.html">论文发表</a>
+        <a class="item" href="./projects.html">技术成果</a>
+        <a class="item" href="./publications.html">学术论文</a>
         <a class="item" href="./member.html">团队成员</a>
         <a class="item" href="./jade.html">🔥大模型安全评测JADE🔥</a>
 <!--         <a class="item" href="./">课程</a>
         <a class="item" href="./">软件</a>
         <a class="item" href="./">组会</a> -->
-        <a class="right item dropdown-toggle" href="mailto:mi_zhang@fudan.edu.cn">联系我们&nbsp<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+        <div class="right item contact-menu" tabindex="0" role="button" aria-label="查看联系邮箱">
+            <span class="contact-trigger">联系我们&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-          </svg></a>
+          </svg></span>
+            <div class="contact-popover" role="tooltip">
+                <div class="contact-popover-title">联系邮箱</div>
+                <span class="contact-email">mi_zhang@fudan.edu.cn</span>
+            </div>
+        </div>
     </div>
     <!-- Page Contents -->
     <div class="pusher">
@@ -314,13 +328,19 @@
                     </a>
                     <a class="item" href="./index.html"><b>复旦JADE（白泽AI）</b></a>
                     <a class="active item" href="./index.html">首页</a>
-                    <a class="item" href="./projects.html">科研成果</a>
-                    <a class="item" href="./publications.html">论文发表</a>
+                    <a class="item" href="./projects.html">技术成果</a>
+                    <a class="item" href="./publications.html">学术论文</a>
                     <a class="item" href="./member.html">团队成员</a>
                     <a class="item" href="./jade.html">🔥大模型安全评测JADE🔥</a>
-                    <a class="right item dropdown-toggle" href="mailto:mi_zhang@fudan.edu.cn">联系我们&nbsp<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <div class="right item contact-menu" tabindex="0" role="button" aria-label="查看联系邮箱">
+            <span class="contact-trigger">联系我们&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                      </svg></a>
+                      </svg></span>
+            <div class="contact-popover" role="tooltip">
+                <div class="contact-popover-title">联系邮箱</div>
+                <span class="contact-email">mi_zhang@fudan.edu.cn</span>
+            </div>
+        </div>
             </div>
            </div>
         <div class="ui vertical stripe center aligned container">
@@ -338,24 +358,22 @@
             <div class="ui divider"></div>
             <ul class="list">
                 <li class="list"><strong>团队负责人</strong>：张谧 教授（博导，<a href="https://mi-zhang-fdu.github.io/index.chn.html">个人主页</a>）</li>
-                <ul>
-                    <li class="list"><strong>研究方向</strong>：AI安全、大模型安全与智能体安全研究，并包含图像、文本、推荐系统、时间序列、社交网络等应用领域</li>
-                    <li class="list">研发首个中文大模型安全评测与治理平台 <strong>复旦JADE</strong>，GitHub Star数位居同类中文平台TOP 1；成果被新华社、人民日报、央广网、光明网、环球网、凤凰网、南方都市报、新京报等主流媒体连续跟踪报道，多次接受南都专访，全网阅读量破千万 [<a href="./index.html#llm-security">成果概览</a>]</li>
-                    <li class="list"><strong>大模型安全视频课程</strong>：当“巨兽”成为“宠物”：复旦白泽带你领略大模型安全伦理风险与治理 [<a href="https://www.bilibili.com/video/BV1sw411g7Ui">b站录屏</a>] [<a href="https://mp.weixin.qq.com/s/mJeSdUNIwa9LcsDY7FpH0g">内容回顾</a>]</li>
-                </ul>
-                <li class="list"><strong>科研</strong>：在网络安全与AI领域顶会顶刊发表学术成果百余篇</li>
+                <li class="list"><strong>研究方向</strong>：AI安全、大模型安全与智能体安全研究，并包含图像、文本、推荐系统、时间序列、社交网络等应用领域</li>
+                <li class="list"><strong>复旦JADE</strong>：首个中文大模型安全评测与治理平台，GitHub Star数位居同类中文平台TOP 1；成果被新华社、人民日报、央广网、光明网、环球网、凤凰网、南方都市报等主流媒体连续跟踪报道，多次接受南都专访，全网阅读量破千万 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202509121122718.html">南都报道</a>]</li>
+                <li class="list"><strong>大模型安全视频课程</strong>：当“巨兽”成为“宠物”：复旦白泽带你领略大模型安全伦理风险与治理 [<a href="https://www.bilibili.com/video/BV1sw411g7Ui">b站录屏</a>] [<a href="https://mp.weixin.qq.com/s/mJeSdUNIwa9LcsDY7FpH0g">内容回顾</a>]</li>
+                <!-- <li class="list"><strong>科研</strong>：在网络安全与AI领域顶会顶刊发表学术成果百余篇</li>
                 <ul>
                     <li class="list"><strong>安全四大会与顶刊</strong>：S&P、USENIX Security、CCS、NDSS、TIFS、TDSC（CSRanking名列国内前茅）</li>
                     <li class="list"><strong>AI顶会顶刊</strong>：TPAMI、TKDE、ICML、CVPR、NeurIPS、ICDE、KDD、AAAI、SIGIR等</li>
-                </ul>
-                <li class="list"><strong>落地</strong>：多项AI安全研究成果<strong>服务国家、社会与行业</strong></li>
+                </ul> -->
+                <!-- <li class="list"><strong>落地</strong>：多项AI安全研究成果<strong>服务国家、社会与行业</strong></li>
                 <ul>
                     <li class="list">联合起草信安标委《<strong>生成式人工智能服务安全</strong>基本要求》</li>
                     <li class="list">深度参与《人工智能<strong>拟人化互动服务</strong>安全基本要求》、《<strong>智能体安全</strong>基本规范》、《网络安全标准实践指南——生成式人工智能服务<strong>内容标识方法</strong>》、《人工智能安全标准化白皮书(2023版)》的制订</li>
                     <li class="list">主持科技部重点研发计划课题、国家自然科学基金面上项目、上海市自然科学基金面上项目等课题</li>
                     <li class="list">主持阿里、华为、百度、奇安信等企业项目</li>
-                </ul>
-                <li class="list"><strong>获奖</strong>：多次斩获国内外科研、竞赛奖项</li>
+                </ul> -->
+                <!-- <li class="list"><strong>获奖</strong>：多次斩获国内外科研、竞赛奖项</li>
                 <ul>
                     <li class="list">网络安全国际顶尖会议USENIX Security Symposium杰出论文奖（大陆高校首次，2022）</li>
                     <li class="list">网络安全国际顶尖会议ACM CCS最佳论文提名（每年仅4篇，2020）</li>
@@ -363,11 +381,54 @@
                     <li class="list">IEEE/ACM WI/IAT最佳论文奖 (2010)</li>
                     <li class="list">CNVD 2021年度国家最具价值漏洞</li>
                     <li class="list">上海市青年五四奖章集体 (2021年)</li>
-                    <li class="list">中国计算机协会科学技术奖自然科学二等奖 (2021年)</li>
+                    <li class="list">中国计算机协会科学技术奖自然科学二等奖 (2020年)</li>
                     <li class="list">华为优秀技术成果奖</li>
                     <li class="list">国际顶尖安全竞赛DEFCON无人驾驶安全攻防赛冠军（两届蝉联）</li>
+                </ul> -->
+                <li class="list"><strong>隶属</strong>：复旦大学 <a href="https://secsys.fudan.edu.cn">系统软件与安全实验室</a></li>
+                <li class="list">🤖 <strong>智能体安全</strong>：</li>
+                <ul>
+                    <li class="list">围绕智能体MCP协议安全，对Cursor、字节Coze等商业智能体平台进行大规模风险排查，揭示了智能体被投毒/劫持的严重风险</li>
+                    <li class="list"><strong>系统化、全栈式的智能体安全研究布局</strong></li>
+                    <ul>
+                        <li class="list">覆盖通用Agent、GUI Agent、多Agent系统等典型智能体形态</li>
+                        <li class="list">贯穿感知理解、知识库、工具调用、Agent Skills、任务执行链路等关键风险面</li>
+                    </ul>
+                    <li class="list">收到华为、阿里、字节、腾讯等头部科技企业的深度合作意向，探索智能体安全评测与防护技术在真实业务场景中的落地探索</li>
+                    <li class="list">竞赛：第六届中国软件开源创新大赛一等奖（AI Agent应用开发）</li>
                 </ul>
-                <li class="list">隶属 <a href="https://secsys.fudan.edu.cn">复旦大学系统软件与安全实验室</a>（由杨珉教授领衔）</li>
+                <li class="list">🧠 <strong>大模型安全</strong>：</li>
+                <ul>
+                    <li class="list">研发 <strong>复旦JADE-大模型测评与治理一体化</strong> 的全栈安全框架</li>
+                    <ul>
+                        <li class="list">为开源社区贡献多个中文安全评测数据集/防护工具，GitHub Star数位居同类中文平台TOP 1</li>
+                        <li class="list">受到业内广泛关注，被腾讯朱雀实验室AI-Infra-Guard、蚂蚁集团“蚁鉴”等知名大模型测评平台收录</li>
+                    </ul>
+                    <li class="list"><strong>前沿性、体系化的大模型安全研究体系</strong></li>
+                    <ul>
+                        <li class="list">覆盖大语言模型、多模态大模型、生图模型等主流大模型形态</li>
+                        <li class="list">聚焦对抗越狱、安全对齐、幻觉缓解、可信追溯等前沿安全问题</li>
+                        <li class="list">近两年在网络安全与AI领域的国际顶会顶刊上 <strong>发表论文十余篇</strong></li>
+                    </ul>
+                    <li class="list">与多家头部科技企业开展深度合作，相关测评与治理技术已应用于 <strong>阿里通义、百度文心、华为云核</strong> 等国产大模型</li>
+                    <li class="list">竞赛屡获佳绩：“华为杯”第二届中国研究生网络安全创新大赛一等奖（LLM隐私保护），DataCon2024 AI安全赛道二等奖（LLM越狱），阿里大模型安全挑战者计划二等奖（LLM越狱）</li>
+                </ul>
+                <li class="list">⚙️ <strong>传统AI安全</strong>：</li>
+                <ul>
+                    <li class="list">多领域、全链路的AI安全攻防技术沉淀</li>
+                    <ul>
+                        <li class="list">围绕视觉感知安全（2D图像/3D点云/自动驾驶）、推荐系统安全、时序异常检测、模型隐私安全、模型版权保护等问题</li>
+                        <li class="list">在网络安全与AI领域的国际顶会顶刊上 <strong>发表论文百余篇，CSRanking名列国内前茅</strong></li>
+                    </ul>
+                    <li class="list">国际认可、产业关注的AI安全研究影响力</li>
+                    <ul>
+                        <li class="list">得到包括中国科学院院士、欧洲科学院院士、英国皇家学会院士，以及IEEE/ACM/AAAS/AAAI Fellow在内的国际知名学者持续跟踪引用，<strong>累积引用破万</strong></li>
+                        <li class="list">揭示多类模型重大安全风险，引发OpenAI、Anthropic、Google、Apple、Meta等头部企业关注</li>
+                    </ul>
+                    <li class="list">奖项荣誉：网安顶会USENIX Security杰出论文奖（大陆高校首次）、网安顶会CCS最佳论文提名（每年仅4篇）、CCF科学技术奖自然科学二等奖等</li>
+                    <li class="list">竞赛：蝉联DEFCON无人驾驶安全攻防赛全球总冠军（2021&2022）</li>
+                </ul>
+                
             </li>
         </div>
 
@@ -376,7 +437,7 @@
             <div class="ui divider"></div>
                 <div id="news-list-container">
                     <ul class='list'>
-                        <li class="list">[2026/05/19] 张谧教授受南都大数据研究院采访，关于智能体“自我推翻“安全规范的现象给出风险来源分析与安全治理建议 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202605191592904.html">南都新闻</a>] [<a href="https://mp.weixin.qq.com/s/f0w89bGs7EVO4HyCvBWRAw">广东数据安全与个人信息保护协会</a>]</li>
+                        <li class="list">[2026/05/19] 张谧教授受南都大数据研究院采访，关于智能体“自我推翻“安全规范的现象给出风险来源分析与安全治理建议 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202605191592904.html">南方都市报</a>] [<a href="https://mp.weixin.qq.com/s/f0w89bGs7EVO4HyCvBWRAw">广东数据安全与个人信息保护协会</a>]</li>
                         <li class="list"> [2026/05/17] 2篇论文被KDD 2026 Cycle 2录用😊 恭喜黄元敏、粟子淳同学
                         <li class="list">[2026/05/12-13] 张谧教授受邀TC260人工智能安全标准工作组（WG9）第二次全体会议，讨论《智能体应用安全基本要求》等16项国标</li>
                         <li class="list"> [2026/05/02] 2篇论文被ICML 2026录用😊恭喜邱虎鸣、杨湘同学
@@ -409,7 +470,7 @@
                         <li class="list">[2025/06/18] 张谧教授受邀华为-复旦workshop，作学术报告《多模态大模型的安全风险》</li>
                         <li class="list">[2025/06/18] 与华为合作的大模型安全项目顺利结题，结题会在黄大年茶思屋举行</li>
                         <li class="list">[2025/06/12] 张谧教授受邀上海计算机学会与华为联合论坛，作学术报告《通用大模型的安全治理》</li>
-                        <li class="list">[2025/04/10] 张谧教授受南都大数据研究院采访，分享大模型的安全评测与治理，指出大模型需像人一样学习安全本质 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202504091067733.html?layer=3&share=chat&isndappinstalled=0">南都新闻</a>] [<a href="https://weibo.com/1682207150/Pn4FYaXSI">南方日报</a>]</li>
+                        <li class="list">[2025/04/10] 张谧教授受南都大数据研究院采访，分享大模型的安全评测与治理，指出大模型需像人一样学习安全本质 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202504091067733.html?layer=3&share=chat&isndappinstalled=0">南方都市报</a>] [<a href="https://weibo.com/1682207150/Pn4FYaXSI">南方日报</a>]</li>
                         <li class="list">[2025/03/05] 与阿里合作的大模型安全项目顺利结题，结题会在阿里西溪园区举行</li>
                         <li class="list">[2025/02/27] 1篇论文被CVPR 2025录用😊恭喜李菲菲同学
                         <li class="list">[2025/02/24] 我们发布了 <a href="./jadev5.html">JADE 5.0：文生图大模型内容安全评测</a>，并开源 <a href="https://github.com/whitzard-ai/jade-db/tree/main/jade-t2i-v1.0">JADE-T2I Benchmark数据集</a>！</li>
@@ -465,7 +526,7 @@
             <h1 style="color: rgb(15, 7, 125);">研究成果概览</h1>
             <div class="ui divider mb-5"></div>
             
-            <h3 class="list text-center mt-4" id="llm-security">大模型安全研究</h3>
+            <h3 class="list text-center mt-4" id="llm-security">大模型与智能体安全研究</h3>
             <div class="mx-5 mt-3">
                 <p>JADE 系列以安全评测为切入点，提出红队构建方法并发布高质量 Benchmark 数据集，深入剖析大模型的共性安全问题，挖掘风险生成机理并探索治理方案。</p>
 
@@ -638,14 +699,14 @@
                     <li>博士:
                         <ul>
                         <li>在读: <em>肖起凡 (2020-), 陆逸凡 (2021-), 黄元敏 (2021-), 汪亦凝 (2022-), 李文轩 (2022-), 李菲菲 (2023-), 邱虎鸣 (2023-), 陈家桂 (2024-), 孙翊铭 (2024-), 李熙 (2024-), 陈晨 (2024-), 陈冠旭 (2025-), 陈沛仪 (2025-), 杨湘 (2025-), 粟子淳 (2025-)</em></li>
-                        <li>毕业: <em>丁岱宗 (2017-2023, 华为), 潘旭东 (2018-2023, 复旦), 游小钰 (2017-2024, 华东理工)</em></li>
+                        <li>毕业: <em>丁岱宗 (2023, 华为), 潘旭东 (2023, 复旦), 游小钰 (2024, 华东理工)</em></li>
                         </ul>
                     <br><p></p>
                     </li>
                     <li>硕士: 
                         <ul>
                             <li>在读: <em>吕洋昊 (2022-), 陈心诺 (2023-), 汪兆祥 (2023-), 王晨悦 (2023-), 张振飞 (2024-), 浦良辰 (2024-), 王宇全 (2024-), 顾佳豪 (2024-), 王润杰 (2024-), 朱子轩 (2024-), 毛垚 (2024-), 洪淳宇 (2025-), 徐乾斌 (2025-), 陈奎运 (2025-), 周子凡 (2025-), 邱军昌 (2025-), 陈瑞钦 (2025-)</em> </li>
-                            <li>毕业:  <em>张栩晨 (2013-2016, 字节跳动), 徐日 (华为), 马骁炀 (腾讯), 王立 (蚂蚁), 朱成纯 (字节跳动), 黄若孜 (2017-2020, 腾讯), 武多才 (2018-2021, 蚂蚁), 王寒蕊 (2018-2021, 网易), 朱家明 (2019-2021, 蚂蚁), 颜一帆 (2020-2022, 阿里), 李驰 (2020-2022, 阿里), 盛钡娜 (2020-2023, 字节跳动), 姜尔玲 (2021-2023, 阿里), 姜又荷 (2021-2023, 阿里), 徐建伟 (2021-2023, 辽宁选调), 张圣尧 (2021-2024, 阿里), 孙俊杰 (2022-2025, 阿里), 高泽晨 (2022-2025, 复旦)</em> </li>
+                            <li>毕业:  <em>张栩晨 (2016, 字节跳动), 徐日 (2017, 华为), 马骁炀 (2017, 腾讯), 王立 (2017, 蚂蚁), 朱成纯 (2017, 字节跳动), 黄若孜 (2020, 腾讯), 武多才 (2021, 蚂蚁), 王寒蕊 (2021, 网易), 朱家明 (2021, 蚂蚁), 颜一帆 (2022, 阿里), 李驰 (2022, 阿里), 盛钡娜 (2023, 字节跳动), 姜尔玲 (2023, 阿里), 姜又荷 (2023, 阿里), 徐建伟 (2023, 辽宁选调), 张圣尧 (2024, 阿里), 孙俊杰 (2025, 阿里), 高泽晨 (2025, 复旦)</em> </li>
                         </ul>
                     <br><p>
                     </li>

@@ -1,0 +1,97 @@
+.contact-menu {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+
+.contact-menu .contact-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.contact-menu .contact-popover {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 1200;
+    min-width: 220px;
+    padding: 10px 12px;
+    color: #1f2933;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid rgba(34, 36, 38, 0.16);
+    border-radius: 6px;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.16);
+    cursor: default;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s ease;
+}
+
+.contact-menu .contact-popover::before {
+    position: absolute;
+    top: -6px;
+    right: 20px;
+    width: 12px;
+    height: 12px;
+    content: "";
+    background: #ffffff;
+    border-top: 1px solid rgba(34, 36, 38, 0.16);
+    border-left: 1px solid rgba(34, 36, 38, 0.16);
+    transform: rotate(45deg);
+}
+
+.contact-menu:hover .contact-popover,
+.contact-menu:focus .contact-popover,
+.contact-menu:focus-within .contact-popover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.contact-popover-title {
+    margin-bottom: 4px;
+    color: #6b7280;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.contact-email {
+    display: inline-block;
+    color: #0f077d;
+    cursor: text;
+    font-weight: 600;
+    line-height: 1.4;
+    user-select: text;
+}
+
+.inline-email {
+    color: inherit;
+    cursor: text;
+    font-weight: inherit;
+    text-decoration: none;
+    user-select: text;
+}
+
+.ui.sidebar .contact-menu .contact-popover {
+    position: static;
+    display: none;
+    min-width: 0;
+    margin-top: 8px;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.ui.sidebar .contact-menu .contact-popover::before {
+    display: none;
+}
+
+.ui.sidebar .contact-menu:hover .contact-popover,
+.ui.sidebar .contact-menu:focus .contact-popover,
+.ui.sidebar .contact-menu:focus-within .contact-popover {
+    display: block;
+}
