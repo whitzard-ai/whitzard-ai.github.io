@@ -226,6 +226,178 @@
             border-radius: 5px;
             user-select: none;
         }
+
+        .research-section-title {
+            margin: 60px auto 18px;
+            color: #17212b;
+            font-size: 2em;
+            font-weight: 800;
+            line-height: 1.35;
+            text-align: center;
+        }
+        
+        .research-subsection-title {
+            margin-top: 34px;
+            color: #24313f;
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1.35;
+            text-align: center;
+        }
+        
+        .ui.vertical.stripe h3.research-subsection-title {
+            font-size: 1.35rem;
+        }
+        
+        .achievements-area {
+            margin-top: 28px;
+        }
+        
+        .achievement-section {
+            padding: 34px 0 44px;
+        }
+        
+        .achievement-section + .achievement-section {
+            border-top: 0;
+        }
+        
+        .achievement-domain-title {
+            color: rgb(15, 7, 125);
+            font-size: 1.75em;
+            font-weight: 800;
+            line-height: 1.35;
+            margin: 0 0 24px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(15, 7, 125, 0.08);
+        }
+        
+        .achievement-domain-title svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            vertical-align: -1px;
+        }
+        
+        .achievement-item {
+            margin-top: 42px;
+        }
+        
+        .achievement-domain-title + .achievement-item {
+            margin-top: 28px;
+        }
+        
+        .achievement-item h4 {
+            margin: 0 0 16px;
+            color: #031521;
+            font-size: 1.38em;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        
+        .achievement-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 14px;
+            color: #031521;
+            font-family: open sans, sans-serif;
+            font-size: 1.22em;
+            line-height: 1.45;
+        }
+        
+        .achievement-point svg {
+            flex: 0 0 18px;
+            width: 18px;
+            height: 18px;
+            margin-top: 5px;
+            color: rgb(15, 7, 125);
+        }
+        
+        .achievement-images {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 18px;
+            margin: 22px auto 0;
+        }
+        
+        .achievement-images img {
+            display: block;
+            width: auto;
+            max-width: none;
+            height: 220px;
+            object-fit: contain;
+            margin: 0 auto;
+        }
+        
+        .achievement-images figure {
+            flex: 0 0 auto;
+            margin: 0;
+            min-width: 0;
+        }
+        
+        .achievement-images > img {
+            flex: 0 0 auto;
+            min-width: 0;
+        }
+        
+        .achievement-images figcaption {
+            margin-top: 10px;
+            color: #555;
+            font-size: 1.05em;
+            line-height: 1.4;
+            text-align: center;
+        }
+        
+        .achievement-images.three-up {
+            display: flex;
+        }
+        
+        @media (max-width: 768px) {
+            .research-section-title {
+                margin-top: 48px;
+                font-size: 1.55em;
+            }
+        
+            .research-subsection-title {
+                font-size: 1.15rem;
+            }
+        
+            .ui.vertical.stripe h3.research-subsection-title {
+                font-size: 1.15rem;
+            }
+        
+            .achievement-domain-title {
+                font-size: 1.45em;
+            }
+        
+            .achievement-item h4 {
+                font-size: 1.18em;
+            }
+        
+            .achievement-point {
+                font-size: 1.05em;
+            }
+        
+            .achievement-images {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .achievement-images.three-up {
+                display: flex;
+            }
+        
+            .achievement-images img {
+                width: 100% !important;
+                height: auto !important;
+            }
+        
+            .achievement-images figure {
+                width: 100% !important;
+            }
+        }
     </style>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/visibility.js"></script>
@@ -359,7 +531,7 @@
             <ul class="list">
                 <li class="list"><strong>团队负责人</strong>：张谧 教授（博导，<a href="https://mi-zhang-fdu.github.io/index.chn.html">个人主页</a>）</li>
                 <li class="list"><strong>研究方向</strong>：AI安全、大模型安全与智能体安全研究，并包含图像、文本、推荐系统、时间序列、社交网络等应用领域</li>
-                <li class="list"><strong>复旦JADE</strong>：首个中文大模型安全评测与治理平台，GitHub Star数位居同类中文平台TOP 1；成果被新华社、人民日报、央广网、光明网、环球网、凤凰网、南方都市报等主流媒体连续跟踪报道，多次接受南都专访，全网阅读量破千万 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202509121122718.html">南都报道</a>]</li>
+                <li class="list"><strong>复旦JADE</strong>：研发首个中文大模型安全评测与治理平台 复旦JADE，GitHub Star数位居同类中文平台TOP 1；成果被新华社、人民日报、央广网、光明网、环球网、凤凰网、南方都市报等主流媒体连续跟踪报道，多次接受南都专访，全网阅读量破千万 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202509121122718.html">南都报道</a>]</li>
                 <li class="list"><strong>大模型安全视频课程</strong>：当“巨兽”成为“宠物”：复旦白泽带你领略大模型安全伦理风险与治理 [<a href="https://www.bilibili.com/video/BV1sw411g7Ui">b站录屏</a>] [<a href="https://mp.weixin.qq.com/s/mJeSdUNIwa9LcsDY7FpH0g">内容回顾</a>]</li>
                 <!-- <li class="list"><strong>科研</strong>：在网络安全与AI领域顶会顶刊发表学术成果百余篇</li>
                 <ul>
@@ -394,8 +566,8 @@
                         <li class="list">覆盖通用Agent、GUI Agent、多Agent系统等典型智能体形态</li>
                         <li class="list">贯穿感知理解、知识库、工具调用、Agent Skills、任务执行链路等关键风险面</li>
                     </ul>
-                    <li class="list">收到华为、阿里、字节、腾讯等头部科技企业的深度合作意向，探索智能体安全评测与防护技术在真实业务场景中的落地探索</li>
-                    <li class="list">竞赛：第六届中国软件开源创新大赛一等奖（AI Agent应用开发）</li>
+                    <li class="list">标准制定：联合起草《<strong>生成式人工智能服务安全</strong>基本要求》、TC260 WG9专家成员，深度参与《<strong>智能体应用安全</strong>基本要求》、《网络安全标准实践指南——生成式人工智能服务<strong>内容标识方法</strong>》等<strong>数十项国家标准</strong>的制订</li>
+                    <li class="list">主持科技部重点研发计划课题、国家自然科学基金面上项目等课题；收到多家头部企业的合作意向，探索智能体安全评测与防护技术在真实业务中的落地</li>
                 </ul>
                 <li class="list">🧠 <strong>大模型安全</strong>：</li>
                 <ul>
@@ -411,20 +583,16 @@
                         <li class="list">近两年在网络安全与AI领域的国际顶会顶刊上 <strong>发表论文十余篇</strong></li>
                     </ul>
                     <li class="list">与多家头部科技企业开展深度合作，相关测评与治理技术已应用于 <strong>阿里通义、百度文心、华为云核</strong> 等国产大模型</li>
-                    <li class="list">竞赛屡获佳绩：“华为杯”第二届中国研究生网络安全创新大赛一等奖（LLM隐私保护），DataCon2024 AI安全赛道二等奖（LLM越狱），阿里大模型安全挑战者计划二等奖（LLM越狱）</li>
+                    <li class="list">竞赛屡获佳绩：第六届中国软件开源创新大赛一等奖（AI Agent应用开发），“华为杯”第二届中国研究生网络安全创新大赛一等奖（LLM隐私保护），DataCon2024 AI安全赛道二等奖、阿里大模型安全挑战者计划二等奖（LLM越狱）</li>
                 </ul>
                 <li class="list">⚙️ <strong>传统AI安全</strong>：</li>
                 <ul>
-                    <li class="list">多领域、全链路的AI安全攻防技术沉淀</li>
+                    <li class="list"><strong>多领域、全链路的AI安全攻防技术沉淀</strong></li>
                     <ul>
                         <li class="list">围绕视觉感知安全（2D图像/3D点云/自动驾驶）、推荐系统安全、时序异常检测、模型隐私安全、模型版权保护等问题</li>
                         <li class="list">在网络安全与AI领域的国际顶会顶刊上 <strong>发表论文百余篇，CSRanking名列国内前茅</strong></li>
                     </ul>
-                    <li class="list">国际认可、产业关注的AI安全研究影响力</li>
-                    <ul>
-                        <li class="list">得到包括中国科学院院士、欧洲科学院院士、英国皇家学会院士，以及IEEE/ACM/AAAS/AAAI Fellow在内的国际知名学者持续跟踪引用，<strong>累积引用破万</strong></li>
-                        <li class="list">揭示多类模型重大安全风险，引发OpenAI、Anthropic、Google、Apple、Meta等头部企业关注</li>
-                    </ul>
+                    <li class="list">揭示<strong>多类模型重大安全风险</strong>，引发OpenAI、Anthropic、Google、Apple、Meta等头部企业关注，<strong>累积引用破万</strong></li>
                     <li class="list">奖项荣誉：网安顶会USENIX Security杰出论文奖（大陆高校首次）、网安顶会CCS最佳论文提名（每年仅4篇）、CCF科学技术奖自然科学二等奖等</li>
                     <li class="list">竞赛：蝉联DEFCON无人驾驶安全攻防赛全球总冠军（2021&2022）</li>
                 </ul>
@@ -437,6 +605,8 @@
             <div class="ui divider"></div>
                 <div id="news-list-container">
                     <ul class='list'>
+                        <li class="list">[2026/05/25] 张谧教授受邀上海市通信管理局“磐石行动”2026年上海市工业和信息化领域网络安全实战攻防活动启动会，作专题讲座《电信和互联网企业如何使用AI构建安全防护体系》</li>
+                        <li class="list">[2026/05/23] 张谧教授受邀参加“CCF-INFORSEC网络空间安全前沿创新论坛”，围绕大模型与智能体安全前沿进行学术交流</li>
                         <li class="list">[2026/05/19] 张谧教授受南都大数据研究院采访，关于智能体“自我推翻“安全规范的现象给出风险来源分析与安全治理建议 [<a href="https://m.mp.oeeee.com/a/BAAFRD0000202605191592904.html">南方都市报</a>] [<a href="https://mp.weixin.qq.com/s/f0w89bGs7EVO4HyCvBWRAw">广东数据安全与个人信息保护协会</a>]</li>
                         <li class="list"> [2026/05/17] 2篇论文被KDD 2026 Cycle 2录用😊 恭喜黄元敏、粟子淳同学
                         <li class="list">[2026/05/12-13] 张谧教授受邀TC260人工智能安全标准工作组（WG9）第二次全体会议，讨论《智能体应用安全基本要求》等16项国标</li>
@@ -526,7 +696,7 @@
             <h1 style="color: rgb(15, 7, 125);">研究成果概览</h1>
             <div class="ui divider mb-5"></div>
             
-            <h3 class="list text-center mt-4" id="llm-security">大模型与智能体安全研究</h3>
+            <h2 class="research-section-title" id="jade-series">JADE 系列研究</h2>
             <div class="mx-5 mt-3">
                 <p>JADE 系列以安全评测为切入点，提出红队构建方法并发布高质量 Benchmark 数据集，深入剖析大模型的共性安全问题，挖掘风险生成机理并探索治理方案。</p>
 
@@ -542,7 +712,7 @@
               <img src="./jade_assets/img/jadev8_overview.png" alt="jade_series" width="80%" class="mx-auto d-block mb-5">
             </div>
 
-            <h3 class="list text-center mt-4">JADE 系列微信推送二维码</h3>
+            <h3 class="research-subsection-title">JADE 系列微信推送二维码</h3>
 
             <style>
                 .qrcode-gallery {
@@ -571,14 +741,23 @@
 
                 .qrcode-item p {
                     margin-top: 5px;
-                    font-size: 0.9em;
+                    font-size: 1.05rem;
+                    line-height: 1.35;
                     color: #555;
+                }
+
+                .ui.vertical.stripe .qrcode-item p {
+                    font-size: 1.05rem;
                 }
 
                 /* 响应式调整：在小屏幕上显示 2 列 */
                 @media (max-width: 768px) {
                     .qrcode-gallery {
                         grid-template-columns: repeat(2, 1fr);
+                    }
+
+                    .ui.vertical.stripe .qrcode-item p {
+                        font-size: 0.95rem;
                     }
                 }
             </style>
@@ -625,71 +804,162 @@
                 </div>
             </div>
 
-            <h3 class="list text-center mt-5">全方位、多领域的AI理论功底和安全攻防技术积淀</h3>
-            <div class="row align-items-start mt-5">
-              <div class="col">
-                <h4 class="text-center"> 
-                  <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-                  </svg> 时间序列</strong>
-                  <br>
-                      传感器数据
-                  <br>
-                  气象、金融
-                  <br>
-                  <br>
-                  <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
-                    <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
-                    <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
-                  </svg> 自然语言</strong>
-                  <br>
-                      大语言模型
-                </h4>
-              </div>
-              <div class="col">
-                <h4 class="text-center"> 
-                  <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bounding-box" viewBox="0 0 16 16">
-                    <path d="M5 2V0H0v5h2v6H0v5h5v-2h6v2h5v-5h-2V5h2V0h-5v2H5zm6 1v2h2v6h-2v2H5v-2H3V5h2V3h6zm1-2h3v3h-3V1zm3 11v3h-3v-3h3zM4 15H1v-3h3v3zM1 4V1h3v3H1z"/>
-                  </svg> 图结构</strong>
-                  <br>
-                  社交网络
-                <br>
-                    知识图谱
-                <br>
-                <br>
-                  <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone-fill" viewBox="0 0 16 16">
-                    <path d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z"/>
-                  </svg> 移动应用</strong>
-                  <br>
-                      API序列
-                </h4>
-              </div>
+            <h2 class="research-section-title">全方位、多领域的AI安全研究成果</h2>
 
-              <div class="col">
-                <h4 class="text-center"> 
-                <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
-                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
-                </svg> 机器视觉</strong>
-                <br>
-                    无人驾驶<small>（含点云）</small>
-                <br>
-                    人脸、深度伪造      
-                <br>
-                <br>
-                  <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up" viewBox="0 0 16 16">
-                    <path d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2.144 2.144 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a9.84 9.84 0 0 0-.443.05 9.365 9.365 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111L8.864.046zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a8.908 8.908 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.224 2.224 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.866.866 0 0 1-.121.416c-.165.288-.503.56-1.066.56z"/>
-                  </svg> 推荐系统</strong>
-                  <br>
-                  评分、Point-of-Interest      
-                  <br>
-                </h4>
-              </div>
-            </div>
+            <div class="achievements-area">
+                <section class="achievement-section" id="agent-security-achievements">
+                    <h3 class="achievement-domain-title">🤖 智能体安全</h3>
 
-            <div id="proj-container" style="height: 800px">
+                    <div class="achievement-item">
+                        <h4>1. Agent MCP安全性评测</h4>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text></svg><span>提出首个针对恶意MCP Server的系统性分类JADE-MCP-CLS，涵盖6大类、33小类的安全风险</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text></svg><span>揭示<strong>Cursor平台对于恶意MCP Server的严重安全漏洞</strong>：对于直接和间接投毒攻击，国内外旗舰模型的平均攻击成功率分别高达53.0%和30.3%</span></div>
+                        <div class="achievement-images">
+                            <img src="./images/achievements/AgentSec-1-MCP-1.png" alt="Agent MCP安全性评测图1">
+                            <img src="./images/achievements/AgentSec-1-MCP-2.png" alt="Agent MCP安全性评测图2">
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h4>2. 智能体安全研究体系</h4>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text></svg><span>覆盖通用Agent、GUI Agent、多Agent系统等典型智能体形态</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text></svg><span>贯穿感知理解、知识库、工具调用、Agent Skills、任务执行链路等关键风险面</span></div>
+                        <div class="achievement-images">
+                            <figure>
+                                <img src="./images/achievements/AgentSec-2-AgentSystem-1.png" alt="通用Agent的MCP Server投毒攻击">
+                                <figcaption>通用Agent的MCP Server投毒攻击</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="./images/achievements/AgentSec-2-AgentSystem-2.png" alt="通用Agent的提示词注入攻击">
+                                <figcaption>通用Agent的提示词注入攻击</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="./images/achievements/AgentSec-2-AgentSystem-3.png" alt="GUI-Agent的视觉提示词间接注入攻击">
+                                <figcaption>GUI-Agent的视觉提示词间接注入攻击</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="achievement-section" id="large-model-security-achievements">
+                    <h3 class="achievement-domain-title">🧠 大模型安全</h3>
+
+                    <div class="achievement-item">
+                        <h4>1. 复旦Jade-大模型测评与治理框架</h4>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text></svg><span>首个中文大模型安全评测与治理平台，<strong>GitHub Star数位居同类中文平台TOP 1</strong></span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text></svg><span><strong>对齐国标，面向全类别的靶向式测评体系</strong>，涵盖不同对抗强度，评测范围持续演进</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">3</text></svg><span>得到国内外知名学者广泛认可，被腾讯朱雀实验室AI-Infra-Guard、蚂蚁集团“蚁鉴”等大模型测评平台收录</span></div>
+                        <div class="achievement-images">
+                            <img src="./images/achievements/LargeModelSec-1-Jade-1.png" alt="复旦Jade大模型测评与治理框架图1">
+                            <img src="./images/achievements/LargeModelSec-1-Jade-2.png" alt="复旦Jade大模型测评与治理框架图2">
+                            <img src="./images/achievements/LargeModelSec-1-Jade-3.png" alt="复旦Jade大模型测评与治理框架图3">
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h4>2. 大语言模型安全</h4>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text></svg><span>在大语言模型安全测评、越狱攻防、安全对齐等领域有深厚积淀</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text></svg><span>提出针对长推理模型的思维链干预技术，无需训练便可大幅降低越狱风险（ACL '26）</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">3</text></svg><span>与多家头部科技企业开展深度合作，相关测评与治理技术已应用于 <strong>阿里通义、百度文心、华为云核</strong> 等国产大模型</span></div>
+                        <div class="achievement-images three-up">
+                            <img src="./images/achievements/LargeModelSec-2-LLM-1.png" alt="大语言模型安全图1">
+                            <img src="./images/achievements/LargeModelSec-2-LLM-2.png" alt="大语言模型安全图2">
+                            <img src="./images/achievements/LargeModelSec-2-LLM-3.png" alt="大语言模型安全图3">
+                        </div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">4</text></svg><span>竞赛屡获佳绩：“华为杯”第二届中国研究生网络安全创新大赛一等奖（LLM隐私保护），第六届中国软件开源创新大赛一等奖（AI Agent应用开发），DataCon2024 AI安全赛道二等奖、阿里大模型安全挑战者计划二等奖（LLM越狱）</span></div>
+                        <div class="achievement-images three-up">
+                            <img src="./images/achievements/LargeModelSec-2-LLM-4.png" alt="大语言模型安全图4">
+                            <img src="./images/achievements/LargeModelSec-2-LLM-5.png" alt="大语言模型安全图5">
+                            <img src="./images/achievements/LargeModelSec-2-LLM-6.png" alt="大语言模型安全图6">
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h4>3. 多模态大模型安全</h4>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text></svg><span>在多模态大模型的感知鲁棒性、幻觉风险与安全防护等领域持续布局</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text></svg><span>从大模型幻觉的成因机理出发，构建首个多模态幻觉测评框架，揭示了<strong>根植于模型注意力机制的严重幻觉风险</strong>（USENIX SEC '25）</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">3</text></svg><span>提出相应的缓解方案，在降低幻觉风险的同时提升模型感知与推理能力（AAAI '26，TPAMI '26）</span></div>
+                        <div class="achievement-images">
+                            <img src="./images/achievements/LargeModelSec-3-Multimodal-1.png" alt="多模态大模型安全图1">
+                            <img src="./images/achievements/LargeModelSec-3-Multimodal-2.png" alt="多模态大模型安全图2">
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h4>4. 生图大模型安全</h4>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text></svg><span>聚焦生图大模型的内容安全、可控生成、隐私记忆、可信追溯等前沿问题</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text></svg><span>构建完整的安全测评体系，并提出多种具备高可解释性、适配不同模型与任务的安全对齐方案（CVPR '25，CVPR '26，ICML '26）</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">3</text></svg><span>面向AIGC版权保护与内容认证需求，开展图像水印、数据集水印等机制的鲁棒性研究，揭示现有保护方案在真实对抗场景下的安全边界（NeurIPS ’25，ICML ’26）</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">4</text></svg><span>与多家头部企业深度合作，相关安全测评与治理技术已应用于 <strong>阿里通义、华为云核</strong> 等国产大模型；相关图像可控生成技术已接入 <strong>阿里巴巴智能风控体系</strong>，构建对抗验证码、打击网络黑灰产</span></div>
+                        <div class="achievement-images">
+                            <img src="./images/achievements/LargeModelSec-4-T2I-1.png" alt="生图大模型安全图1">
+                            <img src="./images/achievements/LargeModelSec-4-T2I-2.png" alt="生图大模型安全图2">
+                            <img src="./images/achievements/LargeModelSec-4-T2I-3.png" alt="生图大模型安全图3">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="achievement-section" id="traditional-ai-security-achievements">
+                    <h3 class="achievement-domain-title">⚙️ 传统AI安全</h3>
+
+                    <div class="achievement-item">
+                        <h4>1. 计算机视觉安全</h4>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text></svg><span>覆盖2D图像、3D点云、自动驾驶感知等视觉安全场景，围绕鲁棒学习、模型去偏、后门攻防、点云可解释性与物理对抗防御等方向，相关成果发表于TPAMI、USENIX Security、S&amp;P、ICML、CVPR、AAAI等顶会顶刊</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text></svg><span>针对自动驾驶LiDAR目标检测系统，深度整合百度Apollo开源无人驾驶平台，提出面向“幽灵障碍物”等物理攻击的高精度、低延时、可插拔防护框架（USENIX SEC '23）</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">3</text></svg><span>DEFCON无人驾驶安全攻防赛，在CMU、Stanford、理想、小米等国内外顶尖院校与车企的百余支队伍中脱颖而出，<strong>连续两届获得全球总冠军</strong> (2021&amp;2022)</span></div>
+                        <div class="achievement-images">
+                            <img src="./images/achievements/TraditionalAISec-1-CV-1.png" alt="计算机视觉安全图1">
+                            <img src="./images/achievements/TraditionalAISec-1-CV-2.jpeg" alt="计算机视觉安全图2">
+                            <img src="./images/achievements/TraditionalAISec-1-CV-3.jpeg" alt="计算机视觉安全图3">
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h4>2. 推荐系统安全</h4>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text></svg><span>较早围绕推荐系统多样性、新颖性、长尾推荐与冷启动等问题开展系统研究，相关成果发表于ACM RecSys、SIGIR、WI/IAT、ICTAI、TOIT等国际会议期刊，并获WI/IAT 2010最佳论文奖</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text></svg><span>代表性工作Avoiding Monotony（ACM RecSys '08），系统揭示<strong>推荐准确性与多样性之间的权衡关系</strong>，深刻影响了后续多样性推荐、长尾内容曝光与信息茧房缓解等研究，被引近千次</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">3</text></svg><span>近期关注安全可信的智能搜索/推荐系统，聚焦虚假用户注入、知识投毒以及大模型增强搜索的恶意操纵等现实风险，相关成果发表于WWW '18/'23/'26、AAAI '24、CIKM '17等顶会</span></div>
+                        <div class="achievement-images">
+                            <img src="./images/achievements/TraditionalAISec-2-Recsys-1.png" alt="推荐系统安全图1">
+                            <img src="./images/achievements/TraditionalAISec-2-Recsys-2.png" alt="推荐系统安全图2">
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h4>3. 时序异常检测</h4>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text></svg><span>面向金融风控、工业监控、移动应用生态等真实场景，围绕极端长尾事件、隐蔽异常行为、模型老化与对抗风险开展系统研究</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text></svg><span>开创性将极值理论EVT引入深度时序建模，用于刻画<strong>长尾极端事件风险</strong>（KDD '19，TKDE '21），获得包括蚂蚁集团、平安科技、招商银行在内的头部金融与科技企业合作意向</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">3</text></svg><span>首次揭示了深度时序模型在黑盒场景下的对抗攻击风险与后门攻击风险（ICDE '22、AAAI '23、WWW '25）</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">4</text></svg><span>在移动应用异常行为检测方面，提出图语义特征增强方法，实现对隐蔽异常行为的精准拦截（CCS '20、TDSC '22），获得<strong>CCS '20最佳论文提名</strong>（每年仅4篇）；相关技术<strong>已集成于华为自研麒麟 AI 芯片</strong>，并获2020华为优秀技术成果奖，累计获得4项国家发明专利授权</span></div>
+                        <div class="achievement-images">
+                            <img src="./images/achievements/TraditionalAISec-3-TimeSeries-1.png" alt="时序异常检测图1">
+                            <img src="./images/achievements/TraditionalAISec-3-TimeSeries-2.png" alt="时序异常检测图2">
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h4>4. 模型隐私安全</h4>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text></svg><span>围绕数据重建、隐私推断、模型隐写等问题，系统揭示深度模型与大模型中的训练数据泄露风险</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text></svg><span>提出神经元独占性分析方法，实现<strong>用户数据像素级破解</strong>（USENIX SEC '22）</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">3</text></svg><span>提出大型预训练语言模型的特征逆向攻击，首次证实<strong>深度文本表征隐私性几乎等同明文</strong>（S&amp;P '20），引发OpenAI、Google、Anthropic等头部厂商的高度关注</span></div>
+                        <div class="achievement-images">
+                            <img src="./images/achievements/TraditionalAISec-4-Privacy-1.png" alt="模型隐私安全图1">
+                            <img src="./images/achievements/TraditionalAISec-4-Privacy-2.png" alt="模型隐私安全图2">
+                        </div>
+                    </div>
+
+                    <div class="achievement-item">
+                        <h4>5. 模型版权保护</h4>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text></svg><span>面向模型复制、非法部署、模型交易争议与责任追溯等问题，较早布局模型指纹与模型水印研究</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text></svg><span>开创性提出基于神经元不变性变换的水印破坏技术，<strong>同时攻破9种发表于各大顶会的主流水印方案</strong>（USENIX SEC '23，KDD '23），被Sony AI、Meta FAIR等国际知名研究机构引用，累积被引超150次</span></div>
+                        <div class="achievement-point"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><text x="10" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">3</text></svg><span>研发基于特异预测行为的通用模型指纹追溯，盗版追溯能力远超现有技术，适配任意下游模型；作为全国征集的<strong>7个AI安全典型实践案例之一</strong>，入选信安标委《人工智能安全标准化白皮书》（2022版）</span></div>
+                        <div class="achievement-images">
+                            <img src="./images/achievements/TraditionalAISec-5-Copyright-1.png" alt="模型版权保护图1">
+                            <img src="./images/achievements/TraditionalAISec-5-Copyright-2.png" alt="模型版权保护图2">
+                        </div>
+                    </div>
+                </section>
             </div>
-            <script type="text/javascript" src="./js/proj.js"></script>
         </div>
 
         <div class="ui vertical stripe container">
@@ -713,7 +983,54 @@
                 </ul>
         </div>
 
-     
+        <script>
+            function balanceAchievementImageRows() {
+                const mobileLayout = window.matchMedia('(max-width: 768px)').matches;
+                document.querySelectorAll('.achievement-images').forEach((row) => {
+                    const images = Array.from(row.querySelectorAll('img'));
+                    if (!images.length) {
+                        return;
+                    }
+
+                    images.forEach((img) => {
+                        img.style.height = '';
+                        img.style.width = '';
+                    });
+                    row.querySelectorAll('figure').forEach((figure) => {
+                        figure.style.width = '';
+                    });
+
+                    if (mobileLayout) {
+                        return;
+                    }
+
+                    const rowStyle = window.getComputedStyle(row);
+                    const gap = parseFloat(rowStyle.columnGap || rowStyle.gap) || 0;
+                    const availableWidth = row.clientWidth - gap * (images.length - 1);
+                    const totalAspectRatio = images.reduce((sum, img) => {
+                        const width = img.naturalWidth || img.width || 1;
+                        const height = img.naturalHeight || img.height || 1;
+                        return sum + width / height;
+                    }, 0);
+                    const rowHeight = Math.min(240, Math.max(90, availableWidth / totalAspectRatio));
+
+                    images.forEach((img) => {
+                        const aspectRatio = (img.naturalWidth || img.width || 1) / (img.naturalHeight || img.height || 1);
+                        img.style.height = `${rowHeight}px`;
+                        img.style.width = `${rowHeight * aspectRatio}px`;
+                    });
+                    row.querySelectorAll('figure').forEach((figure) => {
+                        const img = figure.querySelector('img');
+                        if (img) {
+                            figure.style.width = img.style.width;
+                        }
+                    });
+                });
+            }
+
+            window.addEventListener('load', balanceAchievementImageRows);
+            window.addEventListener('resize', balanceAchievementImageRows);
+        </script>
 
         <div class="ui inverted vertical footer segment">
             <div class="ui center aligned container">
